@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SiteGov — Know Who Controls Every Domain You Manage</title>
+  <meta name="description" content="SiteGov maps every domain your agency manages — who owns it, who can access it, and what's about to break — before a crisis hits." />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['-apple-system', 'BlinkMacSystemFont', 'Inter', 'Segoe UI', 'sans-serif'],
+          },
+        }
+      }
+    }
+  </script>
+  <style>
+    html { scroll-behavior: smooth; }
+  </style>
+</head>
+<body class="bg-white text-gray-900 antialiased">
+
+  <!-- Nav -->
+  <header class="sticky top-0 z-50 bg-white/90 backdrop-blur border-b border-gray-100">
+    <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+      <a href="/" class="font-semibold text-lg tracking-tight text-gray-900">SiteGov</a>
+      <nav class="hidden md:flex items-center gap-8 text-sm text-gray-600">
+        <a href="#how-it-works" class="hover:text-gray-900 transition-colors">How it works</a>
+        <a href="#findings" class="hover:text-gray-900 transition-colors">What we detect</a>
+        <a href="#pricing" class="hover:text-gray-900 transition-colors">Pricing</a>
+      </nav>
+      <div class="flex items-center gap-3">
+        <a href="/login" class="text-sm text-gray-600 hover:text-gray-900 transition-colors hidden sm:inline">Log in</a>
+        <a href="/signup" class="inline-flex items-center px-4 py-2 bg-gray-900 text-white text-sm font-medium rounded-lg hover:bg-gray-700 transition-colors">
+          Get started free
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="bg-gray-950 text-white">
+    <div class="max-w-6xl mx-auto px-6 pt-24 pb-28">
+      <div class="max-w-3xl">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-red-900/40 border border-red-800/50 text-red-300 text-xs font-medium mb-8">
+          <span class="w-1.5 h-1.5 rounded-full bg-red-400 inline-block"></span>
+          Client down. 11pm. Who controls their DNS?
+        </div>
+        <h1 class="text-5xl sm:text-6xl font-bold leading-tight tracking-tight mb-6">
+          Your client's site just went down.<br />
+          <span class="text-gray-400">Do you know who controls their DNS?</span>
+        </h1>
+        <p class="text-xl text-gray-400 leading-relaxed mb-10 max-w-2xl">
+          SiteGov maps every domain your agency manages — who owns it, who can access it, and what's about to break — before your Friday 5pm call turns into a Saturday emergency.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-3">
+          <a href="/signup" class="inline-flex items-center justify-center px-6 py-3.5 bg-white text-gray-900 text-sm font-semibold rounded-lg hover:bg-gray-100 transition-colors">
+            Get started free
+          </a>
+          <a href="#how-it-works" class="inline-flex items-center justify-center px-6 py-3.5 bg-transparent text-gray-300 text-sm font-medium rounded-lg border border-gray-700 hover:border-gray-500 hover:text-white transition-colors">
+            See how it works →
+          </a>
+        </div>
+        <p class="mt-4 text-xs text-gray-600">No credit card required. Setup in under 5 minutes.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Problem Vignettes -->
+  <section class="border-b border-gray-100 bg-gray-50">
+    <div class="max-w-6xl mx-auto px-6 py-20">
+      <p class="text-xs font-semibold uppercase tracking-widest text-gray-400 mb-10">Sound familiar?</p>
+      <div class="grid md:grid-cols-3 gap-6">
+
+        <div class="bg-white rounded-2xl p-8 border border-gray-200">
+          <div class="w-10 h-10 rounded-full bg-red-100 flex items-center justify-center mb-5">
+            <svg class="w-5 h-5 text-red-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126zM12 15.75h.007v.008H12v-.008z" />
+            </svg>
+          </div>
+          <h3 class="font-semibold text-gray-900 text-lg mb-2">"We lost the login."</h3>
+          <p class="text-gray-500 text-sm leading-relaxed">
+            A client's SSL cert expired. It was issued to a developer who left eight months ago. Nobody knew. The site was down for six hours.
+          </p>
+        </div>
+
+        <div class="bg-white rounded-2xl p-8 border border-gray-200">
+          <div class="w-10 h-10 rounded-full bg-amber-100 flex items-center justify-center mb-5">
+            <svg class="w-5 h-5 text-amber-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+          </div>
+          <h3 class="font-semibold text-gray-900 text-lg mb-2">"Nobody knows who registered it."</h3>
+          <p class="text-gray-500 text-sm leading-relaxed">
+            Domain expires in 12 days. The registrar account belongs to a former project manager. She's not returning calls.
+          </p>
+        </div>
+
+        <div class="bg-white rounded-2xl p-8 border border-gray-200">
+          <div class="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center mb-5">
+            <svg class="w-5 h-5 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M16.5 10.5V6.75a4.5 4.5 0 10-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 002.25-2.25v-6.75a2.25 2.25 0 00-2.25-2.25H6.75a2.25 2.25 0 00-2.25 2.25v6.75a2.25 2.25 0 002.25 2.25z" />
+            </svg>
+          </div>
+          <h3 class="font-semibold text-gray-900 text-lg mb-2">"The previous agency won't hand it over."</h3>
+          <p class="text-gray-500 text-sm leading-relaxed">
+            You've taken on a new client. Their DNS is locked in another agency's Cloudflare account. Their old agency isn't cooperating.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- What SiteGov does — value prop -->
+  <section class="py-24">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="grid md:grid-cols-2 gap-16 items-center">
+        <div>
+          <p class="text-xs font-semibold uppercase tracking-widest text-gray-400 mb-4">The fix</p>
+          <h2 class="text-4xl font-bold leading-tight mb-6">
+            A control map for every domain you manage.
+          </h2>
+          <p class="text-gray-500 text-lg leading-relaxed mb-8">
+            SiteGov automatically scans every client domain and builds a <strong class="text-gray-900">Digital Asset Control Map</strong> — a single source of truth for who controls what across DNS, hosting, SSL, registrar, and email.
+          </p>
+          <ul class="space-y-4">
+            <li class="flex items-start gap-3">
+              <span class="mt-0.5 w-5 h-5 rounded-full bg-green-100 flex items-center justify-center shrink-0">
+                <svg class="w-3 h-3 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+                </svg>
+              </span>
+              <span class="text-gray-600 text-sm leading-relaxed"><strong class="text-gray-900">Add a domain. We do the rest.</strong> Live scans across DNS, SSL, WHOIS, hosting, and email. No agents, no integrations.</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="mt-0.5 w-5 h-5 rounded-full bg-green-100 flex items-center justify-center shrink-0">
+                <svg class="w-3 h-3 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+                </svg>
+              </span>
+              <span class="text-gray-600 text-sm leading-relaxed"><strong class="text-gray-900">Know who's in control.</strong> Document the login, credentials location, MFA status, and backup admin for every asset.</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="mt-0.5 w-5 h-5 rounded-full bg-green-100 flex items-center justify-center shrink-0">
+                <svg class="w-3 h-3 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+                </svg>
+              </span>
+              <span class="text-gray-600 text-sm leading-relaxed"><strong class="text-gray-900">Catch problems before clients do.</strong> A DACS score (0–100) surfaces governance gaps and infrastructure risks across your entire portfolio.</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Mock dashboard card -->
+        <div class="bg-gray-950 rounded-2xl p-6 shadow-2xl">
+          <div class="flex items-center justify-between mb-5">
+            <span class="text-white text-sm font-medium">acmebuilders.com</span>
+            <span class="inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-red-900/60 text-red-300">High Risk</span>
+          </div>
+          <div class="space-y-3 mb-5">
+            <div class="flex items-center justify-between py-2.5 border-b border-gray-800">
+              <span class="text-gray-500 text-xs">Registrar</span>
+              <span class="text-gray-200 text-xs font-medium">GoDaddy</span>
+            </div>
+            <div class="flex items-center justify-between py-2.5 border-b border-gray-800">
+              <span class="text-gray-500 text-xs">DNS Provider</span>
+              <span class="text-gray-200 text-xs font-medium">Cloudflare</span>
+            </div>
+            <div class="flex items-center justify-between py-2.5 border-b border-gray-800">
+              <span class="text-gray-500 text-xs">Hosting</span>
+              <span class="text-gray-200 text-xs font-medium">WP Engine</span>
+            </div>
+            <div class="flex items-center justify-between py-2.5 border-b border-gray-800">
+              <span class="text-gray-500 text-xs">SSL Authority</span>
+              <span class="text-yellow-400 text-xs font-medium">Expires in 9 days</span>
+            </div>
+            <div class="flex items-center justify-between py-2.5">
+              <span class="text-gray-500 text-xs">DNS Admin</span>
+              <span class="text-red-400 text-xs font-medium">Former employee</span>
+            </div>
+          </div>
+          <div class="bg-gray-900 rounded-xl p-4">
+            <div class="flex items-center justify-between mb-2">
+              <span class="text-gray-400 text-xs">DACS Score</span>
+              <span class="text-white text-sm font-bold">34 / 100</span>
+            </div>
+            <div class="w-full bg-gray-800 rounded-full h-1.5">
+              <div class="bg-red-500 h-1.5 rounded-full" style="width: 34%"></div>
+            </div>
+            <p class="text-gray-600 text-xs mt-2">3 high-severity findings · 2 governance gaps</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How it works -->
+  <section id="how-it-works" class="bg-gray-50 border-y border-gray-100 py-24">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="max-w-2xl mb-14">
+        <p class="text-xs font-semibold uppercase tracking-widest text-gray-400 mb-4">How it works</p>
+        <h2 class="text-4xl font-bold leading-tight">From chaos to clarity in four steps.</h2>
+      </div>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+
+        <div class="bg-white rounded-2xl p-7 border border-gray-200">
+          <div class="w-8 h-8 rounded-lg bg-gray-900 text-white text-sm font-bold flex items-center justify-center mb-5">1</div>
+          <h3 class="font-semibold text-gray-900 mb-2">Import your clients</h3>
+          <p class="text-gray-500 text-sm leading-relaxed">Paste a list of domains or upload a spreadsheet. We handle the rest.</p>
+        </div>
+
+        <div class="bg-white rounded-2xl p-7 border border-gray-200">
+          <div class="w-8 h-8 rounded-lg bg-gray-900 text-white text-sm font-bold flex items-center justify-center mb-5">2</div>
+          <h3 class="font-semibold text-gray-900 mb-2">We scan automatically</h3>
+          <p class="text-gray-500 text-sm leading-relaxed">DNS, SSL, WHOIS, hosting, email records, and provider detection — live, from the source.</p>
+        </div>
+
+        <div class="bg-white rounded-2xl p-7 border border-gray-200">
+          <div class="w-8 h-8 rounded-lg bg-gray-900 text-white text-sm font-bold flex items-center justify-center mb-5">3</div>
+          <h3 class="font-semibold text-gray-900 mb-2">See the gaps</h3>
+          <p class="text-gray-500 text-sm leading-relaxed">Governance findings, risk levels, and a DACS score per domain. Ranked by severity.</p>
+        </div>
+
+        <div class="bg-white rounded-2xl p-7 border border-gray-200">
+          <div class="w-8 h-8 rounded-lg bg-gray-900 text-white text-sm font-bold flex items-center justify-center mb-5">4</div>
+          <h3 class="font-semibold text-gray-900 mb-2">Your team fills them in</h3>
+          <p class="text-gray-500 text-sm leading-relaxed">Document credentials, assign admins, verify ownership. One record per asset.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- What gets flagged -->
+  <section id="findings" class="py-24">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="grid md:grid-cols-2 gap-16 items-start">
+        <div>
+          <p class="text-xs font-semibold uppercase tracking-widest text-gray-400 mb-4">What we detect</p>
+          <h2 class="text-4xl font-bold leading-tight mb-4">Everything that keeps you up at night.</h2>
+          <p class="text-gray-500 text-lg leading-relaxed">
+            SiteGov surfaces infrastructure and governance risks across every client domain — automatically, on every scan.
+          </p>
+        </div>
+        <div class="space-y-3">
+
+          <div class="flex items-start gap-4 bg-red-50 border border-red-100 rounded-xl px-5 py-4">
+            <span class="inline-flex items-center px-2 py-0.5 rounded text-xs font-semibold bg-red-100 text-red-700 shrink-0 mt-0.5">High</span>
+            <span class="text-gray-700 text-sm leading-relaxed">Former employee still listed as DNS or hosting admin</span>
+          </div>
+
+          <div class="flex items-start gap-4 bg-red-50 border border-red-100 rounded-xl px-5 py-4">
+            <span class="inline-flex items-center px-2 py-0.5 rounded text-xs font-semibold bg-red-100 text-red-700 shrink-0 mt-0.5">High</span>
+            <span class="text-gray-700 text-sm leading-relaxed">SSL certificate expiring soon — auto-renewal may have failed</span>
+          </div>
+
+          <div class="flex items-start gap-4 bg-amber-50 border border-amber-100 rounded-xl px-5 py-4">
+            <span class="inline-flex items-center px-2 py-0.5 rounded text-xs font-semibold bg-amber-100 text-amber-700 shrink-0 mt-0.5">Warning</span>
+            <span class="text-gray-700 text-sm leading-relaxed">No backup admin documented for critical infrastructure</span>
+          </div>
+
+          <div class="flex items-start gap-4 bg-amber-50 border border-amber-100 rounded-xl px-5 py-4">
+            <span class="inline-flex items-center px-2 py-0.5 rounded text-xs font-semibold bg-amber-100 text-amber-700 shrink-0 mt-0.5">Warning</span>
+            <span class="text-gray-700 text-sm leading-relaxed">MFA not verified on DNS or registrar account</span>
+          </div>
+
+          <div class="flex items-start gap-4 bg-amber-50 border border-amber-100 rounded-xl px-5 py-4">
+            <span class="inline-flex items-center px-2 py-0.5 rounded text-xs font-semibold bg-amber-100 text-amber-700 shrink-0 mt-0.5">Warning</span>
+            <span class="text-gray-700 text-sm leading-relaxed">DMARC not configured — domain is spoofable</span>
+          </div>
+
+          <div class="flex items-start gap-4 bg-blue-50 border border-blue-100 rounded-xl px-5 py-4">
+            <span class="inline-flex items-center px-2 py-0.5 rounded text-xs font-semibold bg-blue-100 text-blue-700 shrink-0 mt-0.5">Info</span>
+            <span class="text-gray-700 text-sm leading-relaxed">Credential location not documented — recovery undocumented</span>
+          </div>
+
+          <div class="flex items-start gap-4 bg-blue-50 border border-blue-100 rounded-xl px-5 py-4">
+            <span class="inline-flex items-center px-2 py-0.5 rounded text-xs font-semibold bg-blue-100 text-blue-700 shrink-0 mt-0.5">Info</span>
+            <span class="text-gray-700 text-sm leading-relaxed">Registrar transfer locks not set — domain unprotected from hijack</span>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- For agencies -->
+  <section class="bg-gray-950 text-white py-24">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="max-w-2xl mb-14">
+        <p class="text-xs font-semibold uppercase tracking-widest text-gray-500 mb-4">Built for agencies</p>
+        <h2 class="text-4xl font-bold leading-tight mb-6">One dashboard. Every client. Every domain. Every risk.</h2>
+        <p class="text-gray-400 text-lg leading-relaxed">
+          See which clients have high-risk domains before they call you. Know instantly who owns what when a site breaks. Document your handoff-readiness before a client relationship ends.
+        </p>
+      </div>
+      <div class="grid sm:grid-cols-3 gap-6">
+        <div class="bg-gray-900 rounded-2xl p-7 border border-gray-800">
+          <p class="text-3xl font-bold text-white mb-2">Zero</p>
+          <p class="text-gray-400 text-sm leading-relaxed">spreadsheets needed to know the state of your client infrastructure</p>
+        </div>
+        <div class="bg-gray-900 rounded-2xl p-7 border border-gray-800">
+          <p class="text-3xl font-bold text-white mb-2">5 min</p>
+          <p class="text-gray-400 text-sm leading-relaxed">to import a client list and get your first scan results</p>
+        </div>
+        <div class="bg-gray-900 rounded-2xl p-7 border border-gray-800">
+          <p class="text-3xl font-bold text-white mb-2">Always</p>
+          <p class="text-gray-400 text-sm leading-relaxed">know who to call when a client site breaks at 11pm on a Friday</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Final CTA -->
+  <section class="py-28">
+    <div class="max-w-3xl mx-auto px-6 text-center">
+      <h2 class="text-4xl sm:text-5xl font-bold leading-tight mb-6">
+        Know who controls every domain you manage.
+      </h2>
+      <p class="text-gray-500 text-xl mb-10">
+        When a client's site breaks at 11pm, the question isn't <em>what</em> broke. It's <em>who can fix it</em>. SiteGov gives you that answer in seconds.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-3 justify-center">
+        <a href="/signup" class="inline-flex items-center justify-center px-8 py-4 bg-gray-900 text-white text-sm font-semibold rounded-lg hover:bg-gray-700 transition-colors">
+          Get started free
+        </a>
+        <a href="/demo" class="inline-flex items-center justify-center px-8 py-4 bg-white text-gray-700 text-sm font-medium rounded-lg border border-gray-200 hover:border-gray-400 transition-colors">
+          Book a demo
+        </a>
+      </div>
+      <p class="mt-4 text-xs text-gray-400">No credit card required · Setup in under 5 minutes</p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="border-t border-gray-100 py-10">
+    <div class="max-w-6xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-gray-400">
+      <span class="font-medium text-gray-600">SiteGov</span>
+      <div class="flex gap-6">
+        <a href="/privacy" class="hover:text-gray-700 transition-colors">Privacy</a>
+        <a href="/terms" class="hover:text-gray-700 transition-colors">Terms</a>
+        <a href="mailto:hello@sitegov.com" class="hover:text-gray-700 transition-colors">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
