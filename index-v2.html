@@ -578,6 +578,70 @@
     </div>
   </section>
 
+  <!-- What SiteGov prevents -->
+  <section class="bg-slate-50 border-y border-slate-100 py-24">
+    <div class="max-w-6xl mx-auto px-6">
+
+      <div class="max-w-3xl mb-14">
+        <p class="text-xs font-semibold uppercase tracking-widest text-slate-400 mb-4">Prevention</p>
+        <h2 class="text-4xl font-bold leading-tight mb-6">These happen to every agency. Most of them are preventable.</h2>
+        <p class="text-slate-500 text-lg leading-relaxed">None of these are rare edge cases. Every agency has hit at least half this list. They happen not because anything went wrong technically &mdash; but because nobody documented who was responsible for what, before the moment it mattered.</p>
+      </div>
+
+      <div class="grid sm:grid-cols-2 gap-4 mb-12">
+
+        <div class="bg-white rounded-xl p-6 border border-slate-200">
+          <p class="text-slate-900 text-sm font-semibold mb-2">Delayed go-lives</p>
+          <p class="text-slate-500 text-sm leading-relaxed">DNS still pointing at the old host, controlled by an agency not returning calls. The site is ready. The launch isn&rsquo;t. SiteGov surfaces who controls DNS before the project starts, not after it stalls.</p>
+        </div>
+
+        <div class="bg-white rounded-xl p-6 border border-slate-200">
+          <p class="text-slate-900 text-sm font-semibold mb-2">Onboarding friction</p>
+          <p class="text-slate-500 text-sm leading-relaxed">New client, unknown infrastructure. Two weeks spent figuring out what&rsquo;s where. SiteGov runs a structured scan on day one &mdash; registrar, DNS, hosting, SSL, email &mdash; so discovery takes minutes, not weeks.</p>
+        </div>
+
+        <div class="bg-white rounded-xl p-6 border border-slate-200">
+          <p class="text-slate-900 text-sm font-semibold mb-2">Offboarding chaos</p>
+          <p class="text-slate-500 text-sm leading-relaxed">Someone leaves. Their personal email was the recovery address on three provider accounts. SiteGov flags missing backup admins and unknown credential locations before they become your emergency.</p>
+        </div>
+
+        <div class="bg-white rounded-xl p-6 border border-slate-200">
+          <p class="text-slate-900 text-sm font-semibold mb-2">Migration blockers</p>
+          <p class="text-slate-500 text-sm leading-relaxed">The site needs to move. The hosting details are in a Slack thread from 2021, the DNS login belongs to a contractor, and nobody&rsquo;s sure if the domain auto-renews. SiteGov keeps a current record of every provider so migrations start with a plan, not a search party.</p>
+        </div>
+
+        <div class="bg-white rounded-xl p-6 border border-slate-200">
+          <p class="text-slate-900 text-sm font-semibold mb-2">Missed renewals</p>
+          <p class="text-slate-500 text-sm leading-relaxed">The domain lapses. Or the SSL cert expires. Or the hosting plan quietly cancels because the billing email went to someone who left. SiteGov tracks expiry dates and flags who&rsquo;s responsible for each renewal across your entire portfolio.</p>
+        </div>
+
+        <div class="bg-white rounded-xl p-6 border border-slate-200">
+          <p class="text-slate-900 text-sm font-semibold mb-2">SSL surprises</p>
+          <p class="text-slate-500 text-sm leading-relaxed">The site goes red-padlock on a Friday afternoon. The cert expired. Nobody knew it wasn&rsquo;t on auto-renew. Nobody knew who managed it. SiteGov monitors SSL expiry and surfaces the asset, the issuer, and the governance record so you&rsquo;re never the last to find out.</p>
+        </div>
+
+        <div class="bg-white rounded-xl p-6 border border-slate-200">
+          <p class="text-slate-900 text-sm font-semibold mb-2">Lost admin access</p>
+          <p class="text-slate-500 text-sm leading-relaxed">The primary admin left eight months ago. The backup admin was never documented. Account recovery requires identity verification the client can&rsquo;t pass. SiteGov governance records require a named backup admin for every critical asset &mdash; so there&rsquo;s always a second key.</p>
+        </div>
+
+        <div class="bg-white rounded-xl p-6 border border-slate-200">
+          <p class="text-slate-900 text-sm font-semibold mb-2">Knowledge walking out the door</p>
+          <p class="text-slate-500 text-sm leading-relaxed">One person knew where everything was. That person is gone. SiteGov is where that knowledge lives instead &mdash; structured, current, and not dependent on any one person staying at the company.</p>
+        </div>
+
+      </div>
+
+      <div class="bg-white rounded-xl border border-slate-200 px-6 py-5 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+        <p class="text-slate-600 text-sm font-medium">The gaps are already there. SiteGov makes them visible before they become problems.</p>
+        <a href="/signup" class="inline-flex items-center justify-center px-5 py-2.5 bg-slate-900 text-white text-sm font-semibold rounded-lg hover:bg-slate-700 transition-colors shrink-0">
+          Run a free governance scan
+        </a>
+      </div>
+
+    </div>
+  </section>
+
   <!-- Agency use cases -->
   <section id="use-cases" class="bg-slate-950 text-white py-24">
     <div class="max-w-6xl mx-auto px-6">
