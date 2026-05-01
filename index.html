@@ -192,7 +192,10 @@
             A clear record of who controls what, across every client site.
           </h2>
           <p class="text-slate-500 text-lg leading-relaxed mb-4">
-            Not compliance paperwork. Not a ticketing system. A maintained record of who controls every provider behind every client site, built from automated scans and kept current by your team.
+            Not compliance paperwork. Not a new workflow. A maintained record of who controls every provider behind every client site, built from automated scans and kept current by your team.
+          </p>
+          <p class="text-slate-500 text-base leading-relaxed mb-4">
+            Most agencies already have a version of this: a spreadsheet, a shared doc, a Notion page last updated before the previous project kicked off. SiteGov replaces the part that doesn&rsquo;t work &mdash; the gap between what someone typed and what&rsquo;s actually running right now. The scan reads what&rsquo;s live. You add who&rsquo;s responsible. That&rsquo;s the whole system.
           </p>
           <p class="text-slate-500 text-base leading-relaxed mb-8">
             Scan a domain and SiteGov maps the registrar, DNS, hosting, email platform, and SSL authority from live data. Then document who manages each asset: who the backup admin is, where credentials are stored, whether MFA is confirmed. One governance record per asset. When a project needs to move, the information is already there.
@@ -432,6 +435,29 @@
         <p class="text-slate-500 text-lg leading-relaxed">From kickoff scans to go-live days to annual reviews. Every feature fits a situation agencies already deal with.</p>
       </div>
       <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+
+        <div class="bg-teal-50 rounded-2xl p-7 border border-teal-200 sm:col-span-2 lg:col-span-3 flex flex-col lg:flex-row lg:items-start lg:gap-12">
+          <div class="flex-1">
+            <div class="flex items-center gap-2.5 mb-2">
+              <h3 class="font-semibold text-slate-900">Infrastructure Change Alerts</h3>
+              <span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full text-xs font-medium bg-teal-100 text-teal-700">
+                <span class="w-1.5 h-1.5 rounded-full bg-teal-500 inline-block"></span>
+                Live monitoring
+              </span>
+            </div>
+            <p class="text-slate-600 text-sm leading-relaxed">When a client&rsquo;s nameservers, registrar, IP addresses, CNAME chain, or domain lock status changes between scans, SiteGov detects it immediately and emails your team. Silent infrastructure changes &mdash; a DNS hijack, a registrar transfer, a nameserver swap nobody authorized &mdash; are caught before they become an incident. This is the scenario that shouldn&rsquo;t be possible to miss.</p>
+          </div>
+          <div class="mt-6 lg:mt-0 lg:w-64 shrink-0">
+            <p class="text-teal-800 text-xs font-semibold uppercase tracking-wider mb-3">What triggers an alert</p>
+            <ul class="space-y-2">
+              <li class="flex items-center gap-2 text-slate-600 text-xs"><span class="w-1 h-1 rounded-full bg-teal-500 shrink-0"></span>Registrar changed</li>
+              <li class="flex items-center gap-2 text-slate-600 text-xs"><span class="w-1 h-1 rounded-full bg-teal-500 shrink-0"></span>Nameservers replaced</li>
+              <li class="flex items-center gap-2 text-slate-600 text-xs"><span class="w-1 h-1 rounded-full bg-teal-500 shrink-0"></span>IP addresses changed</li>
+              <li class="flex items-center gap-2 text-slate-600 text-xs"><span class="w-1 h-1 rounded-full bg-teal-500 shrink-0"></span>CNAME chain modified</li>
+              <li class="flex items-center gap-2 text-slate-600 text-xs"><span class="w-1 h-1 rounded-full bg-teal-500 shrink-0"></span>Domain lock status changed</li>
+            </ul>
+          </div>
+        </div>
 
         <div class="bg-white rounded-2xl p-7 border border-slate-200">
           <h3 class="font-semibold text-slate-900 mb-2">Infrastructure Scan</h3>
@@ -888,6 +914,44 @@
         <div class="flex items-start gap-4 p-5 rounded-xl border border-slate-200 sm:col-span-2 lg:col-span-3">
           <span class="w-2 h-2 mt-1.5 rounded-full bg-slate-300 shrink-0"></span>
           <p class="text-slate-600 text-sm leading-relaxed">A new project kicks off and nobody on the team knows who owns the SSL certificate, whether it auto-renews, or frankly which account it&rsquo;s even in</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="bg-white border-t border-slate-100 py-24">
+    <div class="max-w-3xl mx-auto px-6">
+      <div class="mb-14">
+        <p class="text-xs font-semibold uppercase tracking-widest text-slate-400 mb-4">Common questions</p>
+        <h2 class="text-4xl font-bold leading-tight">What agencies usually ask.</h2>
+      </div>
+      <div class="divide-y divide-slate-100">
+
+        <div class="py-7">
+          <h3 class="text-slate-900 font-semibold mb-3">We already have a spreadsheet for this.</h3>
+          <p class="text-slate-500 text-sm leading-relaxed">A spreadsheet holds what someone typed. SiteGov holds what&rsquo;s actually running. It finds the DNS provider your spreadsheet doesn&rsquo;t list, the SSL cert expiring in 11 days, and the nameserver that changed last Tuesday. The spreadsheet is a good intention. SiteGov is a live record.</p>
+        </div>
+
+        <div class="py-7">
+          <h3 class="text-slate-900 font-semibold mb-3">Our clients manage their own infrastructure &mdash; this isn&rsquo;t our problem.</h3>
+          <p class="text-slate-500 text-sm leading-relaxed">Most agencies say that until a migration stalls because the client can&rsquo;t find the registrar login, or a domain renewal lapses because it was registered under an email address nobody checks. SiteGov maps the control layer before you need it, not after you&rsquo;re already on a call trying to recover it.</p>
+        </div>
+
+        <div class="py-7">
+          <h3 class="text-slate-900 font-semibold mb-3">We&rsquo;d have to enter all of this manually.</h3>
+          <p class="text-slate-500 text-sm leading-relaxed">The scan is automatic. SiteGov probes the domain and populates registrar, DNS provider, nameservers, hosting, SSL, and email infrastructure without manual entry. What you add is the governance layer: who has the login, MFA status, credential location. That part takes minutes per domain, once, and stays current.</p>
+        </div>
+
+        <div class="py-7">
+          <h3 class="text-slate-900 font-semibold mb-3">What happens to our client&rsquo;s data if the relationship ends?</h3>
+          <p class="text-slate-500 text-sm leading-relaxed">The governance record belongs to the domain owner, not the agency that built it. If the relationship ends, the record transfers to the client &mdash; not lost, not locked. Think of it like medical records: the provider maintains them, but they belong to the patient. Your client&rsquo;s infrastructure history is theirs to keep.</p>
+        </div>
+
+        <div class="py-7">
+          <h3 class="text-slate-900 font-semibold mb-3">We only work with technically sophisticated clients. They handle this themselves.</h3>
+          <p class="text-slate-500 text-sm leading-relaxed">Technically sophisticated clients still forget to document who controls their infrastructure. The problem isn&rsquo;t knowledge &mdash; it&rsquo;s the operational habit of recording it before the moment it matters. SiteGov is the habit, not a replacement for competence.</p>
         </div>
 
       </div>
