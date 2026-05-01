@@ -1,0 +1,279 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="Pricing — SiteGov"
+  description="Simple, predictable pricing for agencies tracking client infrastructure. Start free, upgrade as your portfolio grows."
+  currentPage="Pricing"
+>
+
+  <!-- Hero -->
+  <section class="bg-slate-950 text-white py-20">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="max-w-3xl">
+        <p class="text-xs font-semibold uppercase tracking-widest text-slate-500 mb-4">Pricing</p>
+        <h1 class="text-5xl font-bold leading-tight tracking-tight mb-6">
+          Simple pricing. No surprises.
+        </h1>
+        <p class="text-lg text-slate-400 leading-relaxed">
+          Start free with your first domain scan. Upgrade when you need more clients, more seats, or recurring scans across your portfolio.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing tiers -->
+  <section class="py-24 border-b border-slate-100">
+    <div class="max-w-6xl mx-auto px-6">
+
+      <!--
+        STRIPE PRICING TABLE
+        When ready, replace the placeholder cards below with your Stripe Pricing Table embed:
+
+        <script async src="https://js.stripe.com/v3/pricing-table.js"></script>
+        <stripe-pricing-table
+          pricing-table-id="prctbl_XXXXXXXXXXXXXXXX"
+          publishable-key="pk_live_XXXXXXXXXXXXXXXX">
+        </stripe-pricing-table>
+
+        Or use Stripe Payment Links for a simpler setup:
+        Link each CTA button below to the corresponding Stripe Payment Link URL.
+      -->
+
+      <div class="grid md:grid-cols-3 gap-6 mb-12">
+
+        <!-- Starter -->
+        <div class="bg-white rounded-2xl border border-slate-200 p-8 flex flex-col">
+          <div class="mb-6">
+            <h2 class="text-slate-900 font-semibold text-lg mb-1">Starter</h2>
+            <p class="text-slate-500 text-sm leading-relaxed">For agencies with a handful of clients who want to stop guessing.</p>
+          </div>
+          <div class="mb-8">
+            <span class="text-4xl font-bold text-slate-900">$29</span>
+            <span class="text-slate-500 text-sm ml-1">/ month</span>
+            <p class="text-slate-400 text-xs mt-1">Billed monthly. Cancel anytime.</p>
+          </div>
+          <ul class="space-y-3 mb-8 flex-1">
+            <li class="flex items-start gap-2.5 text-slate-600 text-sm">
+              <svg class="w-4 h-4 text-teal-500 mt-0.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" /></svg>
+              Up to 10 client domains
+            </li>
+            <li class="flex items-start gap-2.5 text-slate-600 text-sm">
+              <svg class="w-4 h-4 text-teal-500 mt-0.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" /></svg>
+              Full infrastructure scan (DNS, SSL, registrar, hosting, email)
+            </li>
+            <li class="flex items-start gap-2.5 text-slate-600 text-sm">
+              <svg class="w-4 h-4 text-teal-500 mt-0.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" /></svg>
+              Governance records per asset
+            </li>
+            <li class="flex items-start gap-2.5 text-slate-600 text-sm">
+              <svg class="w-4 h-4 text-teal-500 mt-0.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" /></svg>
+              DACS score per domain
+            </li>
+            <li class="flex items-start gap-2.5 text-slate-600 text-sm">
+              <svg class="w-4 h-4 text-teal-500 mt-0.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" /></svg>
+              2 team seats
+            </li>
+          </ul>
+          <a href="/signup" class="inline-flex items-center justify-center px-5 py-3 bg-slate-900 text-white text-sm font-semibold rounded-lg hover:bg-slate-700 transition-colors">
+            Get started
+          </a>
+        </div>
+
+        <!-- Growth -->
+        <div class="bg-slate-900 rounded-2xl border border-slate-700 p-8 flex flex-col relative">
+          <div class="absolute -top-3 left-1/2 -translate-x-1/2">
+            <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-teal-400 text-slate-900">Most popular</span>
+          </div>
+          <div class="mb-6">
+            <h2 class="text-white font-semibold text-lg mb-1">Growth</h2>
+            <p class="text-slate-400 text-sm leading-relaxed">For growing agencies tracking a full client portfolio.</p>
+          </div>
+          <div class="mb-8">
+            <span class="text-4xl font-bold text-white">$79</span>
+            <span class="text-slate-400 text-sm ml-1">/ month</span>
+            <p class="text-slate-500 text-xs mt-1">Billed monthly. Cancel anytime.</p>
+          </div>
+          <ul class="space-y-3 mb-8 flex-1">
+            <li class="flex items-start gap-2.5 text-slate-300 text-sm">
+              <svg class="w-4 h-4 text-teal-400 mt-0.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" /></svg>
+              Up to 50 client domains
+            </li>
+            <li class="flex items-start gap-2.5 text-slate-300 text-sm">
+              <svg class="w-4 h-4 text-teal-400 mt-0.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" /></svg>
+              Everything in Starter
+            </li>
+            <li class="flex items-start gap-2.5 text-slate-300 text-sm">
+              <svg class="w-4 h-4 text-teal-400 mt-0.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" /></svg>
+              Infrastructure change alerts
+            </li>
+            <li class="flex items-start gap-2.5 text-slate-300 text-sm">
+              <svg class="w-4 h-4 text-teal-400 mt-0.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" /></svg>
+              Weekly risk digest emails
+            </li>
+            <li class="flex items-start gap-2.5 text-slate-300 text-sm">
+              <svg class="w-4 h-4 text-teal-400 mt-0.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" /></svg>
+              Risk timeline per domain
+            </li>
+            <li class="flex items-start gap-2.5 text-slate-300 text-sm">
+              <svg class="w-4 h-4 text-teal-400 mt-0.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" /></svg>
+              5 team seats
+            </li>
+          </ul>
+          <a href="/signup" class="inline-flex items-center justify-center px-5 py-3 bg-white text-slate-900 text-sm font-semibold rounded-lg hover:bg-slate-100 transition-colors">
+            Get started
+          </a>
+        </div>
+
+        <!-- Agency -->
+        <div class="bg-white rounded-2xl border border-slate-200 p-8 flex flex-col">
+          <div class="mb-6">
+            <h2 class="text-slate-900 font-semibold text-lg mb-1">Agency</h2>
+            <p class="text-slate-500 text-sm leading-relaxed">For larger agencies managing infrastructure across hundreds of client sites.</p>
+          </div>
+          <div class="mb-8">
+            <span class="text-4xl font-bold text-slate-900">$199</span>
+            <span class="text-slate-500 text-sm ml-1">/ month</span>
+            <p class="text-slate-400 text-xs mt-1">Billed monthly. Cancel anytime.</p>
+          </div>
+          <ul class="space-y-3 mb-8 flex-1">
+            <li class="flex items-start gap-2.5 text-slate-600 text-sm">
+              <svg class="w-4 h-4 text-teal-500 mt-0.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" /></svg>
+              Unlimited client domains
+            </li>
+            <li class="flex items-start gap-2.5 text-slate-600 text-sm">
+              <svg class="w-4 h-4 text-teal-500 mt-0.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" /></svg>
+              Everything in Growth
+            </li>
+            <li class="flex items-start gap-2.5 text-slate-600 text-sm">
+              <svg class="w-4 h-4 text-teal-500 mt-0.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" /></svg>
+              CSV &amp; bulk import
+            </li>
+            <li class="flex items-start gap-2.5 text-slate-600 text-sm">
+              <svg class="w-4 h-4 text-teal-500 mt-0.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" /></svg>
+              Priority support
+            </li>
+            <li class="flex items-start gap-2.5 text-slate-600 text-sm">
+              <svg class="w-4 h-4 text-teal-500 mt-0.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" /></svg>
+              Unlimited team seats
+            </li>
+          </ul>
+          <a href="/signup" class="inline-flex items-center justify-center px-5 py-3 bg-slate-900 text-white text-sm font-semibold rounded-lg hover:bg-slate-700 transition-colors">
+            Get started
+          </a>
+        </div>
+
+      </div>
+
+      <div class="bg-slate-50 rounded-xl border border-slate-200 px-6 py-5 text-center">
+        <p class="text-slate-600 text-sm">Not sure which plan is right? <a href="mailto:hello@sitegov.com" class="text-slate-900 font-medium hover:underline">Email us</a> and we&rsquo;ll help you figure it out. No sales call required.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Free scan callout -->
+  <section class="py-20 border-b border-slate-100">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div>
+          <p class="text-xs font-semibold uppercase tracking-widest text-slate-400 mb-4">Before you commit</p>
+          <h2 class="text-3xl font-bold leading-tight mb-4">Run your first scan free.</h2>
+          <p class="text-slate-500 text-lg leading-relaxed mb-6">
+            Add a domain and see exactly what SiteGov surfaces in under five minutes. No credit card. No time limit on the scan. You&rsquo;ll see the full infrastructure map and every governance gap on day one.
+          </p>
+          <a href="/signup" class="inline-flex items-center justify-center px-6 py-3.5 bg-slate-900 text-white text-sm font-semibold rounded-lg hover:bg-slate-700 transition-colors">
+            Run a free infrastructure scan
+          </a>
+          <p class="text-xs text-slate-400 mt-3">No credit card required.</p>
+        </div>
+        <div class="bg-slate-50 rounded-2xl border border-slate-200 p-6">
+          <p class="text-slate-400 text-xs uppercase tracking-widest mb-4">What the free scan shows you</p>
+          <ul class="space-y-3">
+            <li class="flex items-start gap-3 text-slate-600 text-sm">
+              <span class="w-1.5 h-1.5 mt-1.5 rounded-full bg-teal-500 shrink-0"></span>
+              Registrar, DNS provider, hosting platform, SSL authority, and email system &mdash; from live data
+            </li>
+            <li class="flex items-start gap-3 text-slate-600 text-sm">
+              <span class="w-1.5 h-1.5 mt-1.5 rounded-full bg-teal-500 shrink-0"></span>
+              SSL expiry status and whether auto-renew is detectable
+            </li>
+            <li class="flex items-start gap-3 text-slate-600 text-sm">
+              <span class="w-1.5 h-1.5 mt-1.5 rounded-full bg-teal-500 shrink-0"></span>
+              DNSSEC and email authentication (SPF, DMARC) status
+            </li>
+            <li class="flex items-start gap-3 text-slate-600 text-sm">
+              <span class="w-1.5 h-1.5 mt-1.5 rounded-full bg-teal-500 shrink-0"></span>
+              Open infrastructure findings ranked by severity
+            </li>
+            <li class="flex items-start gap-3 text-slate-600 text-sm">
+              <span class="w-1.5 h-1.5 mt-1.5 rounded-full bg-teal-500 shrink-0"></span>
+              DACS score (0&ndash;100) showing overall infrastructure health
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="bg-white border-t border-slate-100 py-20">
+    <div class="max-w-3xl mx-auto px-6">
+      <div class="mb-12">
+        <p class="text-xs font-semibold uppercase tracking-widest text-slate-400 mb-4">Pricing questions</p>
+        <h2 class="text-3xl font-bold leading-tight">What people ask before signing up.</h2>
+      </div>
+      <div class="divide-y divide-slate-100">
+
+        <div class="py-7">
+          <h3 class="text-slate-900 font-semibold mb-3">What counts as a domain?</h3>
+          <p class="text-slate-500 text-sm leading-relaxed">Each hostname you add to SiteGov counts as one domain. If you track both acmebuilders.com and www.acmebuilders.com, that&rsquo;s two domains. Root domain governance data (registrar, DNS, WHOIS) is shared across subdomains of the same root, so you&rsquo;re not duplicating effort &mdash; just tracking coverage where it matters.</p>
+        </div>
+
+        <div class="py-7">
+          <h3 class="text-slate-900 font-semibold mb-3">Can I change plans later?</h3>
+          <p class="text-slate-500 text-sm leading-relaxed">Yes. Upgrade or downgrade at any time. If you upgrade mid-cycle, you&rsquo;re prorated for the remainder of the month. If you downgrade and have more domains than your new plan allows, you&rsquo;ll be prompted to remove the excess before the change takes effect.</p>
+        </div>
+
+        <div class="py-7">
+          <h3 class="text-slate-900 font-semibold mb-3">What happens to my data if I cancel?</h3>
+          <p class="text-slate-500 text-sm leading-relaxed">Your governance records belong to the domain owner, not us. On cancellation, you can export your full record set before your account closes. Nothing is deleted for 30 days after cancellation in case you want to reactivate or export.</p>
+        </div>
+
+        <div class="py-7">
+          <h3 class="text-slate-900 font-semibold mb-3">Do you offer annual billing?</h3>
+          <p class="text-slate-500 text-sm leading-relaxed">Annual plans are available with two months free. <a href="mailto:hello@sitegov.com" class="text-slate-900 font-medium hover:underline">Email us</a> to get set up on annual billing.</p>
+        </div>
+
+        <div class="py-7">
+          <h3 class="text-slate-900 font-semibold mb-3">Is there a discount for larger agencies?</h3>
+          <p class="text-slate-500 text-sm leading-relaxed">If the Agency plan doesn&rsquo;t fit your situation &mdash; you have an unusually large portfolio or specific team structure &mdash; <a href="mailto:hello@sitegov.com" class="text-slate-900 font-medium hover:underline">get in touch</a> and we&rsquo;ll work something out.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Final CTA -->
+  <section class="bg-slate-50 border-t border-slate-200 py-24">
+    <div class="max-w-3xl mx-auto px-6 text-center">
+      <p class="text-xs font-semibold uppercase tracking-widest text-slate-400 mb-6">Get started</p>
+      <h2 class="text-4xl font-bold leading-tight mb-6">
+        Every client has a gap. Find yours in five minutes.
+      </h2>
+      <p class="text-slate-500 text-xl mb-10 leading-relaxed">
+        Add a domain and run your first scan free. No credit card required.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-3 justify-center">
+        <a href="/signup" class="inline-flex items-center justify-center px-8 py-4 bg-slate-900 text-white text-sm font-semibold rounded-lg hover:bg-slate-700 transition-colors">
+          Run a free infrastructure scan
+        </a>
+        <a href="/use-cases" class="inline-flex items-center justify-center px-8 py-4 bg-white text-slate-700 text-sm font-medium rounded-lg border border-slate-200 hover:border-slate-400 transition-colors">
+          See use cases
+        </a>
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>
