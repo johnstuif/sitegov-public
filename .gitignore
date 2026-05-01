@@ -1,0 +1,7 @@
+.astro/
+dist/
+node-modules/
+vendor/
+
+.env
+.env.local
