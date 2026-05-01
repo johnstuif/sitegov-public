@@ -1,0 +1,89 @@
+---
+interface Props {
+  title: string;
+  description: string;
+  ogTitle?: string;
+  ogDescription?: string;
+  currentPage?: string;
+}
+
+const {
+  title,
+  description,
+  ogTitle,
+  ogDescription,
+  currentPage = '',
+} = Astro.props;
+
+const navLinks = [
+  { href: '/#solution', label: 'How it works' },
+  { href: '/use-cases', label: 'Use Cases' },
+  { href: '/pricing', label: 'Pricing' },
+];
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    {ogTitle && <meta property="og:title" content={ogTitle} />}
+    {ogDescription && <meta property="og:description" content={ogDescription} />}
+    <meta property="og:type" content="website" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <style>
+      html { scroll-behavior: smooth; }
+    </style>
+  </head>
+  <body class="bg-white text-slate-900 antialiased">
+
+    <header class="sticky top-0 z-50 bg-white/90 backdrop-blur border-b border-slate-100">
+      <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+        <a href="/" class="font-semibold text-lg tracking-tight text-slate-900">SiteGov</a>
+        <nav class="hidden md:flex items-center gap-8 text-sm text-slate-600">
+          {navLinks.map(({ href, label }) => (
+            <a
+              href={href}
+              class={currentPage === label
+                ? 'text-slate-900 font-medium'
+                : 'hover:text-slate-900 transition-colors'}
+            >
+              {label}
+            </a>
+          ))}
+        </nav>
+        <div class="flex items-center gap-3">
+          <a href="/login" class="text-sm text-slate-600 hover:text-slate-900 transition-colors hidden sm:inline">Sign In</a>
+          <a href="/signup" class="inline-flex items-center px-4 py-2 bg-slate-900 text-white text-sm font-medium rounded-lg hover:bg-slate-700 transition-colors">
+            Run a Free Infrastructure Scan
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <slot />
+
+    <footer class="border-t border-slate-100 py-12">
+      <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-start md:items-center justify-between gap-8">
+        <div>
+          <p class="font-semibold text-slate-900 mb-1">SiteGov</p>
+          <p class="text-xs text-slate-500 max-w-xs">For agencies managing client domains, DNS, hosting, and SSL.</p>
+        </div>
+        <div class="flex flex-wrap gap-6 text-xs text-slate-400">
+          <a href="/#solution" class="hover:text-slate-700 transition-colors">How it works</a>
+          <a href="/use-cases" class="hover:text-slate-700 transition-colors">Use Cases</a>
+          <a href="/pricing" class="hover:text-slate-700 transition-colors">Pricing</a>
+          <a href="/login" class="hover:text-slate-700 transition-colors">Sign In</a>
+          <a href="/privacy" class="hover:text-slate-700 transition-colors">Privacy</a>
+          <a href="/terms" class="hover:text-slate-700 transition-colors">Terms</a>
+          <a href="mailto:hello@sitegov.com" class="hover:text-slate-700 transition-colors">Contact</a>
+        </div>
+      </div>
+    </footer>
+
+  </body>
+</html>
