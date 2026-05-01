@@ -195,7 +195,7 @@
             Not compliance paperwork. Not a new workflow. A maintained record of who controls every provider behind every client site, built from automated scans and kept current by your team.
           </p>
           <p class="text-slate-500 text-base leading-relaxed mb-4">
-            Most agencies already have a version of this: a spreadsheet, a shared doc, a Notion page last updated before the previous project kicked off. SiteGov replaces the part that doesn&rsquo;t work &mdash; the gap between what someone typed and what&rsquo;s actually running right now. The scan reads what&rsquo;s live. You add who&rsquo;s responsible. That&rsquo;s the whole system.
+            Most agencies already have a version of this: a spreadsheet, a shared doc, a Notion page last updated before the previous project kicked off. SiteGov replaces the part that doesn&rsquo;t work: the gap between what someone typed and what&rsquo;s actually running right now. The scan reads what&rsquo;s live. You add who&rsquo;s responsible. That&rsquo;s the whole system.
           </p>
           <p class="text-slate-500 text-base leading-relaxed mb-8">
             Scan a domain and SiteGov maps the registrar, DNS, hosting, email platform, and SSL authority from live data. Then document who manages each asset: who the backup admin is, where credentials are stored, whether MFA is confirmed. One governance record per asset. When a project needs to move, the information is already there.
@@ -445,7 +445,7 @@
                 Live monitoring
               </span>
             </div>
-            <p class="text-slate-600 text-sm leading-relaxed">When a client&rsquo;s nameservers, registrar, IP addresses, CNAME chain, or domain lock status changes between scans, SiteGov detects it immediately and emails your team. Silent infrastructure changes &mdash; a DNS hijack, a registrar transfer, a nameserver swap nobody authorized &mdash; are caught before they become an incident. This is the scenario that shouldn&rsquo;t be possible to miss.</p>
+            <p class="text-slate-600 text-sm leading-relaxed">When a client&rsquo;s nameservers, registrar, IP addresses, CNAME chain, or domain lock status changes between scans, SiteGov detects it immediately and emails your team. Silent infrastructure changes are caught before they become an incident: a DNS hijack, a registrar transfer, a nameserver swap nobody authorized. This is the scenario that shouldn&rsquo;t be possible to miss.</p>
           </div>
           <div class="mt-6 lg:mt-0 lg:w-64 shrink-0">
             <p class="text-teal-800 text-xs font-semibold uppercase tracking-wider mb-3">What triggers an alert</p>
@@ -935,23 +935,81 @@
         </div>
 
         <div class="py-7">
-          <h3 class="text-slate-900 font-semibold mb-3">Our clients manage their own infrastructure &mdash; this isn&rsquo;t our problem.</h3>
-          <p class="text-slate-500 text-sm leading-relaxed">Most agencies say that until a migration stalls because the client can&rsquo;t find the registrar login, or a domain renewal lapses because it was registered under an email address nobody checks. SiteGov maps the control layer before you need it, not after you&rsquo;re already on a call trying to recover it.</p>
+          <h3 class="text-slate-900 font-semibold mb-3">Our clients manage their own infrastructure. This isn&rsquo;t our problem.</h3>
+          <p class="text-slate-500 text-sm leading-relaxed">Most agencies say that until a migration stalls because the client can&rsquo;t find the registrar login, or a domain renewal lapses because it was registered under an email address nobody checks. SiteGov maps who controls what before you need it, not after you&rsquo;re already on a call trying to recover it.</p>
         </div>
 
         <div class="py-7">
           <h3 class="text-slate-900 font-semibold mb-3">We&rsquo;d have to enter all of this manually.</h3>
-          <p class="text-slate-500 text-sm leading-relaxed">The scan is automatic. SiteGov probes the domain and populates registrar, DNS provider, nameservers, hosting, SSL, and email infrastructure without manual entry. What you add is the governance layer: who has the login, MFA status, credential location. That part takes minutes per domain, once, and stays current.</p>
+          <p class="text-slate-500 text-sm leading-relaxed">The scan is automatic. SiteGov probes the domain and populates registrar, DNS provider, nameservers, hosting, SSL, and email infrastructure without manual entry. What you add is who controls each one: who has the login, MFA status, credential location. That part takes minutes per domain, once, and stays current.</p>
         </div>
 
         <div class="py-7">
           <h3 class="text-slate-900 font-semibold mb-3">What happens to our client&rsquo;s data if the relationship ends?</h3>
-          <p class="text-slate-500 text-sm leading-relaxed">The governance record belongs to the domain owner, not the agency that built it. If the relationship ends, the record transfers to the client &mdash; not lost, not locked. Think of it like medical records: the provider maintains them, but they belong to the patient. Your client&rsquo;s infrastructure history is theirs to keep.</p>
+          <p class="text-slate-500 text-sm leading-relaxed">The governance record belongs to the domain owner, not the agency that built it. If the relationship ends, the record transfers to the client. It&rsquo;s not lost, and it&rsquo;s not locked in. Think of it like medical records: the provider maintains them, but they belong to the patient. Your client&rsquo;s infrastructure history is theirs to keep.</p>
         </div>
 
         <div class="py-7">
           <h3 class="text-slate-900 font-semibold mb-3">We only work with technically sophisticated clients. They handle this themselves.</h3>
-          <p class="text-slate-500 text-sm leading-relaxed">Technically sophisticated clients still forget to document who controls their infrastructure. The problem isn&rsquo;t knowledge &mdash; it&rsquo;s the operational habit of recording it before the moment it matters. SiteGov is the habit, not a replacement for competence.</p>
+          <p class="text-slate-500 text-sm leading-relaxed">Technically sophisticated clients still forget to document who controls their infrastructure. The problem isn&rsquo;t knowledge. It&rsquo;s the operational habit of recording it before the moment it matters. SiteGov is the habit, not a replacement for competence.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Part 2: Understanding SiteGov -->
+  <section class="bg-slate-50 border-t border-slate-100 py-24">
+    <div class="max-w-3xl mx-auto px-6">
+      <div class="mb-14">
+        <p class="text-xs font-semibold uppercase tracking-widest text-slate-400 mb-4">Understanding SiteGov</p>
+        <h2 class="text-4xl font-bold leading-tight">The questions behind the question.</h2>
+      </div>
+      <div class="divide-y divide-slate-200">
+
+        <div class="py-7">
+          <h3 class="text-slate-900 font-semibold mb-3">What is website infrastructure tracking?</h3>
+          <p class="text-slate-500 text-sm leading-relaxed">Website infrastructure tracking is the practice of documenting who controls every system behind a domain: who registered it, who manages the DNS, who runs the hosting, who owns the SSL cert, and who holds the credentials for each. Most organizations have this knowledge scattered across people&rsquo;s heads, email threads, and stale spreadsheets. SiteGov makes it explicit and accessible before the moment it&rsquo;s needed.</p>
+        </div>
+
+        <div class="py-7">
+          <h3 class="text-slate-900 font-semibold mb-3">What does SiteGov actually track?</h3>
+          <p class="text-slate-500 text-sm leading-relaxed">On the infrastructure side: registrar, domain expiry, DNSSEC status, DNS provider, nameservers, MX records, email authentication (SPF, DMARC), hosting provider, SSL certificate authority, and expiry. For each asset, your team documents who&rsquo;s the primary admin, who&rsquo;s the backup, MFA status, credential location, and whether access recovery is in place. Scans run automatically. Governance records are maintained by your team.</p>
+        </div>
+
+        <div class="py-7">
+          <h3 class="text-slate-900 font-semibold mb-3">Is this for agencies or internal teams?</h3>
+          <p class="text-slate-500 text-sm leading-relaxed">Both, but the friction is different. Agencies use SiteGov to maintain a live map across a client portfolio, catching gaps before a migration, a renewal, or an account change surfaces them. Internal teams use it to document who controls what across their own domains and subdomains, especially as vendor relationships and team members change. The underlying problem is the same either way.</p>
+        </div>
+
+        <div class="py-7">
+          <h3 class="text-slate-900 font-semibold mb-3">Is this a security tool?</h3>
+          <p class="text-slate-500 text-sm leading-relaxed">Not primarily. Security tools look for vulnerabilities: open ports, malware, injection risks. SiteGov looks for access gaps: expired certs, missing backup admins, undocumented credentials, former employees still listed as primary contacts. The distinction matters. A site can pass a security scan and still be inaccessible the moment the one person who knows the registrar login leaves the company.</p>
+        </div>
+
+        <div class="py-7">
+          <h3 class="text-slate-900 font-semibold mb-3">Does this replace password managers?</h3>
+          <p class="text-slate-500 text-sm leading-relaxed">No. A password manager stores credentials. SiteGov documents that credentials exist, who holds them, where they&rsquo;re stored, and whether access recovery is documented. It answers &ldquo;do we have access?&rdquo; without holding the passwords themselves. The two tools are complementary: use a password manager to store credentials, use SiteGov to confirm the right people have access and every account has a named owner.</p>
+        </div>
+
+        <div class="py-7">
+          <h3 class="text-slate-900 font-semibold mb-3">Why separate domain ownership from DNS control?</h3>
+          <p class="text-slate-500 text-sm leading-relaxed">Because they&rsquo;re often different people. The domain might be registered under a founder&rsquo;s personal email. DNS might be managed by a vendor the client switched last year. Hosting might be on a developer&rsquo;s agency account. Each is a separate access point, and any one of them can fail independently. When they&rsquo;re documented separately, you can see the full picture. When they&rsquo;re assumed to be the same, you find out they&rsquo;re not at the worst possible time.</p>
+        </div>
+
+        <div class="py-7">
+          <h3 class="text-slate-900 font-semibold mb-3">How does this help with migrations or go-lives?</h3>
+          <p class="text-slate-500 text-sm leading-relaxed">Most migration delays come from access problems discovered mid-project: the client can&rsquo;t find the registrar login, DNS is at a provider nobody has access to, or the SSL cert is managed by a developer who left. SiteGov maps all of that before the project starts. You walk into a migration knowing exactly what you&rsquo;re working with, who needs to be involved, and where the gaps are, not discovering them once the project is already live.</p>
+        </div>
+
+        <div class="py-7">
+          <h3 class="text-slate-900 font-semibold mb-3">What kinds of risks does this surface?</h3>
+          <p class="text-slate-500 text-sm leading-relaxed">Expiring SSL certificates. Domains approaching renewal without a documented owner. Missing backup admin contacts. Former employees still listed as primary admins. Unverified MFA on critical systems. DNS providers that changed without documentation. Credentials with no documented recovery path. These aren&rsquo;t edge cases. They&rsquo;re the things that actually block projects and cause incidents.</p>
+        </div>
+
+        <div class="py-7">
+          <h3 class="text-slate-900 font-semibold mb-3">How does this help prevent vendor lock-in?</h3>
+          <p class="text-slate-500 text-sm leading-relaxed">When you can&rsquo;t move a client because you don&rsquo;t have access to the systems that need to change, that&rsquo;s lock-in, regardless of contract terms. SiteGov makes the full picture legible: every vendor relationship is documented, every access point recorded, every dependency visible. When a client wants to switch hosting, you know exactly what needs to change and who needs to do it. The map is the antidote to lock-in.</p>
         </div>
 
       </div>
