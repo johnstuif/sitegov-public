@@ -1,14 +1,7 @@
-.astro/
-dist/
-node-modules/
-vendor/
-
-.env
-.env.localnode_modules/
-dist/
-.astro/
-
 node_modules/
 dist/
 .astro/
+
+.env
+.env.local
 .DS_Store

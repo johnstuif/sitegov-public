@@ -83,12 +83,33 @@ The `/pricing` page has placeholder tier cards. When you're ready to connect Str
 1. Create Payment Links for each plan in Stripe
 2. Point each tier's CTA button `href` to its Payment Link URL
 
-## Deploying
+## Deploying to Cloudflare Pages
 
-The site builds to static HTML in `dist/`. It can be hosted anywhere that serves static files:
+The site builds to static HTML in `dist/`. In Cloudflare Pages, use:
 
-- **Netlify / Vercel**: connect the repo, set build command to `npm run build`, publish directory to `dist`
-- **Kamal / self-hosted**: `npm run build` and serve the `dist/` folder with nginx or caddy
+| Setting | Value |
+|---|---|
+| Framework preset | `Astro` |
+| Build command | `npm run build` |
+| Build output directory | `dist` |
+| Root directory | repository root, or `sitegov-public` if this lives in a monorepo |
+
+Cloudflare Pages will deploy the production branch automatically on pushes and create preview deployments for pull requests.
+
+For direct deploys with Wrangler:
+
+```bash
+npm run build
+npx wrangler pages deploy dist --project-name sitegov-public
+```
+
+There is also a local script:
+
+```bash
+npm run pages:deploy
+```
+
+The `wrangler.jsonc` file pins the Pages project name and output directory for Wrangler-based deploys.
 
 ## What's in `vendor/`
 
