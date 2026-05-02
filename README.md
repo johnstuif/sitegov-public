@@ -96,7 +96,13 @@ The site builds to static HTML in `dist/`. In Cloudflare Pages, use:
 
 Cloudflare Pages will deploy the production branch automatically on pushes and create preview deployments for pull requests.
 
-For direct deploys with Wrangler:
+For a Git-connected Pages project, leave any custom deploy command blank if the dashboard allows it. If the dashboard requires a deploy command, use a no-op command so Cloudflare can publish the configured output directory:
+
+```bash
+echo "Cloudflare Pages will publish dist"
+```
+
+For direct deploys with Wrangler, use an API token with `Account > Cloudflare Pages > Edit` permission:
 
 ```bash
 npm run build
@@ -109,7 +115,7 @@ There is also a local script:
 npm run pages:deploy
 ```
 
-The `wrangler.jsonc` file pins the Pages project name and output directory for Wrangler-based deploys.
+The `wrangler.toml` file pins the Pages project name and output directory for Wrangler-based deploys.
 
 ## What's in `vendor/`
 
