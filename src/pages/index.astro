@@ -609,21 +609,6 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         </div>
 
         <div class="py-7">
-          <h3 class="text-slate-900 font-semibold mb-3">What does SiteGov actually track?</h3>
-          <p class="text-slate-500 text-sm leading-relaxed">On the infrastructure side: registrar, domain expiry, DNSSEC status, DNS provider, nameservers, MX records, email authentication (SPF, DMARC), hosting provider, SSL certificate authority, and expiry. For each asset, your team documents who&rsquo;s the primary admin, who&rsquo;s the backup, MFA status, credential location, and whether access recovery is in place. Scans run automatically. Governance records are maintained by your team.</p>
-        </div>
-
-        <div class="py-7">
-          <h3 class="text-slate-900 font-semibold mb-3">Is this a security tool?</h3>
-          <p class="text-slate-500 text-sm leading-relaxed">Not primarily. Security tools look for vulnerabilities: open ports, malware, injection risks. SiteGov looks for access gaps: expired certs, missing backup admins, undocumented credentials, former employees still listed as primary contacts. A site can pass a security scan and still be inaccessible the moment the one person who knows the registrar login leaves the company.</p>
-        </div>
-
-        <div class="py-7">
-          <h3 class="text-slate-900 font-semibold mb-3">Does this replace password managers?</h3>
-          <p class="text-slate-500 text-sm leading-relaxed">No. A password manager stores credentials. SiteGov documents that credentials exist, who holds them, where they&rsquo;re stored, and whether access recovery is documented. It answers &ldquo;do we have access?&rdquo; without holding the passwords themselves. The two tools are complementary: use a password manager to store credentials, use SiteGov to confirm the right people have access and every account has a named owner.</p>
-        </div>
-
-        <div class="py-7">
           <h3 class="text-slate-900 font-semibold mb-3">What happens to our client&rsquo;s data if the relationship ends?</h3>
           <p class="text-slate-500 text-sm leading-relaxed">The governance record belongs to the domain owner, not the agency that built it. If the relationship ends, the record transfers to the client. It&rsquo;s not lost, and it&rsquo;s not locked in. Think of it like medical records: the provider maintains them, but they belong to the patient. Your client&rsquo;s infrastructure history is theirs to keep.</p>
         </div>
