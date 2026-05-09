@@ -35,9 +35,44 @@ const navLinks = [
     <meta property="og:type" content="website" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-    <style>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <style is:global>
       html { scroll-behavior: smooth; }
+
+      /* Corner bracket frames — amber for dark cards, teal for light cards.
+         Each corner uses two layers: a horizontal stroke and a vertical stroke.
+         The vertical stroke is offset by 2px so it starts where the horizontal ends,
+         preventing the semi-transparent layers from doubling up at the corner pixel. */
+      .frame-amber {
+        background-image:
+          linear-gradient(rgb(245 158 11 / 0.5), rgb(245 158 11 / 0.5)),
+          linear-gradient(rgb(245 158 11 / 0.5), rgb(245 158 11 / 0.5)),
+          linear-gradient(rgb(245 158 11 / 0.5), rgb(245 158 11 / 0.5)),
+          linear-gradient(rgb(245 158 11 / 0.5), rgb(245 158 11 / 0.5)),
+          linear-gradient(rgb(245 158 11 / 0.5), rgb(245 158 11 / 0.5)),
+          linear-gradient(rgb(245 158 11 / 0.5), rgb(245 158 11 / 0.5)),
+          linear-gradient(rgb(245 158 11 / 0.5), rgb(245 158 11 / 0.5)),
+          linear-gradient(rgb(245 158 11 / 0.5), rgb(245 158 11 / 0.5));
+        background-size:     16px 2px, 2px 14px, 16px 2px, 2px 14px, 16px 2px, 2px 14px, 16px 2px, 2px 14px;
+        background-position: top left, 0px 2px, top right, right 0px top 2px, bottom left, left 0px bottom 2px, bottom right, right 0px bottom 2px;
+        background-repeat: no-repeat;
+        background-origin: border-box;
+      }
+      .frame-teal {
+        background-image:
+          linear-gradient(rgb(20 184 166 / 0.5), rgb(20 184 166 / 0.5)),
+          linear-gradient(rgb(20 184 166 / 0.5), rgb(20 184 166 / 0.5)),
+          linear-gradient(rgb(20 184 166 / 0.5), rgb(20 184 166 / 0.5)),
+          linear-gradient(rgb(20 184 166 / 0.5), rgb(20 184 166 / 0.5)),
+          linear-gradient(rgb(20 184 166 / 0.5), rgb(20 184 166 / 0.5)),
+          linear-gradient(rgb(20 184 166 / 0.5), rgb(20 184 166 / 0.5)),
+          linear-gradient(rgb(20 184 166 / 0.5), rgb(20 184 166 / 0.5)),
+          linear-gradient(rgb(20 184 166 / 0.5), rgb(20 184 166 / 0.5));
+        background-size:     16px 2px, 2px 14px, 16px 2px, 2px 14px, 16px 2px, 2px 14px, 16px 2px, 2px 14px;
+        background-position: top left, 0px 2px, top right, right 0px top 2px, bottom left, left 0px bottom 2px, bottom right, right 0px bottom 2px;
+        background-repeat: no-repeat;
+        background-origin: border-box;
+      }
     </style>
   </head>
   <body class="bg-white text-slate-900 antialiased">

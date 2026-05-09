@@ -28,27 +28,27 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     <div class="max-w-6xl mx-auto px-6">
       <p class="text-xs font-semibold uppercase tracking-widest text-slate-500 mb-7">Does any of this sound familiar?</p>
       <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-3">
-        <div class="flex items-start gap-3 bg-slate-800/50 rounded-xl px-4 py-3.5">
+        <div class="flex items-start gap-3 bg-slate-800/50 px-4 py-3.5 frame-amber">
           <span class="w-1.5 h-1.5 mt-1.5 rounded-full bg-red-500 shrink-0"></span>
           <p class="text-slate-300 text-sm leading-relaxed">A launch is blocked because DNS is still controlled by a previous agency not returning emails</p>
         </div>
-        <div class="flex items-start gap-3 bg-slate-800/50 rounded-xl px-4 py-3.5">
+        <div class="flex items-start gap-3 bg-slate-800/50 px-4 py-3.5 frame-amber">
           <span class="w-1.5 h-1.5 mt-1.5 rounded-full bg-amber-500 shrink-0"></span>
           <p class="text-slate-300 text-sm leading-relaxed">A domain is about to expire and nobody is sure who holds the registrar account</p>
         </div>
-        <div class="flex items-start gap-3 bg-slate-800/50 rounded-xl px-4 py-3.5">
+        <div class="flex items-start gap-3 bg-slate-800/50 px-4 py-3.5 frame-amber">
           <span class="w-1.5 h-1.5 mt-1.5 rounded-full bg-amber-500 shrink-0"></span>
           <p class="text-slate-300 text-sm leading-relaxed">A provider account is inaccessible. There is no backup admin. There never was.</p>
         </div>
-        <div class="flex items-start gap-3 bg-slate-800/50 rounded-xl px-4 py-3.5">
+        <div class="flex items-start gap-3 bg-slate-800/50 px-4 py-3.5 frame-amber">
           <span class="w-1.5 h-1.5 mt-1.5 rounded-full bg-red-500 shrink-0"></span>
           <p class="text-slate-300 text-sm leading-relaxed">A client leaves and a clean handoff depends on documentation that does not exist</p>
         </div>
-        <div class="flex items-start gap-3 bg-slate-800/50 rounded-xl px-4 py-3.5">
+        <div class="flex items-start gap-3 bg-slate-800/50 px-4 py-3.5 frame-amber">
           <span class="w-1.5 h-1.5 mt-1.5 rounded-full bg-amber-500 shrink-0"></span>
           <p class="text-slate-300 text-sm leading-relaxed">A migration is underway and the hosting and DNS details are scattered across old emails</p>
         </div>
-        <div class="flex items-start gap-3 bg-slate-800/50 rounded-xl px-4 py-3.5">
+        <div class="flex items-start gap-3 bg-slate-800/50 px-4 py-3.5 frame-amber">
           <span class="w-1.5 h-1.5 mt-1.5 rounded-full bg-amber-500 shrink-0"></span>
           <p class="text-slate-300 text-sm leading-relaxed">A new project kicks off and nobody knows who owns the SSL certificate or whether it auto-renews</p>
         </div>
@@ -70,19 +70,19 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
       <div class="grid md:grid-cols-3 gap-5">
 
-        <div class="bg-white rounded-xl p-6 border border-slate-200">
+        <div class="bg-white p-6 frame-teal">
           <p class="text-slate-900 text-sm font-semibold mb-3">New client onboarding</p>
           <p class="text-slate-500 text-sm leading-relaxed mb-4">You take on a new client and spend the first two weeks figuring out what you&rsquo;ve inherited. Who registered the domain. Which DNS provider they&rsquo;re on. Whether the hosting account belongs to the client or the last agency.</p>
           <p class="text-teal-700 text-xs font-medium">SiteGov runs a structured scan on day one. Discovery takes minutes, not weeks.</p>
         </div>
 
-        <div class="bg-white rounded-xl p-6 border border-slate-200">
+        <div class="bg-white p-6 frame-teal">
           <p class="text-slate-900 text-sm font-semibold mb-3">Rebuilds and redesigns</p>
           <p class="text-slate-500 text-sm leading-relaxed mb-4">A new site is scoped. Before the timeline is set, someone needs to know who controls DNS, what platform the hosting is on, and who has the registrar login. Finding out mid-project adds weeks.</p>
           <p class="text-teal-700 text-xs font-medium">SiteGov surfaces who controls what before the project timeline is built, not after a cutover is blocked.</p>
         </div>
 
-        <div class="bg-white rounded-xl p-6 border border-slate-200">
+        <div class="bg-white p-6 frame-teal">
           <p class="text-slate-900 text-sm font-semibold mb-3">Annual infrastructure reviews</p>
           <p class="text-slate-500 text-sm leading-relaxed mb-4">At each renewal cycle or annual check-in, you need a current picture of who controls what, what&rsquo;s expiring, and what&rsquo;s undocumented. Assembling this from memory and old threads is not a repeatable process.</p>
           <p class="text-teal-700 text-xs font-medium">SiteGov gives you a current, structured record to review and present. A deliverable clients can actually see.</p>
@@ -106,19 +106,19 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
       <div class="grid md:grid-cols-3 gap-5">
 
-        <div class="bg-white rounded-xl p-6 border border-slate-200">
+        <div class="bg-white p-6 frame-teal">
           <p class="text-slate-900 text-sm font-semibold mb-3">Delayed go-lives</p>
           <p class="text-slate-500 text-sm leading-relaxed mb-4">The site is built. The client is ready. The DNS is still managed by an agency that stopped returning emails six months ago. The registrar login went to someone&rsquo;s personal Gmail. The project is not going live today.</p>
           <p class="text-teal-700 text-xs font-medium">SiteGov surfaces who controls DNS before the project starts, not after it stalls.</p>
         </div>
 
-        <div class="bg-white rounded-xl p-6 border border-slate-200">
+        <div class="bg-white p-6 frame-teal">
           <p class="text-slate-900 text-sm font-semibold mb-3">Migration blockers</p>
           <p class="text-slate-500 text-sm leading-relaxed mb-4">Moving platforms means touching DNS, hosting, SSL, and sometimes the registrar. The site needs to move. The hosting details are in a Slack thread from 2021, the DNS login belongs to a contractor, and nobody&rsquo;s sure if the domain auto-renews.</p>
           <p class="text-teal-700 text-xs font-medium">SiteGov keeps a current record of every provider so migrations start with a plan, not a search party.</p>
         </div>
 
-        <div class="bg-white rounded-xl p-6 border border-slate-200">
+        <div class="bg-white p-6 frame-teal">
           <p class="text-slate-900 text-sm font-semibold mb-3">Go-live day</p>
           <p class="text-slate-500 text-sm leading-relaxed mb-4">The cutover window is open. The DNS needs to update. The record is wrong and nobody can log in to fix it. Every minute costs something. This is not the moment to discover the credentials are missing.</p>
           <p class="text-teal-700 text-xs font-medium">SiteGov means credentials are already documented, the admin is already identified, and the path is already clear.</p>
@@ -142,19 +142,19 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
       <div class="grid md:grid-cols-3 gap-5">
 
-        <div class="bg-white rounded-xl p-6 border border-slate-200">
+        <div class="bg-white p-6 frame-teal">
           <p class="text-slate-900 text-sm font-semibold mb-3">Team offboarding</p>
           <p class="text-slate-500 text-sm leading-relaxed mb-4">Someone leaves. They were the primary contact on the registrar, the hosting account, and the DNS provider. None of it was documented. Now a critical provider account belongs to someone who left eighteen months ago. Nobody documented a backup admin.</p>
           <p class="text-teal-700 text-xs font-medium">SiteGov flags missing backup admins and credential gaps before the person walks out the door.</p>
         </div>
 
-        <div class="bg-white rounded-xl p-6 border border-slate-200">
+        <div class="bg-white p-6 frame-teal">
           <p class="text-slate-900 text-sm font-semibold mb-3">Client offboarding</p>
           <p class="text-slate-500 text-sm leading-relaxed mb-4">The relationship ends. The client needs a clean transfer of every account and credential. Without documentation, that process takes weeks and leaves gaps on both sides. The incoming team inherits a tangle of accounts, personal logins, and extremely confident guesses.</p>
           <p class="text-teal-700 text-xs font-medium">With SiteGov, the record is already there. A clean handoff instead of a scavenger hunt.</p>
         </div>
 
-        <div class="bg-white rounded-xl p-6 border border-slate-200">
+        <div class="bg-white p-6 frame-teal">
           <p class="text-slate-900 text-sm font-semibold mb-3">Knowledge walking out the door</p>
           <p class="text-slate-500 text-sm leading-relaxed mb-4">One person knew where everything was. That person is gone. Every provider, every admin contact, every credential location. All of it was in their head and their inbox. Not documented anywhere the team can reach.</p>
           <p class="text-teal-700 text-xs font-medium">SiteGov is where that knowledge lives instead. Structured, current, and not dependent on any one person staying at the company.</p>
@@ -178,25 +178,25 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
       <div class="grid sm:grid-cols-2 gap-5">
 
-        <div class="bg-white rounded-xl p-6 border border-slate-200">
+        <div class="bg-white p-6 frame-teal">
           <p class="text-slate-900 text-sm font-semibold mb-3">Missed renewals</p>
           <p class="text-slate-500 text-sm leading-relaxed mb-4">The domain lapses. Or the SSL cert expires. Or the hosting plan quietly cancels because the billing email went to someone who left. These don&rsquo;t announce themselves in advance. They happen on a Sunday morning.</p>
           <p class="text-teal-700 text-xs font-medium">SiteGov tracks expiry dates and flags who&rsquo;s responsible for each renewal across your entire portfolio.</p>
         </div>
 
-        <div class="bg-white rounded-xl p-6 border border-slate-200">
+        <div class="bg-white p-6 frame-teal">
           <p class="text-slate-900 text-sm font-semibold mb-3">SSL surprises</p>
           <p class="text-slate-500 text-sm leading-relaxed mb-4">The site goes red-padlock on a Friday afternoon. The cert expired. Nobody knew it wasn&rsquo;t on auto-renew. Nobody knew who managed it. This is a predictable problem. It should never be a surprise.</p>
           <p class="text-teal-700 text-xs font-medium">SiteGov monitors SSL expiry and surfaces the asset, the issuer, and the governance record so you&rsquo;re never the last to find out.</p>
         </div>
 
-        <div class="bg-white rounded-xl p-6 border border-slate-200">
+        <div class="bg-white p-6 frame-teal">
           <p class="text-slate-900 text-sm font-semibold mb-3">Lost admin access</p>
           <p class="text-slate-500 text-sm leading-relaxed mb-4">The primary admin left eight months ago. The backup admin was never documented. Account recovery requires identity verification the client can&rsquo;t pass. There is no second key because nobody required one.</p>
           <p class="text-teal-700 text-xs font-medium">SiteGov governance records require a named backup admin for every critical asset. There&rsquo;s always a second key.</p>
         </div>
 
-        <div class="bg-white rounded-xl p-6 border border-slate-200">
+        <div class="bg-white p-6 frame-teal">
           <p class="text-slate-900 text-sm font-semibold mb-3">Hidden ownership risk</p>
           <p class="text-slate-500 text-sm leading-relaxed mb-4">A critical account is listed under someone&rsquo;s personal email. Nobody actually knows if MFA is enabled. Nobody documented a backup. Everything is fine. Right up until it isn&rsquo;t. The risk was there on day one. Nobody looked.</p>
           <p class="text-teal-700 text-xs font-medium">SiteGov surfaces former employee admins, unverified MFA, and undocumented credentials before they become your emergency.</p>
@@ -216,15 +216,15 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       </div>
 
       <div class="grid sm:grid-cols-3 gap-6">
-        <div class="bg-slate-50 rounded-xl p-6 border border-slate-200">
+        <div class="bg-slate-50 p-6 frame-teal">
           <p class="text-xs font-semibold uppercase tracking-widest text-slate-400 mb-3">Scan</p>
           <p class="text-slate-600 text-sm leading-relaxed">SiteGov probes a domain and maps the registrar, DNS provider, hosting, SSL authority, and email platform from live data. No manual entry. No stale spreadsheets. What&rsquo;s running is what you see.</p>
         </div>
-        <div class="bg-slate-50 rounded-xl p-6 border border-slate-200">
+        <div class="bg-slate-50 p-6 frame-teal">
           <p class="text-xs font-semibold uppercase tracking-widest text-slate-400 mb-3">Document</p>
           <p class="text-slate-600 text-sm leading-relaxed">Your team adds who controls each asset: the primary admin, a backup admin, MFA status, credential location, and recovery documentation. One governance record per asset. Takes minutes once. Stays current.</p>
         </div>
-        <div class="bg-teal-50 rounded-xl p-6 border border-teal-200">
+        <div class="bg-teal-50 p-6 frame-teal">
           <p class="text-xs font-semibold uppercase tracking-widest text-teal-600 mb-3">Know</p>
           <p class="text-slate-600 text-sm leading-relaxed">For a launch, a migration, a handoff, or a renewal, the information is already there. Not assembled under pressure. Already documented, already current.</p>
         </div>
@@ -241,19 +241,19 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           <h2 class="text-3xl font-bold leading-tight mb-6">Make infrastructure knowledge a documented deliverable.</h2>
           <p class="text-xs font-semibold uppercase tracking-widest text-slate-500 mb-4 mt-2">Situations every agency recognizes</p>
           <div class="space-y-3 mb-8">
-            <div class="bg-slate-900 rounded-xl border border-slate-800 px-5 py-4">
+            <div class="bg-slate-900 px-5 py-4 frame-amber">
               <p class="text-slate-300 text-sm leading-relaxed italic">&ldquo;The DNS was still with the old agency. We couldn&rsquo;t go live for nine days.&rdquo;</p>
             </div>
-            <div class="bg-slate-900 rounded-xl border border-slate-800 px-5 py-4">
+            <div class="bg-slate-900 px-5 py-4 frame-amber">
               <p class="text-slate-300 text-sm leading-relaxed italic">&ldquo;The domain lapsed because the renewal notice went to a Gmail account from 2019.&rdquo;</p>
             </div>
-            <div class="bg-slate-900 rounded-xl border border-slate-800 px-5 py-4">
+            <div class="bg-slate-900 px-5 py-4 frame-amber">
               <p class="text-slate-300 text-sm leading-relaxed italic">&ldquo;The contractor had the only credentials. We spent two weeks on account recovery.&rdquo;</p>
             </div>
-            <div class="bg-slate-900 rounded-xl border border-slate-800 px-5 py-4">
+            <div class="bg-slate-900 px-5 py-4 frame-amber">
               <p class="text-slate-300 text-sm leading-relaxed italic">&ldquo;We inherited the client with no documentation. It took a month to understand what we were managing.&rdquo;</p>
             </div>
-            <div class="bg-slate-900 rounded-xl border border-slate-800 px-5 py-4">
+            <div class="bg-slate-900 px-5 py-4 frame-amber">
               <p class="text-slate-300 text-sm leading-relaxed italic">&ldquo;The SSL cert expired on a Saturday. Nobody knew it wasn&rsquo;t on auto-renew.&rdquo;</p>
             </div>
           </div>
@@ -267,7 +267,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
               It&rsquo;s also what makes handoffs clean and offboarding professional. Clients rarely ask for this until the domain expires or the launch stalls. Agencies that track it proactively are the ones clients call first and leave last.
             </p>
           </div>
-          <div class="bg-slate-900 rounded-xl border border-slate-800 px-5 py-4">
+          <div class="bg-slate-900 px-5 py-4 frame-amber">
             <p class="text-teal-400 text-xs font-semibold uppercase tracking-widest mb-2">Data Ownership</p>
             <p class="text-slate-300 text-sm leading-relaxed">Governance records belong to the domain owner, not the agency that built them. If a client relationship ends, the records go with the client &mdash; like medical records. A doctor can maintain them, but they belong to the patient.</p>
           </div>
