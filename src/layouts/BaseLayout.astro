@@ -39,6 +39,12 @@ const navLinks = [
     <style is:global>
       html { scroll-behavior: smooth; }
 
+      /* §11 — 14px dot grain on section-level paper surfaces */
+      .paper-grain {
+        background-image: radial-gradient(rgba(20,23,30,0.055) 1px, transparent 1px);
+        background-size: 14px 14px;
+      }
+
       /* Corner bracket frames — amber for dark cards, teal for light cards.
          Each corner uses two layers: a horizontal stroke and a vertical stroke.
          The vertical stroke is offset by 2px so it starts where the horizontal ends,
@@ -73,6 +79,48 @@ const navLinks = [
         background-repeat: no-repeat;
         background-origin: border-box;
       }
+
+      /* §11 — 32px blueprint grid for topology/engineering contexts */
+      .bg-grid {
+        background-image:
+          linear-gradient(to right, rgba(20,23,30,0.06) 1px, transparent 1px),
+          linear-gradient(to bottom, rgba(20,23,30,0.06) 1px, transparent 1px);
+        background-size: 32px 32px;
+      }
+
+      /* §11 — Night grid for dark hero/CTA sections */
+      .bg-grid-night {
+        background-image:
+          linear-gradient(to right, rgba(229,227,220,0.05) 1px, transparent 1px),
+          linear-gradient(to bottom, rgba(229,227,220,0.05) 1px, transparent 1px);
+        background-size: 32px 32px;
+      }
+
+      /* §11 — Marketing signal pills (round; different from app sq pills) */
+      .mkt-pill {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        padding: 3px 8px;
+        border-radius: 999px;
+        font-family: 'IBM Plex Mono', ui-monospace, monospace;
+        font-size: 10.5px;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        border: 1px solid rgba(20,23,30,0.18);
+        color: #4B4E55;
+        background: rgba(255,255,255,0.6);
+      }
+      .mkt-pill .mkt-dot {
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background: #82848B;
+        flex-shrink: 0;
+      }
+      .mkt-pill.healthy .mkt-dot { background: oklch(0.74 0.08 180); }
+      .mkt-pill.warn    .mkt-dot { background: oklch(0.74 0.13 60); }
+      .mkt-pill.critical .mkt-dot { background: oklch(0.62 0.16 25); }
     </style>
   </head>
   <body class="bg-white text-slate-900 antialiased">
