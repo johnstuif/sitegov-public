@@ -125,6 +125,11 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           <p class="text-slate-500 text-sm leading-relaxed">No. A password manager stores credentials. SiteGov documents that credentials exist, who holds them, where they&rsquo;re stored, and whether access recovery is documented. It answers &ldquo;do we have access?&rdquo; without holding the passwords themselves. The two tools are complementary: use a password manager to store credentials, use SiteGov to confirm the right people have access and every account has a named owner.</p>
         </div>
 
+        <div class="py-7">
+          <h3 class="text-slate-900 font-semibold mb-3">What is vendor dependency risk?</h3>
+          <p class="text-slate-500 text-sm leading-relaxed">When a critical infrastructure layer is controlled by a vendor whose relationship with your client has changed &mdash; an old agency still holding DNS, a contractor who left with hosting credentials, a previous developer whose email is still the registrar contact &mdash; your ability to act on that domain depends on their cooperation. You can&rsquo;t migrate, change providers, or go live without their involvement, regardless of who the domain technically belongs to. SiteGov makes vendor dependencies visible before they become blockers. Every infrastructure layer shows who controls the account, not just which provider is running the service. When a vendor relationship ends, the governance record tells you exactly what needs to be transferred and who needs to do it.</p>
+        </div>
+
       </div>
     </div>
   </section>
@@ -174,7 +179,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       </p>
       <div class="flex flex-col sm:flex-row gap-3 justify-center">
         <a href="/signup" class="inline-flex items-center justify-center px-8 py-4 bg-slate-900 text-white text-sm font-semibold rounded-lg hover:bg-slate-700 transition-colors">
-          Run a free infrastructure scan
+          Find your gaps
         </a>
         <a href="/use-cases" class="inline-flex items-center justify-center px-8 py-4 bg-white text-slate-700 text-sm font-medium rounded-lg border border-slate-200 hover:border-slate-400 transition-colors">
           See use cases
