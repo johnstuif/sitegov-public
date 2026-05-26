@@ -25,7 +25,7 @@ The `.env` file sets the app URL used by sign-in and sign-up links across the si
 |---|---|---|
 | `/` | `src/pages/index.astro` | Homepage |
 | `/use-cases` | `src/pages/use-cases.astro` | Use cases |
-| `/what-is-sitegov` | `src/pages/what-is-sitegov.astro` | Category explainer (has two stub sections to fill in) |
+| `/what-is-sitegov` | `src/pages/what-is-sitegov.astro` | Category explainer |
 | `/pricing` | `src/pages/pricing.astro` | Pricing — placeholder tiers, ready for Stripe embed |
 
 ## Project Structure
@@ -73,18 +73,6 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 ```
 
 3. If it's a top-level nav link, add it to the `navLinks` array in `src/layouts/BaseLayout.astro`.
-
-## Stripe / Payments
-
-The `/pricing` page has placeholder tier cards. When you're ready to connect Stripe:
-
-**Option A — Stripe Pricing Table** (recommended for subscriptions):
-1. Create a Pricing Table in the Stripe Dashboard
-2. Replace the placeholder cards in `src/pages/pricing.astro` with the embed snippet — there's a comment marking exactly where it goes
-
-**Option B — Stripe Payment Links** (simpler, no embed):
-1. Create Payment Links for each plan in Stripe
-2. Point each tier's CTA button `href` to its Payment Link URL
 
 ## Deploying to Cloudflare Pages
 

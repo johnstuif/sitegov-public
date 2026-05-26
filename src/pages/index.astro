@@ -729,35 +729,6 @@ import { APP_URL } from '../config';
 
       </div>
 
-      <!-- Independence diagram -->
-      <div class="mb-12 overflow-x-auto">
-        <svg viewBox="0 0 860 100" class="w-full max-w-3xl h-[100px]" aria-hidden="true">
-          <g font-family="IBM Plex Mono" font-size="9" letter-spacing="1.5" fill="#94a3b8" text-anchor="middle">
-            <text x="200" y="14">OWNERSHIP</text>
-            <text x="430" y="14">ACCESS</text>
-            <text x="660" y="14">CONTROL</text>
-          </g>
-          <!-- Rows: CLIENT, VENDOR, AGENCY -->
-          <g font-family="IBM Plex Mono" font-size="9" letter-spacing="1.5" fill="#1e293b">
-            <text x="44" y="40">CLIENT</text>
-            <text x="44" y="62">VENDOR</text>
-            <text x="44" y="84">AGENCY</text>
-          </g>
-          <!-- OWNERSHIP bars -->
-          <rect x="120" y="28" width="160" height="14" fill="#1e293b"/>
-          <rect x="120" y="50" width="160" height="14" fill="none" stroke="#1e293b" stroke-width="1"/>
-          <rect x="120" y="72" width="160" height="14" fill="none" stroke="#1e293b" stroke-width="1"/>
-          <!-- ACCESS bars -->
-          <rect x="350" y="28" width="160" height="14" fill="none" stroke="#1e293b" stroke-width="1"/>
-          <rect x="350" y="50" width="160" height="14" fill="#1e293b"/>
-          <rect x="350" y="72" width="160" height="14" fill="none" stroke="#1e293b" stroke-width="1"/>
-          <!-- CONTROL bars -->
-          <rect x="580" y="28" width="160" height="14" fill="none" stroke="#1e293b" stroke-width="1"/>
-          <rect x="580" y="50" width="160" height="14" fill="none" stroke="#1e293b" stroke-width="1"/>
-          <rect x="580" y="72" width="160" height="14" fill="#1e293b"/>
-        </svg>
-      </div>
-
       <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-6">
         <p class="text-slate-500 text-base leading-relaxed max-w-xl">SiteGov documents ownership, access, and control for every provider behind a client site. One governance record per asset, kept current as infrastructure changes.</p>
         <a href={`${APP_URL}/users/sign_up`} class="inline-flex items-center justify-center px-6 py-3.5 bg-slate-900 text-white text-sm font-semibold rounded-lg hover:bg-slate-700 transition-colors shrink-0">
@@ -806,22 +777,34 @@ import { APP_URL } from '../config';
           <p class="text-slate-400 text-lg leading-relaxed mb-8">
             The providers behind each client site are messy by default. Domains registered by founders, DNS managed by previous agencies, hosting billed to personal accounts, SSL certs nobody is tracking. SiteGov gives your team a structured record of who controls what across every client, before you need it.
           </p>
-          <ul class="space-y-4 mb-8">
-            <li class="flex items-center gap-3 text-slate-300 text-sm">
-              <span class="w-1.5 h-1.5 rounded-full bg-teal-500 shrink-0"></span>
-              <strong class="text-white">Onboarding a new client.</strong> Scan on day one. Complete infrastructure map before the second meeting.
+          <ul class="space-y-5 mb-8">
+            <li class="flex items-start gap-3">
+              <span class="w-1.5 h-1.5 rounded-full bg-teal-500 shrink-0 mt-1.5"></span>
+              <div>
+                <p class="text-white text-sm font-semibold">Onboarding a new client.</p>
+                <p class="text-slate-400 text-sm mt-0.5">Scan on day one. Complete infrastructure map before the second meeting.</p>
+              </div>
             </li>
-            <li class="flex items-center gap-3 text-slate-300 text-sm">
-              <span class="w-1.5 h-1.5 rounded-full bg-teal-500 shrink-0"></span>
-              <strong class="text-white">Scoping a redesign.</strong> Know who controls DNS, hosting, and the registrar before the project timeline is set.
+            <li class="flex items-start gap-3">
+              <span class="w-1.5 h-1.5 rounded-full bg-teal-500 shrink-0 mt-1.5"></span>
+              <div>
+                <p class="text-white text-sm font-semibold">Scoping a redesign.</p>
+                <p class="text-slate-400 text-sm mt-0.5">Know who controls DNS, hosting, and the registrar before the project timeline is set.</p>
+              </div>
             </li>
-            <li class="flex items-center gap-3 text-slate-300 text-sm">
-              <span class="w-1.5 h-1.5 rounded-full bg-teal-500 shrink-0"></span>
-              <strong class="text-white">Shipping the site.</strong> Every credential is documented before the cutover window opens. No go-live surprises.
+            <li class="flex items-start gap-3">
+              <span class="w-1.5 h-1.5 rounded-full bg-teal-500 shrink-0 mt-1.5"></span>
+              <div>
+                <p class="text-white text-sm font-semibold">Shipping the site.</p>
+                <p class="text-slate-400 text-sm mt-0.5">Every credential is documented before the cutover window opens. No go-live surprises.</p>
+              </div>
             </li>
-            <li class="flex items-center gap-3 text-slate-300 text-sm">
-              <span class="w-1.5 h-1.5 rounded-full bg-teal-500 shrink-0"></span>
-              <strong class="text-white">Handoffs and offboarding.</strong> Clean transfer when clients move on. Infrastructure knowledge stays when people leave.
+            <li class="flex items-start gap-3">
+              <span class="w-1.5 h-1.5 rounded-full bg-teal-500 shrink-0 mt-1.5"></span>
+              <div>
+                <p class="text-white text-sm font-semibold">Handoffs and offboarding.</p>
+                <p class="text-slate-400 text-sm mt-0.5">Clean transfer when clients move on. Infrastructure knowledge stays when people leave.</p>
+              </div>
             </li>
           </ul>
           <p class="text-slate-500 text-sm leading-relaxed">
