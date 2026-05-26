@@ -1,4 +1,6 @@
 ---
+import { APP_URL } from '../config';
+
 interface Props {
   title: string;
   description: string;
@@ -29,6 +31,7 @@ const navLinks = [
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{title}</title>
+    <link rel="icon" href="/icon.svg" type="image/svg+xml" />
     <meta name="description" content={description} />
     {ogTitle && <meta property="og:title" content={ogTitle} />}
     {ogDescription && <meta property="og:description" content={ogDescription} />}
@@ -36,6 +39,7 @@ const navLinks = [
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/sg-icon.css" />
     <style is:global>
       html { scroll-behavior: smooth; }
 
@@ -121,14 +125,36 @@ const navLinks = [
       .mkt-pill.healthy .mkt-dot { background: oklch(0.74 0.08 180); }
       .mkt-pill.warn    .mkt-dot { background: oklch(0.74 0.13 60); }
       .mkt-pill.critical .mkt-dot { background: oklch(0.62 0.16 25); }
+
     </style>
   </head>
   <body class="bg-white text-slate-900 antialiased">
 
     <header class="sticky top-0 z-50 bg-white/90 backdrop-blur border-b border-slate-100">
       <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
-        <a href="/">
-          <img src="/sitegov-logo-horizontal.svg" alt="SiteGov" class="h-8 w-auto" />
+        <a href="/" class="sg-logo flex items-center gap-2.5">
+          <div class="sg-icon-wrap" style="width:28px;height:28px;">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="28" height="28">
+              <path d="M32 10 L51.05 21 L51.05 43 L32 54 L12.95 43 L12.95 21 Z" fill="none" stroke="#0B1F3A" stroke-width="2.5" stroke-linejoin="round"/>
+              <g stroke="#0B1F3A" stroke-width="1.8" stroke-linecap="round" opacity="0.6">
+                <line x1="32" y1="10" x2="32" y2="32"/>
+                <line x1="51.05" y1="21" x2="32" y2="32"/>
+                <line x1="51.05" y1="43" x2="32" y2="32"/>
+                <line x1="32" y1="54" x2="32" y2="32"/>
+                <line x1="12.95" y1="43" x2="32" y2="32"/>
+                <line x1="12.95" y1="21" x2="32" y2="32"/>
+              </g>
+              <circle class="sg-n1" cx="32"    cy="10"  r="2.8" fill="#0B1F3A"/>
+              <circle class="sg-n2" cx="51.05" cy="21"  r="2.8" fill="#0B1F3A"/>
+              <circle class="sg-n3" cx="51.05" cy="43"  r="2.8" fill="#0B1F3A"/>
+              <circle class="sg-n4" cx="32"    cy="54"  r="2.8" fill="#0B1F3A"/>
+              <circle class="sg-n5" cx="12.95" cy="43"  r="2.8" fill="#0B1F3A"/>
+              <circle class="sg-n6" cx="12.95" cy="21"  r="2.8" fill="#0B1F3A"/>
+              <circle class="sg-ring" cx="32"  cy="32"  r="5"   fill="none" stroke="#2E7CF6" stroke-width="1.5"/>
+              <circle cx="32" cy="32" r="5" fill="#2E7CF6"/>
+            </svg>
+          </div>
+          <span class="text-xl font-semibold tracking-tight" style="color:#0B1F3A;">SiteGov</span>
         </a>
         <nav class="hidden md:flex items-center gap-8 text-sm text-slate-600">
           {navLinks.map(({ href, label }) => (
@@ -143,8 +169,8 @@ const navLinks = [
           ))}
         </nav>
         <div class="flex items-center gap-3">
-          <a href="/login" class="text-sm text-slate-600 hover:text-slate-900 transition-colors hidden sm:inline">Sign In</a>
-          <a href="/signup" class="inline-flex items-center px-4 py-2 bg-slate-900 text-white text-sm font-medium rounded-lg hover:bg-slate-700 transition-colors">
+          <a href={`${APP_URL}/users/sign_in`} class="text-sm text-slate-600 hover:text-slate-900 transition-colors hidden sm:inline">Sign In</a>
+          <a href={`${APP_URL}/users/sign_up`} class="inline-flex items-center px-4 py-2 bg-slate-900 text-white text-sm font-medium rounded-lg hover:bg-slate-700 transition-colors">
             Start for free
           </a>
         </div>
@@ -156,7 +182,30 @@ const navLinks = [
     <footer class="border-t border-slate-100 py-12">
       <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-start md:items-center justify-between gap-8">
         <div>
-          <p class="font-semibold text-slate-900 mb-1">SiteGov</p>
+          <div class="flex items-center gap-2 mb-1">
+            <div class="sg-icon-wrap" style="width:20px;height:20px;">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="20" height="20">
+                <path d="M32 10 L51.05 21 L51.05 43 L32 54 L12.95 43 L12.95 21 Z" fill="none" stroke="#0B1F3A" stroke-width="2.5" stroke-linejoin="round"/>
+                <g stroke="#0B1F3A" stroke-width="1.8" stroke-linecap="round" opacity="0.6">
+                  <line x1="32" y1="10" x2="32" y2="32"/>
+                  <line x1="51.05" y1="21" x2="32" y2="32"/>
+                  <line x1="51.05" y1="43" x2="32" y2="32"/>
+                  <line x1="32" y1="54" x2="32" y2="32"/>
+                  <line x1="12.95" y1="43" x2="32" y2="32"/>
+                  <line x1="12.95" y1="21" x2="32" y2="32"/>
+                </g>
+                <circle class="sg-n1" cx="32"    cy="10"  r="2.8" fill="#0B1F3A"/>
+                <circle class="sg-n2" cx="51.05" cy="21"  r="2.8" fill="#0B1F3A"/>
+                <circle class="sg-n3" cx="51.05" cy="43"  r="2.8" fill="#0B1F3A"/>
+                <circle class="sg-n4" cx="32"    cy="54"  r="2.8" fill="#0B1F3A"/>
+                <circle class="sg-n5" cx="12.95" cy="43"  r="2.8" fill="#0B1F3A"/>
+                <circle class="sg-n6" cx="12.95" cy="21"  r="2.8" fill="#0B1F3A"/>
+                <circle class="sg-ring" cx="32"  cy="32"  r="5"   fill="none" stroke="#2E7CF6" stroke-width="1.5"/>
+                <circle cx="32" cy="32" r="5" fill="#2E7CF6"/>
+              </svg>
+            </div>
+            <span class="font-semibold text-slate-900">SiteGov</span>
+          </div>
           <p class="text-xs text-slate-500 max-w-xs">For agencies managing client domains, DNS, hosting, and SSL.</p>
         </div>
         <div class="flex flex-wrap gap-6 text-xs text-slate-400">
@@ -164,7 +213,7 @@ const navLinks = [
           <a href="/what-is-sitegov" class="hover:text-slate-700 transition-colors">What is SiteGov?</a>
           <a href="/use-cases" class="hover:text-slate-700 transition-colors">Use Cases</a>
           <a href="/pricing" class="hover:text-slate-700 transition-colors">Pricing</a>
-          <a href="/login" class="hover:text-slate-700 transition-colors">Sign In</a>
+          <a href={`${APP_URL}/users/sign_in`} class="hover:text-slate-700 transition-colors">Sign In</a>
           <a href="/privacy" class="hover:text-slate-700 transition-colors">Privacy</a>
           <a href="/terms" class="hover:text-slate-700 transition-colors">Terms</a>
           <a href="mailto:hello@sitegov.com" class="hover:text-slate-700 transition-colors">Contact</a>

@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import { APP_URL } from '../config';
 ---
 
 <BaseLayout
@@ -17,7 +18,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           Simple pricing. No surprises.
         </h1>
         <p class="text-lg text-slate-400 leading-relaxed">
-          Start free with your first domain scan. Upgrade when you need more clients, more seats, or recurring scans across your portfolio.
+          Start free — no credit card, no time limit. Track up to 3 domains forever. Upgrade when your portfolio grows.
         </p>
       </div>
     </div>
@@ -41,6 +42,23 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         Link each CTA button below to the corresponding Stripe Payment Link URL.
       -->
 
+      <!-- Free tier — full width above paid plans -->
+      <div class="mb-6 flex justify-center">
+        <div class="bg-slate-50 border border-slate-200 p-6 flex flex-col sm:flex-row sm:items-center gap-6 w-full">
+          <div class="flex-1">
+            <div class="flex items-baseline gap-3 mb-1">
+              <h2 class="text-slate-900 font-semibold text-lg">Free</h2>
+              <span class="text-2xl font-bold text-slate-900">$0</span>
+              <span class="text-slate-400 text-sm">/ forever</span>
+            </div>
+            <p class="text-slate-500 text-sm">Up to 3 domains &middot; Unlimited clients &middot; Full infrastructure scan &middot; Control Score &amp; findings. No credit card. No time limit.</p>
+          </div>
+          <a href={`${APP_URL}/users/sign_up`} class="inline-flex items-center justify-center px-5 py-2.5 bg-white text-slate-900 text-sm font-semibold rounded-lg border border-slate-300 hover:border-slate-500 transition-colors whitespace-nowrap shrink-0">
+            Start free
+          </a>
+        </div>
+      </div>
+
       <div class="grid md:grid-cols-3 gap-6 mb-12">
 
         <!-- Starter -->
@@ -50,14 +68,18 @@ import BaseLayout from '../layouts/BaseLayout.astro';
             <p class="text-slate-500 text-sm leading-relaxed">For agencies with a handful of clients who want to stop guessing.</p>
           </div>
           <div class="mb-8">
-            <span class="text-4xl font-bold text-slate-900">$29</span>
+            <span class="text-4xl font-bold text-slate-900">$19</span>
             <span class="text-slate-500 text-sm ml-1">/ month</span>
             <p class="text-slate-400 text-xs mt-1">Billed monthly. Cancel anytime.</p>
           </div>
           <ul class="space-y-3 mb-8 flex-1">
             <li class="flex items-start gap-2.5 text-slate-600 text-sm">
               <svg class="w-4 h-4 text-teal-500 mt-0.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" /></svg>
-              Up to 10 client domains
+              Up to 10 domains
+            </li>
+            <li class="flex items-start gap-2.5 text-slate-600 text-sm">
+              <svg class="w-4 h-4 text-teal-500 mt-0.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" /></svg>
+              Unlimited clients
             </li>
             <li class="flex items-start gap-2.5 text-slate-600 text-sm">
               <svg class="w-4 h-4 text-teal-500 mt-0.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" /></svg>
@@ -69,14 +91,10 @@ import BaseLayout from '../layouts/BaseLayout.astro';
             </li>
             <li class="flex items-start gap-2.5 text-slate-600 text-sm">
               <svg class="w-4 h-4 text-teal-500 mt-0.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" /></svg>
-              Control Score per domain (your control coverage score, 0&ndash;100)
-            </li>
-            <li class="flex items-start gap-2.5 text-slate-600 text-sm">
-              <svg class="w-4 h-4 text-teal-500 mt-0.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" /></svg>
-              2 team seats
+              Control Score per domain (0&ndash;100)
             </li>
           </ul>
-          <a href="/signup" class="inline-flex items-center justify-center px-5 py-3 bg-slate-900 text-white text-sm font-semibold rounded-lg hover:bg-slate-700 transition-colors">
+          <a href={`${APP_URL}/users/sign_up`} class="inline-flex items-center justify-center px-5 py-3 bg-slate-900 text-white text-sm font-semibold rounded-lg hover:bg-slate-700 transition-colors">
             Get started
           </a>
         </div>
@@ -91,14 +109,14 @@ import BaseLayout from '../layouts/BaseLayout.astro';
             <p class="text-slate-400 text-sm leading-relaxed">For growing agencies tracking a full client portfolio.</p>
           </div>
           <div class="mb-8">
-            <span class="text-4xl font-bold text-white">$79</span>
+            <span class="text-4xl font-bold text-white">$49</span>
             <span class="text-slate-400 text-sm ml-1">/ month</span>
             <p class="text-slate-500 text-xs mt-1">Billed monthly. Cancel anytime.</p>
           </div>
           <ul class="space-y-3 mb-8 flex-1">
             <li class="flex items-start gap-2.5 text-slate-300 text-sm">
               <svg class="w-4 h-4 text-teal-400 mt-0.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" /></svg>
-              Up to 50 client domains
+              Up to 35 domains
             </li>
             <li class="flex items-start gap-2.5 text-slate-300 text-sm">
               <svg class="w-4 h-4 text-teal-400 mt-0.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" /></svg>
@@ -116,12 +134,8 @@ import BaseLayout from '../layouts/BaseLayout.astro';
               <svg class="w-4 h-4 text-teal-400 mt-0.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" /></svg>
               Risk timeline per domain
             </li>
-            <li class="flex items-start gap-2.5 text-slate-300 text-sm">
-              <svg class="w-4 h-4 text-teal-400 mt-0.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" /></svg>
-              5 team seats
-            </li>
           </ul>
-          <a href="/signup" class="inline-flex items-center justify-center px-5 py-3 bg-white text-slate-900 text-sm font-semibold rounded-lg hover:bg-slate-100 transition-colors">
+          <a href={`${APP_URL}/users/sign_up`} class="inline-flex items-center justify-center px-5 py-3 bg-white text-slate-900 text-sm font-semibold rounded-lg hover:bg-slate-100 transition-colors">
             Get started
           </a>
         </div>
@@ -133,14 +147,14 @@ import BaseLayout from '../layouts/BaseLayout.astro';
             <p class="text-slate-500 text-sm leading-relaxed">For larger agencies managing infrastructure across hundreds of client sites.</p>
           </div>
           <div class="mb-8">
-            <span class="text-4xl font-bold text-slate-900">$199</span>
+            <span class="text-4xl font-bold text-slate-900">$99</span>
             <span class="text-slate-500 text-sm ml-1">/ month</span>
             <p class="text-slate-400 text-xs mt-1">Billed monthly. Cancel anytime.</p>
           </div>
           <ul class="space-y-3 mb-8 flex-1">
             <li class="flex items-start gap-2.5 text-slate-600 text-sm">
               <svg class="w-4 h-4 text-teal-500 mt-0.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" /></svg>
-              Unlimited client domains
+              Up to 100 domains
             </li>
             <li class="flex items-start gap-2.5 text-slate-600 text-sm">
               <svg class="w-4 h-4 text-teal-500 mt-0.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" /></svg>
@@ -154,20 +168,27 @@ import BaseLayout from '../layouts/BaseLayout.astro';
               <svg class="w-4 h-4 text-teal-500 mt-0.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" /></svg>
               Priority support
             </li>
-            <li class="flex items-start gap-2.5 text-slate-600 text-sm">
-              <svg class="w-4 h-4 text-teal-500 mt-0.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" /></svg>
-              Unlimited team seats
-            </li>
           </ul>
-          <a href="/signup" class="inline-flex items-center justify-center px-5 py-3 bg-slate-900 text-white text-sm font-semibold rounded-lg hover:bg-slate-700 transition-colors">
+          <a href={`${APP_URL}/users/sign_up`} class="inline-flex items-center justify-center px-5 py-3 bg-slate-900 text-white text-sm font-semibold rounded-lg hover:bg-slate-700 transition-colors">
             Get started
           </a>
         </div>
 
       </div>
 
-      <div class="bg-slate-50 px-6 py-5 text-center frame-teal">
-        <p class="text-slate-600 text-sm">Not sure which plan is right? <a href="mailto:hello@sitegov.com" class="text-slate-900 font-medium hover:underline">Email us</a> and we&rsquo;ll help you figure it out. No sales call required.</p>
+      <!-- Enterprise callout — mirrors free tier above -->
+      <div class="flex justify-center">
+        <div class="bg-slate-50 border border-slate-200 p-6 flex flex-col sm:flex-row sm:items-center gap-6 w-full">
+          <div class="flex-1">
+            <div class="flex items-baseline gap-3 mb-1">
+              <h2 class="text-slate-900 font-semibold text-lg">Enterprise</h2>
+            </div>
+            <p class="text-slate-500 text-sm">Managing more than 100 domains? We offer custom pricing for larger portfolios. No sales call required.</p>
+          </div>
+          <a href="mailto:hello@sitegov.com" class="inline-flex items-center justify-center px-5 py-2.5 bg-white text-slate-900 text-sm font-semibold rounded-lg border border-slate-300 hover:border-slate-500 transition-colors whitespace-nowrap shrink-0">
+            Get in touch
+          </a>
+        </div>
       </div>
 
     </div>
@@ -178,15 +199,15 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     <div class="max-w-6xl mx-auto px-6">
       <div class="grid md:grid-cols-2 gap-12 items-center">
         <div>
-          <p class="text-xs font-semibold uppercase tracking-widest text-slate-400 mb-4">Before you commit</p>
-          <h2 class="text-3xl font-bold leading-tight mb-4">Run your first scan free.</h2>
+          <p class="text-xs font-semibold uppercase tracking-widest text-slate-400 mb-4">Start free, stay free</p>
+          <h2 class="text-3xl font-bold leading-tight mb-4">Up to 3 domains, free forever.</h2>
           <p class="text-slate-500 text-lg leading-relaxed mb-6">
-            Add a domain and see exactly what SiteGov surfaces in under five minutes. No credit card. No time limit on the scan. You&rsquo;ll see the full infrastructure map and every governance gap on day one.
+            Sign up, add your domains, and run a full infrastructure scan — no credit card, no trial clock. If 3 domains is all you need, it&rsquo;s free for as long as you use it.
           </p>
-          <a href="/signup" class="inline-flex items-center justify-center px-6 py-3.5 bg-slate-900 text-white text-sm font-semibold rounded-lg hover:bg-slate-700 transition-colors">
-            Find your gaps
+          <a href={`${APP_URL}/users/sign_up`} class="inline-flex items-center justify-center px-6 py-3.5 bg-slate-900 text-white text-sm font-semibold rounded-lg hover:bg-slate-700 transition-colors">
+            Start free
           </a>
-          <p class="text-xs text-slate-400 mt-3">No credit card required.</p>
+          <p class="text-xs text-slate-400 mt-3">No credit card required. No time limit.</p>
         </div>
         <div class="bg-slate-50 p-6 frame-teal">
           <p class="text-slate-400 text-xs uppercase tracking-widest mb-4">What the free scan shows you</p>
@@ -227,6 +248,11 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       <div class="divide-y divide-slate-100">
 
         <div class="py-7">
+          <h3 class="text-slate-900 font-semibold mb-3">What&rsquo;s included in the free plan?</h3>
+          <p class="text-slate-500 text-sm leading-relaxed">The free plan lets you track up to 3 domains across unlimited clients, with full infrastructure scanning, findings, and a Control Score. It&rsquo;s free forever — no trial period, no credit card. Paid plans start at $19/month for up to 10 domains. When you need more, you&rsquo;ll be prompted to upgrade.</p>
+        </div>
+
+        <div class="py-7">
           <h3 class="text-slate-900 font-semibold mb-3">What counts as a domain?</h3>
           <p class="text-slate-500 text-sm leading-relaxed">Each hostname you add to SiteGov counts as one domain. If you track both acmebuilders.com and www.acmebuilders.com, that&rsquo;s two domains. Root domain governance data (registrar, DNS, WHOIS) is shared across subdomains of the same root, so you&rsquo;re not duplicating effort, just tracking coverage where it matters.</p>
         </div>
@@ -263,11 +289,11 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         Every client has a gap. Find yours in five minutes.
       </h2>
       <p class="text-slate-500 text-xl mb-10 leading-relaxed">
-        Add a domain and run your first scan free. No credit card required.
+        Up to 3 domains. Unlimited clients. Free forever. No credit card required.
       </p>
       <div class="flex flex-col sm:flex-row gap-3 justify-center">
-        <a href="/signup" class="inline-flex items-center justify-center px-8 py-4 bg-slate-900 text-white text-sm font-semibold rounded-lg hover:bg-slate-700 transition-colors">
-          Find your gaps
+        <a href={`${APP_URL}/users/sign_up`} class="inline-flex items-center justify-center px-8 py-4 bg-slate-900 text-white text-sm font-semibold rounded-lg hover:bg-slate-700 transition-colors">
+          Start free
         </a>
         <a href="/use-cases" class="inline-flex items-center justify-center px-8 py-4 bg-white text-slate-700 text-sm font-medium rounded-lg border border-slate-200 hover:border-slate-400 transition-colors">
           See use cases

@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import { APP_URL } from '../config';
 ---
 
 <BaseLayout
@@ -80,7 +81,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
             SiteGov maps the registrar, DNS, hosting, email, and SSL behind every domain. Your team records who controls each one. Whether it&rsquo;s go-live day, a migration, or a renewal, you&rsquo;ve already got the answer.
           </p>
           <div class="flex flex-col sm:flex-row gap-3">
-            <a href="/signup" class="inline-flex items-center justify-center px-6 py-3.5 bg-white text-slate-900 text-sm font-semibold rounded-lg hover:bg-slate-100 transition-colors">
+            <a href={`${APP_URL}/users/sign_up`} class="inline-flex items-center justify-center px-6 py-3.5 bg-white text-slate-900 text-sm font-semibold rounded-lg hover:bg-slate-100 transition-colors">
               Find your gaps
             </a>
             <a href="#solution" class="inline-flex items-center justify-center px-6 py-3.5 bg-transparent text-slate-300 text-sm font-medium rounded-lg border border-slate-700 hover:border-slate-500 hover:text-white transition-colors">
@@ -759,7 +760,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
       <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-6">
         <p class="text-slate-500 text-base leading-relaxed max-w-xl">SiteGov documents ownership, access, and control for every provider behind a client site. One governance record per asset, kept current as infrastructure changes.</p>
-        <a href="/signup" class="inline-flex items-center justify-center px-6 py-3.5 bg-slate-900 text-white text-sm font-semibold rounded-lg hover:bg-slate-700 transition-colors shrink-0">
+        <a href={`${APP_URL}/users/sign_up`} class="inline-flex items-center justify-center px-6 py-3.5 bg-slate-900 text-white text-sm font-semibold rounded-lg hover:bg-slate-700 transition-colors shrink-0">
           Map your first domain
         </a>
       </div>
@@ -844,7 +845,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
             </div>
           </div>
           <div class="pt-2">
-            <a href="/signup" class="inline-flex items-center justify-center w-full px-6 py-3.5 bg-white text-slate-900 text-sm font-semibold rounded-lg hover:bg-slate-100 transition-colors">
+            <a href={`${APP_URL}/users/sign_up`} class="inline-flex items-center justify-center w-full px-6 py-3.5 bg-white text-slate-900 text-sm font-semibold rounded-lg hover:bg-slate-100 transition-colors">
               Start for free
             </a>
           </div>
@@ -918,7 +919,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         Add a domain and run your first scan. You might be surprised what turns up.
       </p>
       <div class="flex flex-col sm:flex-row gap-3 justify-center">
-        <a href="/signup" class="inline-flex items-center justify-center px-8 py-4 bg-slate-900 text-white text-sm font-semibold rounded-lg hover:bg-slate-700 transition-colors">
+        <a href={`${APP_URL}/users/sign_up`} class="inline-flex items-center justify-center px-8 py-4 bg-slate-900 text-white text-sm font-semibold rounded-lg hover:bg-slate-700 transition-colors">
           Find your gaps
         </a>
         <a href="/use-cases" class="inline-flex items-center justify-center px-8 py-4 bg-white text-slate-700 text-sm font-medium rounded-lg border border-slate-200 hover:border-slate-400 transition-colors">

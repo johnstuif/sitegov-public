@@ -6,7 +6,10 @@ Static marketing site built with [Astro](https://astro.build) and Tailwind CSS.
 
 ```bash
 npm install
+cp .env.example .env
 ```
+
+The `.env` file sets the app URL used by sign-in and sign-up links across the site. The default dev value points to `http://app.lvh.me:3000`. In production this is set as an environment variable in Cloudflare Pages (see [Deploying to Cloudflare Pages](#deploying-to-cloudflare-pages)).
 
 ## Commands
 
@@ -93,6 +96,7 @@ The site builds to static HTML in `dist/`. In Cloudflare Pages, use:
 | Build command | `npm run build` |
 | Build output directory | `dist` |
 | Root directory | repository root, or `sitegov-public` if this lives in a monorepo |
+| Environment variable | `APP_URL=https://app.sitegov.io` |
 
 Cloudflare Pages will deploy the production branch automatically on pushes and create preview deployments for pull requests.
 

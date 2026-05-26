@@ -1,0 +1,44 @@
+.sg-icon-wrap {
+  display: inline-flex;
+  flex-shrink: 0;
+}
+
+.sg-icon-wrap circle {
+  transform-box: fill-box;
+  transform-origin: center;
+}
+
+@keyframes sg-node-pulse {
+  0%    { transform: scale(1); }
+  6.25% { transform: scale(1.35); }
+  12.5% { transform: scale(1); }
+  100%  { transform: scale(1); }
+}
+
+@keyframes sg-ring-pulse {
+  0%, 75% { transform: scale(1);   opacity: 0; }
+  76%     { transform: scale(1);   opacity: 0.6; }
+  100%    { transform: scale(2.8); opacity: 0; }
+}
+
+.sg-n1 { animation: sg-node-pulse 2.4s ease-in-out infinite; animation-delay: 0s;    animation-play-state: paused; }
+.sg-n2 { animation: sg-node-pulse 2.4s ease-in-out infinite; animation-delay: -2.1s; animation-play-state: paused; }
+.sg-n3 { animation: sg-node-pulse 2.4s ease-in-out infinite; animation-delay: -1.8s; animation-play-state: paused; }
+.sg-n4 { animation: sg-node-pulse 2.4s ease-in-out infinite; animation-delay: -1.5s; animation-play-state: paused; }
+.sg-n5 { animation: sg-node-pulse 2.4s ease-in-out infinite; animation-delay: -1.2s; animation-play-state: paused; }
+.sg-n6 { animation: sg-node-pulse 2.4s ease-in-out infinite; animation-delay: -0.9s; animation-play-state: paused; }
+
+.sg-ring {
+  animation: sg-ring-pulse 2.4s ease-out infinite;
+  animation-play-state: paused;
+}
+
+.sg-icon-wrap:hover .sg-n1, .sg-logo:hover .sg-n1,
+.sg-icon-wrap:hover .sg-n2, .sg-logo:hover .sg-n2,
+.sg-icon-wrap:hover .sg-n3, .sg-logo:hover .sg-n3,
+.sg-icon-wrap:hover .sg-n4, .sg-logo:hover .sg-n4,
+.sg-icon-wrap:hover .sg-n5, .sg-logo:hover .sg-n5,
+.sg-icon-wrap:hover .sg-n6, .sg-logo:hover .sg-n6,
+.sg-icon-wrap:hover .sg-ring, .sg-logo:hover .sg-ring {
+  animation-play-state: running;
+}
