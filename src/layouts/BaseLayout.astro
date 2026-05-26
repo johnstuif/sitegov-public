@@ -127,6 +127,18 @@ const navLinks = [
       .mkt-pill.critical .mkt-dot { background: oklch(0.62 0.16 25); }
 
     </style>
+
+    {import.meta.env.PROD && (
+      <Fragment>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-VLEGXYTEW7"></script>
+        <script is:inline>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-VLEGXYTEW7');
+        </script>
+      </Fragment>
+    )}
   </head>
   <body class="bg-white text-slate-900 antialiased">
 
