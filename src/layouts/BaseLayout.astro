@@ -29,6 +29,7 @@ const navLinks = [
 <!doctype html>
 <html lang="en">
   <head>
+    <script src="https://app.termly.io/resource-blocker/12ddec9b-c200-4647-a901-fa93713ab689?autoBlock=on"></script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{title}</title>
@@ -248,17 +249,22 @@ const navLinks = [
             </div>
             <span class="font-semibold text-slate-900">SiteGov</span>
           </div>
-          <p class="text-xs text-slate-500 max-w-xs">For agencies managing client domains, DNS, hosting, and SSL.</p>
+          <p class="text-xs text-slate-500 whitespace-nowrap">For agencies managing client domains, DNS, hosting, and SSL.</p>
         </div>
-        <div class="flex flex-wrap gap-6 text-xs text-slate-400">
-          <a href="/#solution" class="hover:text-slate-700 transition-colors">How it works</a>
-          <a href="/what-is-sitegov" class="hover:text-slate-700 transition-colors">What is SiteGov?</a>
-          <a href="/use-cases" class="hover:text-slate-700 transition-colors">Use Cases</a>
-          <a href="/pricing" class="hover:text-slate-700 transition-colors">Pricing</a>
-          <a href={`${APP_URL}/users/sign_in`} class="hover:text-slate-700 transition-colors">Sign In</a>
-          <a href="/privacy" class="hover:text-slate-700 transition-colors">Privacy</a>
-          <a href="/terms" class="hover:text-slate-700 transition-colors">Terms</a>
-          <a href="/contact" class="hover:text-slate-700 transition-colors">Contact</a>
+        <div class="flex flex-col items-start md:items-end gap-3">
+          <div class="flex flex-wrap gap-6 text-xs text-slate-400">
+            <a href="/#solution" class="hover:text-slate-700 transition-colors">How it works</a>
+            <a href="/what-is-sitegov" class="hover:text-slate-700 transition-colors">What is SiteGov?</a>
+            <a href="/use-cases" class="hover:text-slate-700 transition-colors">Use Cases</a>
+            <a href="/pricing" class="hover:text-slate-700 transition-colors">Pricing</a>
+            <a href={`${APP_URL}/users/sign_in`} class="hover:text-slate-700 transition-colors">Sign In</a>
+            <a href="/contact" class="hover:text-slate-700 transition-colors">Contact</a>
+          </div>
+          <div class="flex flex-wrap gap-6 text-xs text-slate-400">
+            <a href="/privacy" class="hover:text-slate-700 transition-colors">Privacy</a>
+            <a href="/terms" class="hover:text-slate-700 transition-colors">Terms</a>
+            <a href="#" class="termly-display-preferences hover:text-slate-700 transition-colors">Consent Preferences</a>
+          </div>
         </div>
       </div>
     </footer>
