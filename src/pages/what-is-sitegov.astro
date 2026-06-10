@@ -1,6 +1,53 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import { APP_URL } from '../config';
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: 'What is website infrastructure tracking?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Website infrastructure tracking is the practice of documenting who controls every system behind a domain: who registered it, who manages the DNS, who runs the hosting, who owns the SSL cert, and who holds the credentials for each. Most organizations have this knowledge scattered across people\'s heads, email threads, and stale spreadsheets. SiteGov makes it explicit and accessible before the moment it\'s needed.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Why separate domain ownership from DNS control?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Because they\'re often different people. The domain might be registered under a founder\'s personal email. DNS might be managed by a vendor the client switched last year. Hosting might be on a developer\'s agency account. Each is a separate access point, and any one of them can fail independently.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Is this a security tool?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Not primarily. Security tools look for vulnerabilities: open ports, malware, injection risks. SiteGov looks for access gaps: expired certs, missing backup admins, undocumented credentials, former employees still listed as primary contacts. A site can pass a security scan and still be inaccessible the moment the one person who knows the registrar login leaves the company.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Does this replace password managers?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'No. A password manager stores credentials. SiteGov documents that credentials exist, who holds them, where they\'re stored, and whether access recovery is documented. It answers "do we have access?" without holding the passwords themselves. Use a password manager to store credentials, use SiteGov to confirm the right people have access and every account has a named owner.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'What is vendor dependency risk?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'When a critical infrastructure layer is controlled by a vendor whose relationship with your client has changed — an old agency still holding DNS, a contractor who left with hosting credentials, a previous developer whose email is still the registrar contact — your ability to act on that domain depends on their cooperation. SiteGov makes vendor dependencies visible before they become blockers.',
+      },
+    },
+  ],
+};
 ---
 
 <BaseLayout
@@ -8,6 +55,7 @@ import { APP_URL } from '../config';
   description="Website infrastructure tracking means documenting who controls every system behind a domain: the registrar, DNS, hosting, SSL, and email provider. Before the moment you need it."
   currentPage="What is SiteGov?"
 >
+  <script type="application/ld+json" slot="head" set:html={JSON.stringify(faqSchema)} />
 
   <!-- Hero -->
   <section class="bg-slate-950 text-white py-20">

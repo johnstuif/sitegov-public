@@ -1,6 +1,22 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import { APP_URL } from '../config';
+
+const softwareSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'SoftwareApplication',
+  name: 'SiteGov',
+  applicationCategory: 'BusinessApplication',
+  operatingSystem: 'Web',
+  description: 'Website infrastructure tracking for agencies. Map registrar, DNS, hosting, SSL, and email providers behind every client domain. Document who controls each asset.',
+  url: 'https://sitegov.io',
+  offers: [
+    { '@type': 'Offer', name: 'Free', price: '0', priceCurrency: 'USD' },
+    { '@type': 'Offer', name: 'Starter', price: '19', priceCurrency: 'USD' },
+    { '@type': 'Offer', name: 'Growth', price: '49', priceCurrency: 'USD' },
+    { '@type': 'Offer', name: 'Agency', price: '99', priceCurrency: 'USD' },
+  ],
+};
 ---
 
 <BaseLayout
@@ -9,6 +25,7 @@ import { APP_URL } from '../config';
   ogTitle="SiteGov: Go-live day. DNS needs to update. Nobody can log in."
   ogDescription="Website infrastructure tracking for agencies. Map providers, document ownership, and make sure your team always has the access they need, before the moment they need it."
 >
+  <script type="application/ld+json" slot="head" set:html={JSON.stringify(softwareSchema)} />
 
   <!-- Hero -->
   <section class="relative overflow-hidden bg-slate-950 text-white">
@@ -264,6 +281,75 @@ import { APP_URL } from '../config';
 
       </div>
 
+    </div>
+  </section>
+
+  <!-- ✏ DRAFT REVIEW: Go-live moments section. Decide: keep on homepage here, or use-cases page only? Delete callout once placed. -->
+  <section class="py-20 border-b border-slate-100 paper-grain">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="max-w-2xl mb-10">
+        <p class="text-xs font-semibold uppercase tracking-widest text-slate-400 mb-4">The highest-cost moment</p>
+        <h2 class="text-3xl font-bold leading-tight">When the project needs to go live, the information is already there &mdash; or it isn&rsquo;t.</h2>
+      </div>
+      <div class="grid md:grid-cols-3 gap-5">
+        <!-- STATE · 01 — Kickoff: all green -->
+        <div class="bg-white p-6 frame-teal">
+          <div class="flex items-center justify-between mb-3 pb-3 border-b border-dashed border-slate-200">
+            <span class="text-[10px] font-mono text-slate-400 uppercase tracking-widest">STATE · 01</span>
+            <span class="inline-flex items-center gap-1.5 text-[10px] font-mono text-slate-500">
+              <span class="w-1.5 h-1.5 rounded-full bg-teal-500 shrink-0"></span>READY
+            </span>
+          </div>
+          <div class="grid grid-cols-4 gap-2 mb-5">
+            <div class="flex flex-col items-center gap-1 py-2 rounded border border-teal-200 bg-teal-50"><span class="text-teal-600 text-sm leading-none font-bold">&#10003;</span><span class="text-[9px] font-mono text-slate-500 tracking-wider">REG</span></div>
+            <div class="flex flex-col items-center gap-1 py-2 rounded border border-teal-200 bg-teal-50"><span class="text-teal-600 text-sm leading-none font-bold">&#10003;</span><span class="text-[9px] font-mono text-slate-500 tracking-wider">DNS</span></div>
+            <div class="flex flex-col items-center gap-1 py-2 rounded border border-teal-200 bg-teal-50"><span class="text-teal-600 text-sm leading-none font-bold">&#10003;</span><span class="text-[9px] font-mono text-slate-500 tracking-wider">HOST</span></div>
+            <div class="flex flex-col items-center gap-1 py-2 rounded border border-teal-200 bg-teal-50"><span class="text-teal-600 text-sm leading-none font-bold">&#10003;</span><span class="text-[9px] font-mono text-slate-500 tracking-wider">SSL</span></div>
+          </div>
+          <p class="text-xs font-semibold uppercase tracking-widest text-slate-400 mb-3">Kickoff</p>
+          <p class="text-slate-900 text-sm font-semibold mb-3">Start the project knowing what you&rsquo;re working with.</p>
+          <p class="text-slate-500 text-sm leading-relaxed mb-4">Without SiteGov, discovery happens mid-project. Who registered the domain, who controls DNS, who holds the registrar login &mdash; all of it surfaces after the timeline is already set.</p>
+          <p class="text-teal-700 text-xs font-medium">With SiteGov: scan on day one, complete infrastructure map before the first meeting.</p>
+        </div>
+        <!-- STATE · 02 — Migration: DNS amber -->
+        <div class="bg-white p-6 frame-teal">
+          <div class="flex items-center justify-between mb-3 pb-3 border-b border-dashed border-slate-200">
+            <span class="text-[10px] font-mono text-slate-400 uppercase tracking-widest">STATE · 02</span>
+            <span class="inline-flex items-center gap-1.5 text-[10px] font-mono text-slate-500">
+              <span class="w-1.5 h-1.5 rounded-full bg-amber-500 shrink-0"></span>MID-FLIGHT
+            </span>
+          </div>
+          <div class="grid grid-cols-4 gap-2 mb-5">
+            <div class="flex flex-col items-center gap-1 py-2 rounded border border-teal-200 bg-teal-50"><span class="text-teal-600 text-sm leading-none font-bold">&#10003;</span><span class="text-[9px] font-mono text-slate-500 tracking-wider">REG</span></div>
+            <div class="flex flex-col items-center gap-1 py-2 rounded border border-amber-200 bg-amber-50"><span class="text-amber-600 text-sm leading-none font-bold">?</span><span class="text-[9px] font-mono text-slate-500 tracking-wider">DNS</span></div>
+            <div class="flex flex-col items-center gap-1 py-2 rounded border border-teal-200 bg-teal-50"><span class="text-teal-600 text-sm leading-none font-bold">&#10003;</span><span class="text-[9px] font-mono text-slate-500 tracking-wider">HOST</span></div>
+            <div class="flex flex-col items-center gap-1 py-2 rounded border border-teal-200 bg-teal-50"><span class="text-teal-600 text-sm leading-none font-bold">&#10003;</span><span class="text-[9px] font-mono text-slate-500 tracking-wider">SSL</span></div>
+          </div>
+          <p class="text-xs font-semibold uppercase tracking-widest text-slate-400 mb-3">Migration</p>
+          <p class="text-slate-900 text-sm font-semibold mb-3">Move the site without a last-minute search party.</p>
+          <p class="text-slate-500 text-sm leading-relaxed mb-4">Without SiteGov, hosting and DNS details are scattered across old emails. Moving platforms means discovering mid-project who has the login and whether it still works.</p>
+          <p class="text-teal-700 text-xs font-medium">With SiteGov: every provider is already documented before the project starts.</p>
+        </div>
+        <!-- STATE · 03 — Go-live: DNS + HOST red, SSL amber -->
+        <div class="bg-white p-6 frame-teal">
+          <div class="flex items-center justify-between mb-3 pb-3 border-b border-dashed border-slate-200">
+            <span class="text-[10px] font-mono text-slate-400 uppercase tracking-widest">STATE · 03</span>
+            <span class="inline-flex items-center gap-1.5 text-[10px] font-mono text-slate-500">
+              <span class="w-1.5 h-1.5 rounded-full bg-red-500 shrink-0"></span>STUCK
+            </span>
+          </div>
+          <div class="grid grid-cols-4 gap-2 mb-5">
+            <div class="flex flex-col items-center gap-1 py-2 rounded border border-teal-200 bg-teal-50"><span class="text-teal-600 text-sm leading-none font-bold">&#10003;</span><span class="text-[9px] font-mono text-slate-500 tracking-wider">REG</span></div>
+            <div class="flex flex-col items-center gap-1 py-2 rounded border border-red-200 bg-red-50"><span class="text-red-600 text-sm leading-none font-bold">&#10007;</span><span class="text-[9px] font-mono text-slate-500 tracking-wider">DNS</span></div>
+            <div class="flex flex-col items-center gap-1 py-2 rounded border border-red-200 bg-red-50"><span class="text-red-600 text-sm leading-none font-bold">&#10007;</span><span class="text-[9px] font-mono text-slate-500 tracking-wider">HOST</span></div>
+            <div class="flex flex-col items-center gap-1 py-2 rounded border border-amber-200 bg-amber-50"><span class="text-amber-600 text-sm leading-none font-bold">!</span><span class="text-[9px] font-mono text-slate-500 tracking-wider">SSL</span></div>
+          </div>
+          <p class="text-xs font-semibold uppercase tracking-widest text-slate-400 mb-3">Go-live day</p>
+          <p class="text-slate-900 text-sm font-semibold mb-3">The cutover window is open. You already have what you need.</p>
+          <p class="text-slate-500 text-sm leading-relaxed mb-4">Without SiteGov, go-live day is when you find out the DNS is still controlled by a previous agency. The cutover window closes. The project doesn&rsquo;t ship today.</p>
+          <p class="text-teal-700 text-xs font-medium">With SiteGov: credentials are documented, the admin is identified, the path is already clear.</p>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -646,7 +732,7 @@ import { APP_URL } from '../config';
     </div>
   </section>
 
-  <!-- Features grid (trimmed: LIVE band + 3 key features) -->
+  <!-- Features grid -->
   <section class="bg-slate-50 border-y border-slate-100 py-24 paper-grain">
     <div class="max-w-6xl mx-auto px-6">
       <div class="max-w-2xl mb-14">
@@ -738,6 +824,38 @@ import { APP_URL } from '../config';
 
         <div class="bg-white p-7 frame-teal">
           <div class="mb-4 rounded-lg border border-slate-100 bg-slate-50 p-3 h-24 flex items-center justify-center">
+            <svg viewBox="0 0 120 70" class="h-[68px]" aria-hidden="true">
+              <line x1="20" y1="35" x2="60" y2="15" stroke="#cbd5e1" stroke-width="1"/>
+              <line x1="20" y1="35" x2="60" y2="35" stroke="#cbd5e1" stroke-width="1"/>
+              <line x1="20" y1="35" x2="60" y2="55" stroke="#cbd5e1" stroke-width="1"/>
+              <line x1="60" y1="15" x2="100" y2="10" stroke="#cbd5e1" stroke-width="1"/>
+              <line x1="60" y1="55" x2="100" y2="60" stroke="#cbd5e1" stroke-width="1"/>
+              <circle cx="20" cy="35" r="5" fill="#0f172a"/>
+              <circle cx="60" cy="15" r="4" fill="#14b8a6"/>
+              <circle cx="60" cy="35" r="4" fill="#94a3b8"/>
+              <circle cx="60" cy="55" r="4" fill="#f59e0b"/>
+              <circle cx="100" cy="10" r="3" fill="#94a3b8"/>
+              <circle cx="100" cy="60" r="3" fill="#94a3b8"/>
+            </svg>
+          </div>
+          <h3 class="font-semibold text-slate-900 mb-2">Infrastructure Map</h3>
+          <p class="text-slate-500 text-sm leading-relaxed">A structured control map showing every provider layer behind a domain: domain controls, service infrastructure, and manual systems, in one organized view.</p>
+        </div>
+
+        <div class="bg-white p-7 frame-teal">
+          <div class="mb-4 rounded-lg border border-slate-100 bg-slate-50 p-3 h-24 flex items-center">
+            <div class="w-full space-y-2 font-mono text-[8px]">
+              <div class="flex items-center gap-2"><span class="text-red-500 w-7 shrink-0">CRIT</span><div class="h-1.5 flex-1 rounded-full bg-slate-200"></div></div>
+              <div class="flex items-center gap-2"><span class="text-amber-500 w-7 shrink-0">WARN</span><div class="h-1.5 flex-1 rounded-full bg-slate-200"></div></div>
+              <div class="flex items-center gap-2"><span class="text-amber-500 w-7 shrink-0">WARN</span><div class="h-1.5 w-2/3 rounded-full bg-slate-200"></div></div>
+            </div>
+          </div>
+          <h3 class="font-semibold text-slate-900 mb-2">Findings and Risk Signals</h3>
+          <p class="text-slate-500 text-sm leading-relaxed">Infrastructure and governance findings ranked by severity: former employee as admin, no backup documented, SSL expiring, domain renewal coming due. Each expiry includes who is responsible for acting on it.</p>
+        </div>
+
+        <div class="bg-white p-7 frame-teal">
+          <div class="mb-4 rounded-lg border border-slate-100 bg-slate-50 p-3 h-24 flex items-center justify-center">
             <svg viewBox="0 0 70 70" class="h-[68px]" aria-hidden="true">
               <circle cx="35" cy="35" r="28" fill="none" stroke="rgba(15,23,42,0.10)" stroke-width="5"/>
               <circle cx="35" cy="35" r="28" fill="none" stroke="#f43f5e" stroke-width="5" stroke-dasharray="60 176" transform="rotate(-90 35 35)" stroke-linecap="round"/>
@@ -749,6 +867,175 @@ import { APP_URL } from '../config';
           <p class="text-slate-500 text-sm leading-relaxed">A single 0&ndash;100 score reflecting how controlled each client&rsquo;s web infrastructure actually is. Covers ownership, governance, access records, and live findings across every layer.</p>
         </div>
 
+        <div class="bg-white p-7 frame-teal">
+          <div class="mb-4 rounded-lg border border-slate-100 bg-slate-50 p-3 h-24 flex items-center">
+            <div class="w-full space-y-1.5 font-mono text-[8px]">
+              <div class="flex items-center justify-between"><span class="text-slate-500">christophercross.com</span><span class="w-1.5 h-1.5 rounded-full bg-red-500"></span></div>
+              <div class="flex items-center justify-between"><span class="text-slate-500">steelydan.io</span><span class="w-1.5 h-1.5 rounded-full bg-red-500"></span></div>
+              <div class="flex items-center justify-between"><span class="text-slate-500">tototheband.com</span><span class="w-1.5 h-1.5 rounded-full bg-amber-500"></span></div>
+              <div class="flex items-center justify-between"><span class="text-slate-500">hallandoates.com</span><span class="w-1.5 h-1.5 rounded-full bg-teal-500"></span></div>
+            </div>
+          </div>
+          <h3 class="font-semibold text-slate-900 mb-2">Client Portfolio Dashboard</h3>
+          <p class="text-slate-500 text-sm leading-relaxed">Every client, every domain, and every missing record in one view. Sorted by risk. Always current. The first page open during a client call or a project kickoff.</p>
+        </div>
+
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Ownership vs Access vs Control -->
+  <section class="py-24 border-b border-slate-100 paper-grain">
+    <div class="max-w-6xl mx-auto px-6">
+
+      <div class="max-w-3xl mb-16">
+        <p class="text-xs font-semibold uppercase tracking-widest text-slate-400 mb-4">A key distinction</p>
+        <h2 class="text-4xl font-bold leading-tight mb-6">Owning it, accessing it, and controlling it are three different things.</h2>
+        <p class="text-slate-500 text-lg leading-relaxed">Most website problems aren&rsquo;t technical. They&rsquo;re definitional. Someone assumed ownership meant access. Someone assumed access meant control. Nobody asked which one they actually had.</p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-6 mb-12">
+
+        <div class="p-8 frame-teal">
+          <div class="w-10 h-10 rounded-xl bg-slate-100 flex items-center justify-center mb-5">
+            <svg class="w-5 h-5 text-slate-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m0 12.75h7.5m-7.5 3H12M10.5 2.25H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z" />
+            </svg>
+          </div>
+          <h3 class="font-bold text-slate-900 text-lg mb-3">Ownership</h3>
+          <p class="text-slate-500 text-sm leading-relaxed mb-4">Who holds legal or organizational claim over an asset. The domain registrant, the account holder, the name on the contract.</p>
+          <p class="text-xs text-slate-400 leading-relaxed border-t border-slate-100 pt-4">&ldquo;The registrar is in the client&rsquo;s name but the agency has had the login for three years.&rdquo; Ownership didn&rsquo;t transfer when the login did.</p>
+        </div>
+
+        <div class="p-8 frame-teal">
+          <div class="w-10 h-10 rounded-xl bg-slate-100 flex items-center justify-center mb-5">
+            <svg class="w-5 h-5 text-slate-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 5.25a3 3 0 013 3m3 0a6 6 0 01-7.029 5.912c-.563-.097-1.159.026-1.563.43L10.5 17.25H8.25v2.25H6v2.25H2.25v-2.818c0-.597.237-1.17.659-1.591l6.499-6.499c.404-.404.527-1 .43-1.563A6 6 0 1121.75 8.25z" />
+            </svg>
+          </div>
+          <h3 class="font-bold text-slate-900 text-lg mb-3">Access</h3>
+          <p class="text-slate-500 text-sm leading-relaxed mb-4">Who has working credentials. A username, a password, a shared inbox, an API key. The ability to authenticate with a provider right now.</p>
+          <p class="text-xs text-slate-400 leading-relaxed border-t border-slate-100 pt-4">&ldquo;The developer who set this up left six months ago. The credentials went with them.&rdquo; Access without a documented backup has an expiry date.</p>
+        </div>
+
+        <div class="bg-teal-50/50 p-8 frame-teal">
+          <div class="w-10 h-10 rounded-xl bg-teal-100 flex items-center justify-center mb-5">
+            <svg class="w-5 h-5 text-teal-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 6h9.75M10.5 6a1.5 1.5 0 11-3 0m3 0a1.5 1.5 0 10-3 0M3.75 6H7.5m3 12h9.75m-9.75 0a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m-3.75 0h9.75" />
+            </svg>
+          </div>
+          <h3 class="font-bold text-slate-900 text-lg mb-3">Control</h3>
+          <p class="text-slate-500 text-sm leading-relaxed mb-4">Who can actually make a change when it matters. Right now, under pressure, before a launch stalls or a domain lapses. Access plus authority plus knowing what you&rsquo;re touching.</p>
+          <p class="text-xs text-teal-700 leading-relaxed border-t border-teal-200 pt-4">Control is the point. On go-live day, ownership doesn&rsquo;t open the DNS panel. Access doesn&rsquo;t help if the password is wrong. Control is what actually moves the deadline.</p>
+        </div>
+
+      </div>
+
+      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-6">
+        <p class="text-slate-500 text-base leading-relaxed max-w-xl">SiteGov documents ownership, access, and control for every provider behind a client site. One governance record per asset, kept current as infrastructure changes.</p>
+        <a href={`${APP_URL}/users/sign_up`} class="inline-flex items-center justify-center px-6 py-3.5 bg-slate-900 text-white text-sm font-semibold rounded-lg hover:bg-slate-700 transition-colors shrink-0">
+          Map your first domain
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- For agencies (merged with use cases) -->
+  <section id="use-cases" class="relative overflow-hidden bg-slate-950 text-white py-24">
+    <!-- Strata cross-section backdrop -->
+    <div class="absolute inset-0 pointer-events-none select-none" aria-hidden="true">
+      <svg class="absolute inset-0 w-full h-full opacity-[0.07]" viewBox="0 0 1200 700" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+        <!-- Horizontal strata bands -->
+        <line x1="0" y1="140" x2="1200" y2="140" stroke="#94a3b8" stroke-width="0.75"/>
+        <text x="24" y="134" fill="#94a3b8" font-size="8" font-family="monospace" letter-spacing="2">REGISTRAR</text>
+        <line x1="0" y1="280" x2="1200" y2="280" stroke="#94a3b8" stroke-width="0.75"/>
+        <text x="24" y="274" fill="#94a3b8" font-size="8" font-family="monospace" letter-spacing="2">DNS / NAMESERVERS</text>
+        <line x1="0" y1="420" x2="1200" y2="420" stroke="#94a3b8" stroke-width="0.75"/>
+        <text x="24" y="414" fill="#94a3b8" font-size="8" font-family="monospace" letter-spacing="2">HOSTING / CDN</text>
+        <line x1="0" y1="560" x2="1200" y2="560" stroke="#94a3b8" stroke-width="0.75"/>
+        <text x="24" y="554" fill="#94a3b8" font-size="8" font-family="monospace" letter-spacing="2">SSL / EMAIL</text>
+        <!-- Vertical drops -->
+        <line x1="220" y1="0" x2="220" y2="700" stroke="#94a3b8" stroke-width="0.5" stroke-dasharray="3 7"/>
+        <line x1="520" y1="0" x2="520" y2="700" stroke="#94a3b8" stroke-width="0.5" stroke-dasharray="3 7"/>
+        <line x1="820" y1="0" x2="820" y2="700" stroke="#94a3b8" stroke-width="0.5" stroke-dasharray="3 7"/>
+        <line x1="1060" y1="0" x2="1060" y2="700" stroke="#94a3b8" stroke-width="0.5" stroke-dasharray="3 7"/>
+        <!-- Intersection nodes -->
+        <circle cx="220" cy="140" r="3" fill="#94a3b8"/><circle cx="220" cy="280" r="3" fill="#94a3b8"/>
+        <circle cx="520" cy="280" r="3" fill="#94a3b8"/><circle cx="520" cy="420" r="3" fill="#94a3b8"/>
+        <circle cx="820" cy="140" r="3" fill="#94a3b8"/><circle cx="820" cy="420" r="3" fill="#94a3b8"/>
+        <circle cx="1060" cy="280" r="3" fill="#94a3b8"/><circle cx="1060" cy="560" r="3" fill="#94a3b8"/>
+      </svg>
+      <!-- Amber thread -->
+      <svg class="absolute inset-0 w-full h-full opacity-[0.18]" viewBox="0 0 1200 700" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+        <path d="M 0 490 Q 300 450 600 510 Q 900 570 1200 490" stroke="#f59e0b" stroke-width="1" fill="none"/>
+      </svg>
+    </div>
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="grid md:grid-cols-2 gap-16 items-start">
+        <div>
+          <p class="text-xs font-semibold uppercase tracking-widest text-slate-500 mb-4">For agencies</p>
+          <h2 class="text-4xl font-bold leading-tight mb-6">The infrastructure layer your retainers have been missing.</h2>
+          <p class="text-slate-400 text-lg leading-relaxed mb-8">
+            The providers behind each client site are messy by default. Domains registered by founders, DNS managed by previous agencies, hosting billed to personal accounts, SSL certs nobody is tracking. SiteGov gives your team a structured record of who controls what across every client, before you need it.
+          </p>
+          <ul class="space-y-5 mb-8">
+            <li class="flex items-start gap-3">
+              <span class="w-1.5 h-1.5 rounded-full bg-teal-500 shrink-0 mt-1.5"></span>
+              <div>
+                <p class="text-white text-sm font-semibold">Onboarding a new client.</p>
+                <p class="text-slate-400 text-sm mt-0.5">Scan on day one. Complete infrastructure map before the second meeting.</p>
+              </div>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="w-1.5 h-1.5 rounded-full bg-teal-500 shrink-0 mt-1.5"></span>
+              <div>
+                <p class="text-white text-sm font-semibold">Scoping a redesign.</p>
+                <p class="text-slate-400 text-sm mt-0.5">Know who controls DNS, hosting, and the registrar before the project timeline is set.</p>
+              </div>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="w-1.5 h-1.5 rounded-full bg-teal-500 shrink-0 mt-1.5"></span>
+              <div>
+                <p class="text-white text-sm font-semibold">Shipping the site.</p>
+                <p class="text-slate-400 text-sm mt-0.5">Every credential is documented before the cutover window opens. No go-live surprises.</p>
+              </div>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="w-1.5 h-1.5 rounded-full bg-teal-500 shrink-0 mt-1.5"></span>
+              <div>
+                <p class="text-white text-sm font-semibold">Handoffs and offboarding.</p>
+                <p class="text-slate-400 text-sm mt-0.5">Clean transfer when clients move on. Infrastructure knowledge stays when people leave.</p>
+              </div>
+            </li>
+          </ul>
+          <p class="text-slate-500 text-sm leading-relaxed">
+            Clients rarely ask for this until the domain expires, the launch stalls, or the handoff goes wrong. Agencies that track this proactively are the ones clients call first and leave last.
+          </p>
+        </div>
+        <div class="space-y-4">
+          <div class="bg-slate-900 frame-amber overflow-hidden">
+            <!-- Amber top edge -->
+            <div class="h-px bg-amber-500/70 w-full"></div>
+            <div class="p-8">
+              <p class="text-[10px] font-mono text-slate-500 uppercase tracking-widest mb-1">DEFAULT</p>
+              <p class="text-teal-400 text-xs font-semibold uppercase tracking-widest mb-4">Data Ownership</p>
+              <h3 class="text-white text-lg font-semibold mb-4 leading-snug">Your clients keep their records. Always.</h3>
+              <p class="text-slate-400 text-sm leading-relaxed">
+                SiteGov governance records belong to the domain owner, not the agency that built them. If a client relationship ends, the records go with the client.
+              </p>
+              <div class="mt-6 pt-6 border-t border-slate-800">
+                <p class="text-slate-500 text-xs leading-relaxed">Think of it like medical records. A doctor can maintain them, but they belong to the patient. Your client&rsquo;s access history is theirs to keep.</p>
+              </div>
+            </div>
+          </div>
+          <div class="pt-2">
+            <a href={`${APP_URL}/users/sign_up`} class="inline-flex items-center justify-center w-full px-6 py-3.5 bg-white text-slate-900 text-sm font-semibold rounded-lg hover:bg-slate-100 transition-colors">
+              Start for free
+            </a>
+          </div>
+        </div>
       </div>
     </div>
   </section>

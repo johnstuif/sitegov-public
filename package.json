@@ -16,6 +16,7 @@
     "tailwindcss": "^3.4.0"
   },
   "devDependencies": {
+    "@astrojs/sitemap": "^2.0.2",
     "wrangler": "^4.87.0"
   }
 }

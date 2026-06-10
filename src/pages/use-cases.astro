@@ -1,13 +1,53 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import { APP_URL } from '../config';
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: 'Is this for agencies or internal teams?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Both, but the friction is different. Agencies use SiteGov to maintain a live map across a client portfolio, catching gaps before a migration, a renewal, or an account change surfaces them. Internal teams use it to document who controls what across their own domains and subdomains, especially as vendor relationships and team members change.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'How does this help with migrations or go-lives?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Most migration delays come from access problems discovered mid-project: the client can\'t find the registrar login, DNS is at a provider nobody has access to, or the SSL cert is managed by a developer who left. SiteGov maps all of that before the project starts. You walk into a migration knowing exactly what you\'re working with, who needs to be involved, and where the gaps are.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'What kinds of risks does SiteGov surface?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Expiring SSL certificates. Domains approaching renewal without a documented owner. Missing backup admin contacts. Former employees still listed as primary admins. Unverified MFA on critical systems. DNS providers that changed without documentation. Credentials with no documented recovery path.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'How does this help prevent vendor lock-in?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'When you can\'t move a client because you don\'t have access to the systems that need to change, that\'s lock-in, regardless of contract terms. SiteGov makes the full picture legible: every vendor relationship is documented, every access point recorded, every dependency visible. When a client wants to switch hosting, you know exactly what needs to change and who needs to do it.',
+      },
+    },
+  ],
+};
 ---
 
 <BaseLayout
-  title="Use Cases | SiteGov"
-  description="Every agency hits these. Delayed launches, lost admin access, messy handoffs, expired domains. Here's where SiteGov makes the difference."
+  title="Agency Use Cases: DNS Access, Go-Live Delays & Client Handoffs | SiteGov"
+  description="SiteGov resolves the most common agency pain points: blocked launches, lost DNS access, messy client handoffs, expired domains, and former employee admin accounts."
   currentPage="Use Cases"
 >
+  <script type="application/ld+json" slot="head" set:html={JSON.stringify(faqSchema)} />
 
   <!-- Hero -->
   <section class="bg-slate-950 text-white py-20">

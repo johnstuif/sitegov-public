@@ -17,6 +17,31 @@ const {
   currentPage = '',
 } = Astro.props;
 
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+const ogImageURL = new URL('/og-default.png', Astro.site);
+const resolvedOgTitle = ogTitle || title;
+const resolvedOgDescription = ogDescription || description;
+
+const organizationSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  name: 'SiteGov',
+  url: 'https://sitegov.io',
+  logo: 'https://sitegov.io/sitegov-logo-horizontal.png',
+  contactPoint: {
+    '@type': 'ContactPoint',
+    email: 'hello@sitegov.io',
+    contactType: 'customer support',
+  },
+};
+
+const websiteSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  name: 'SiteGov',
+  url: 'https://sitegov.io',
+};
+
 const navLinks = [
   { href: '/#solution', label: 'How it works' },
   { href: '/what-is-sitegov', label: 'What is SiteGov?' },
@@ -33,11 +58,24 @@ const navLinks = [
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{title}</title>
+    <link rel="canonical" href={canonicalURL} />
     <link rel="icon" href="/icon.svg" type="image/svg+xml" />
     <meta name="description" content={description} />
-    {ogTitle && <meta property="og:title" content={ogTitle} />}
-    {ogDescription && <meta property="og:description" content={ogDescription} />}
+    <meta property="og:title" content={resolvedOgTitle} />
+    <meta property="og:description" content={resolvedOgDescription} />
     <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonicalURL} />
+    <meta property="og:image" content={ogImageURL} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:site_name" content="SiteGov" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={resolvedOgTitle} />
+    <meta name="twitter:description" content={resolvedOgDescription} />
+    <meta name="twitter:image" content={ogImageURL} />
+    <script type="application/ld+json" set:html={JSON.stringify(organizationSchema)} />
+    <script type="application/ld+json" set:html={JSON.stringify(websiteSchema)} />
+    <slot name="head" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
@@ -128,10 +166,16 @@ const navLinks = [
       .mkt-pill.warn    .mkt-dot { background: oklch(0.74 0.13 60); }
       .mkt-pill.critical .mkt-dot { background: oklch(0.62 0.16 25); }
 
+      details.faq > summary { list-style: none; cursor: pointer; }
+      details.faq > summary::-webkit-details-marker { display: none; }
+      details.faq .faq-plus { transition: transform 0.2s ease; }
+      details.faq[open] .faq-plus { transform: rotate(45deg); }
+
     </style>
 
     {import.meta.env.PROD && (
       <Fragment>
+        <script is:inline>{`(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y)})(window,document,"clarity","script","x3sq1i34cp");`}</script>
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-VLEGXYTEW7"></script>
         <script is:inline>
           window.dataLayer = window.dataLayer || [];

@@ -1,13 +1,69 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import { APP_URL } from '../config';
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: "What's included in the free plan?",
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'The free plan lets you track up to 3 domains across unlimited clients, with full infrastructure scanning, findings, and a Control Score. It\'s free forever — no trial period, no credit card. Paid plans start at $19/month for up to 10 domains.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'What counts as a domain?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Each hostname you add to SiteGov counts as one domain. If you track both acmebuilders.com and www.acmebuilders.com, that\'s two domains. Root domain governance data (registrar, DNS, WHOIS) is shared across subdomains of the same root, so you\'re not duplicating effort.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Can I change plans later?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Yes. Upgrade or downgrade at any time. If you upgrade mid-cycle, you\'re prorated for the remainder of the month. If you downgrade and have more domains than your new plan allows, you\'ll be prompted to remove the excess before the change takes effect.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'What happens to my data if I cancel?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Your governance records belong to the domain owner, not us. On cancellation, you can export your full record set before your account closes. Nothing is deleted for 30 days after cancellation in case you want to reactivate or export.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Do you offer annual billing?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Annual plans are available with two months free. Email hello@sitegov.io to get set up on annual billing.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Is there a discount for larger agencies?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'If the Agency plan doesn\'t fit your situation (unusually large portfolio or specific team structure), get in touch at hello@sitegov.io and we\'ll work something out.',
+      },
+    },
+  ],
+};
 ---
 
 <BaseLayout
-  title="Pricing | SiteGov"
-  description="Simple, predictable pricing for agencies tracking client infrastructure. Start free, upgrade as your portfolio grows."
+  title="Pricing for Website Infrastructure Tracking | SiteGov"
+  description="Start free with 3 domains, no credit card. Paid plans from $19/month for agencies tracking DNS, hosting, SSL, registrar, and email across client portfolios."
   currentPage="Pricing"
 >
+  <script type="application/ld+json" slot="head" set:html={JSON.stringify(faqSchema)} />
 
   <!-- Hero -->
   <section class="bg-slate-950 text-white py-20">
@@ -171,7 +227,7 @@ import { APP_URL } from '../config';
             </div>
             <p class="text-slate-500 text-sm">Managing more than 100 domains? We offer custom pricing for larger portfolios. No sales call required.</p>
           </div>
-          <a href="mailto:hello@sitegov.com" class="inline-flex items-center justify-center px-5 py-2.5 bg-white text-slate-900 text-sm font-semibold rounded-lg border border-slate-300 hover:border-slate-500 transition-colors whitespace-nowrap shrink-0">
+          <a href="mailto:hello@sitegov.io" class="inline-flex items-center justify-center px-5 py-2.5 bg-white text-slate-900 text-sm font-semibold rounded-lg border border-slate-300 hover:border-slate-500 transition-colors whitespace-nowrap shrink-0">
             Get in touch
           </a>
         </div>
@@ -255,12 +311,12 @@ import { APP_URL } from '../config';
 
         <div class="py-7">
           <h3 class="text-slate-900 font-semibold mb-3">Do you offer annual billing?</h3>
-          <p class="text-slate-500 text-sm leading-relaxed">Annual plans are available with two months free. <a href="mailto:hello@sitegov.com" class="text-slate-900 font-medium hover:underline">Email us</a> to get set up on annual billing.</p>
+          <p class="text-slate-500 text-sm leading-relaxed">Annual plans are available with two months free. <a href="mailto:hello@sitegov.io" class="text-slate-900 font-medium hover:underline">Email us</a> to get set up on annual billing.</p>
         </div>
 
         <div class="py-7">
           <h3 class="text-slate-900 font-semibold mb-3">Is there a discount for larger agencies?</h3>
-          <p class="text-slate-500 text-sm leading-relaxed">If the Agency plan doesn&rsquo;t fit your situation (unusually large portfolio or specific team structure), <a href="mailto:hello@sitegov.com" class="text-slate-900 font-medium hover:underline">get in touch</a> and we&rsquo;ll work something out.</p>
+          <p class="text-slate-500 text-sm leading-relaxed">If the Agency plan doesn&rsquo;t fit your situation (unusually large portfolio or specific team structure), <a href="mailto:hello@sitegov.io" class="text-slate-900 font-medium hover:underline">get in touch</a> and we&rsquo;ll work something out.</p>
         </div>
 
       </div>
