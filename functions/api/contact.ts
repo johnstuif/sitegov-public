@@ -1,6 +1,8 @@
-import type { APIRoute } from 'astro';
-
-export const prerender = false;
+interface Env {
+  MAILGUN_API_KEY: string;
+  MAILGUN_DOMAIN: string;
+  TURNSTILE_SECRET_KEY: string;
+}
 
 async function verifyTurnstile(token: string, secretKey: string, ip: string): Promise<boolean> {
   const form = new FormData();
@@ -17,10 +19,8 @@ async function verifyTurnstile(token: string, secretKey: string, ip: string): Pr
   return data.success === true;
 }
 
-export const POST: APIRoute = async ({ request }) => {
-  const apiKey = import.meta.env.MAILGUN_API_KEY;
-  const domain = import.meta.env.MAILGUN_DOMAIN;
-  const turnstileSecret = import.meta.env.TURNSTILE_SECRET_KEY;
+export const onRequestPost: PagesFunction<Env> = async ({ request, env }) => {
+  const { MAILGUN_API_KEY: apiKey, MAILGUN_DOMAIN: domain, TURNSTILE_SECRET_KEY: turnstileSecret } = env;
 
   let body: { name?: string; email?: string; message?: string; _hp?: string; turnstileToken?: string };
   try {
@@ -29,7 +29,6 @@ export const POST: APIRoute = async ({ request }) => {
     return Response.json({ error: 'Invalid request' }, { status: 400 });
   }
 
-  // Honeypot: bots fill this, humans don't
   if (body._hp) {
     return Response.json({ success: true });
   }
@@ -44,7 +43,6 @@ export const POST: APIRoute = async ({ request }) => {
     return Response.json({ error: 'Invalid email address' }, { status: 400 });
   }
 
-  // Verify Turnstile (skip in dev if secret key not set)
   if (turnstileSecret) {
     if (!turnstileToken) {
       return Response.json({ error: 'Please complete the security check.' }, { status: 400 });
