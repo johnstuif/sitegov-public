@@ -1,0 +1,487 @@
+---
+export const prerender = true;
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { APP_URL } from '../config';
+---
+
+<BaseLayout
+  title="About SiteGov | Built from Years of Website Infrastructure Failures"
+  description="SiteGov was built after years of watching the same operational failures repeat across web projects. The problem was never the website."
+  currentPage="About"
+>
+
+  <!-- Hero -->
+  <section class="relative overflow-hidden bg-slate-950 text-white">
+    <div class="absolute inset-0 pointer-events-none select-none" aria-hidden="true">
+      <div class="absolute inset-0" style="background-image: radial-gradient(circle, rgba(148,163,184,0.35) 1px, transparent 1px); background-size: 32px 32px; opacity: 0.08;"></div>
+    </div>
+    <div class="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-amber-500/25 to-transparent"></div>
+
+    <div class="max-w-6xl mx-auto px-6 pt-24 pb-20">
+      <div class="max-w-3xl">
+        <p class="text-xs font-semibold uppercase tracking-widest text-slate-500 mb-4">About SiteGov</p>
+        <h1 class="text-5xl sm:text-6xl font-bold leading-tight tracking-tight mb-6">
+          The problem was never the website.
+        </h1>
+        <p class="text-lg text-slate-300 leading-relaxed mb-4">
+          After years of building websites, running launches, and handling migrations, a pattern became impossible to ignore. Projects rarely failed because of code. They failed because nobody knew who controlled the infrastructure behind the code.
+        </p>
+        <p class="text-base text-slate-500 leading-relaxed">
+          SiteGov was built to fix that. Not as a theory. As a direct response to a problem seen repeating across clients, industries, and years.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- The Pattern -->
+  <section class="border-b border-slate-100 bg-slate-50 py-20 paper-grain">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="max-w-2xl mb-14">
+        <p class="text-xs font-semibold uppercase tracking-widest text-slate-400 mb-4">The pattern</p>
+        <h2 class="text-3xl sm:text-4xl font-bold leading-tight text-slate-900">The same situations. Different clients. Different years.</h2>
+        <p class="text-slate-500 text-lg leading-relaxed mt-4">These aren&rsquo;t edge cases. Every agency that works with clients long enough encounters them. The situations change. The underlying failure doesn&rsquo;t.</p>
+      </div>
+
+      <!-- Launch day timeline -->
+      <div class="bg-white p-6 frame-teal mb-10 overflow-x-auto">
+        <p class="text-[10px] font-mono text-slate-400 uppercase tracking-widest mb-6">Project timeline</p>
+        <div class="min-w-[520px]">
+          <div class="relative flex items-start">
+            <!-- Connector line -->
+            <div class="absolute top-[13px] h-px bg-slate-200" style="left:10%; right:10%;"></div>
+            <!-- Broken red segment before launch -->
+            <div class="absolute top-[12px] h-[3px]" style="left:66%; right:10%; background-image: repeating-linear-gradient(90deg,#ef4444 0,#ef4444 4px,transparent 4px,transparent 8px);"></div>
+
+            <!-- Step 1: Project Approved -->
+            <div class="relative z-10 flex flex-col items-center flex-1">
+              <div class="w-7 h-7 rounded-full border-2 bg-white border-teal-500 flex items-center justify-center text-teal-500 text-[10px]">&#10003;</div>
+              <span class="text-[9px] font-mono mt-2 text-center leading-tight text-slate-400">Project<br>Approved</span>
+            </div>
+            <!-- Step 2: Design -->
+            <div class="relative z-10 flex flex-col items-center flex-1">
+              <div class="w-7 h-7 rounded-full border-2 bg-white border-teal-500 flex items-center justify-center text-teal-500 text-[10px]">&#10003;</div>
+              <span class="text-[9px] font-mono mt-2 text-center leading-tight text-slate-400">Design<br>Complete</span>
+            </div>
+            <!-- Step 3: Development -->
+            <div class="relative z-10 flex flex-col items-center flex-1">
+              <div class="w-7 h-7 rounded-full border-2 bg-white border-teal-500 flex items-center justify-center text-teal-500 text-[10px]">&#10003;</div>
+              <span class="text-[9px] font-mono mt-2 text-center leading-tight text-slate-400">Development<br>Complete</span>
+            </div>
+            <!-- Step 4: QA -->
+            <div class="relative z-10 flex flex-col items-center flex-1">
+              <div class="w-7 h-7 rounded-full border-2 bg-white border-teal-500 flex items-center justify-center text-teal-500 text-[10px]">&#10003;</div>
+              <span class="text-[9px] font-mono mt-2 text-center leading-tight text-slate-400">QA<br>Complete</span>
+            </div>
+            <!-- Step 5: Launch Day - BLOCKED -->
+            <div class="relative z-10 flex flex-col items-center flex-1">
+              <div class="w-7 h-7 rounded-full border-2 bg-red-950 border-red-500 flex items-center justify-center text-red-400 text-[11px] font-bold">!</div>
+              <span class="text-[9px] font-mono mt-2 text-center leading-tight text-red-500">Launch<br>Day</span>
+            </div>
+          </div>
+
+          <div class="flex justify-end mt-4">
+            <div class="inline-flex items-center gap-2 px-3 py-2 bg-red-50 border border-red-200 rounded text-xs text-red-600 font-mono">
+              <span class="w-1.5 h-1.5 rounded-full bg-red-500 shrink-0"></span>
+              DNS access missing &nbsp;&middot;&nbsp; Registrar login unknown &nbsp;&middot;&nbsp; Project blocked
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Observation cards -->
+      <div class="grid md:grid-cols-3 gap-6">
+
+        <div class="bg-white p-6 frame-teal">
+          <div class="flex items-center justify-between mb-4 pb-3 border-b border-dashed border-slate-200">
+            <span class="text-[10px] font-mono text-slate-400 uppercase tracking-widest">OBS &middot; 001</span>
+            <span class="inline-flex items-center gap-1.5 px-2 py-0.5 text-[10px] font-mono text-slate-500">
+              <span class="w-1.5 h-1.5 rounded-full bg-red-500 shrink-0"></span>LAUNCH
+            </span>
+          </div>
+          <p class="text-slate-800 text-sm font-semibold mb-3 leading-snug">DNS access missing on launch day</p>
+          <p class="text-slate-500 text-sm leading-relaxed">The site is ready. The client is ready. The DNS is controlled by someone who left eight months ago. Nobody documented that the nameservers were pointing to the old host. Everything was visible before the project started.</p>
+        </div>
+
+        <div class="bg-white p-6 frame-teal">
+          <div class="flex items-center justify-between mb-4 pb-3 border-b border-dashed border-slate-200">
+            <span class="text-[10px] font-mono text-slate-400 uppercase tracking-widest">OBS &middot; 002</span>
+            <span class="inline-flex items-center gap-1.5 px-2 py-0.5 text-[10px] font-mono text-slate-500">
+              <span class="w-1.5 h-1.5 rounded-full bg-amber-500 shrink-0"></span>RENEWAL
+            </span>
+          </div>
+          <p class="text-slate-800 text-sm font-semibold mb-3 leading-snug">Domain renewal notices sent to abandoned inboxes</p>
+          <p class="text-slate-500 text-sm leading-relaxed">The domain was registered under the founder&rsquo;s personal Gmail from 2014. The account still exists. Nobody checks it. The renewal is automatic &mdash; until the card expires.</p>
+        </div>
+
+        <div class="bg-white p-6 frame-teal">
+          <div class="flex items-center justify-between mb-4 pb-3 border-b border-dashed border-slate-200">
+            <span class="text-[10px] font-mono text-slate-400 uppercase tracking-widest">OBS &middot; 003</span>
+            <span class="inline-flex items-center gap-1.5 px-2 py-0.5 text-[10px] font-mono text-slate-500">
+              <span class="w-1.5 h-1.5 rounded-full bg-red-500 shrink-0"></span>TURNOVER
+            </span>
+          </div>
+          <p class="text-slate-800 text-sm font-semibold mb-3 leading-snug">Former employee still owns the registrar account</p>
+          <p class="text-slate-500 text-sm leading-relaxed">Someone leaves the company. Their email is still the primary contact on three registrar accounts. Everything is fine until someone needs to change DNS, renew a domain, or transfer a registrar.</p>
+        </div>
+
+        <div class="bg-white p-6 frame-teal">
+          <div class="flex items-center justify-between mb-4 pb-3 border-b border-dashed border-slate-200">
+            <span class="text-[10px] font-mono text-slate-400 uppercase tracking-widest">OBS &middot; 004</span>
+            <span class="inline-flex items-center gap-1.5 px-2 py-0.5 text-[10px] font-mono text-slate-500">
+              <span class="w-1.5 h-1.5 rounded-full bg-amber-500 shrink-0"></span>HANDOFF
+            </span>
+          </div>
+          <p class="text-slate-800 text-sm font-semibold mb-3 leading-snug">Agencies inheriting undocumented infrastructure</p>
+          <p class="text-slate-500 text-sm leading-relaxed">A new agency takes over. The outgoing team shares a list of logins in a Google doc. Some are current. Some aren&rsquo;t. The hosting is on a personal credit card. The DNS is &ldquo;probably GoDaddy.&rdquo;</p>
+        </div>
+
+        <div class="bg-white p-6 frame-teal">
+          <div class="flex items-center justify-between mb-4 pb-3 border-b border-dashed border-slate-200">
+            <span class="text-[10px] font-mono text-slate-400 uppercase tracking-widest">OBS &middot; 005</span>
+            <span class="inline-flex items-center gap-1.5 px-2 py-0.5 text-[10px] font-mono text-slate-500">
+              <span class="w-1.5 h-1.5 rounded-full bg-amber-500 shrink-0"></span>ACCESS
+            </span>
+          </div>
+          <p class="text-slate-800 text-sm font-semibold mb-3 leading-snug">Hosting tied to a personal account</p>
+          <p class="text-slate-500 text-sm leading-relaxed">The hosting is under a developer&rsquo;s personal account. They moved on two years ago. The billing still works. Access recovery does not. Resolving it means a support ticket and weeks of back-and-forth.</p>
+        </div>
+
+        <div class="bg-white p-6 frame-teal">
+          <div class="flex items-center justify-between mb-4 pb-3 border-b border-dashed border-slate-200">
+            <span class="text-[10px] font-mono text-slate-400 uppercase tracking-widest">OBS &middot; 006</span>
+            <span class="inline-flex items-center gap-1.5 px-2 py-0.5 text-[10px] font-mono text-slate-500">
+              <span class="w-1.5 h-1.5 rounded-full bg-slate-400 shrink-0"></span>VENDOR
+            </span>
+          </div>
+          <p class="text-slate-800 text-sm font-semibold mb-3 leading-snug">Unknown vendor still controls the DNS</p>
+          <p class="text-slate-500 text-sm leading-relaxed">An old vendor relationship ended. The nameservers still point to their infrastructure. Nobody realized. It was fine &mdash; until the vendor&rsquo;s system had an outage and the client&rsquo;s email went down for a day.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- The Hidden Infrastructure Layer -->
+  <section class="py-24 bg-slate-950 text-white">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="grid md:grid-cols-2 gap-16 items-center">
+        <div>
+          <p class="text-xs font-semibold uppercase tracking-widest text-slate-500 mb-4">The real picture</p>
+          <h2 class="text-4xl font-bold leading-tight mb-6 text-white">
+            A website is not one thing. It&rsquo;s five independent providers, each with a different owner.
+          </h2>
+          <p class="text-slate-400 text-lg leading-relaxed mb-4">
+            The visible website is just the surface. Behind it: a registrar that controls whether the domain exists, a DNS layer that points the domain somewhere, a host that serves the content, an SSL authority that makes it trusted, and an email system handling all the communication tied to the brand.
+          </p>
+          <p class="text-slate-400 text-base leading-relaxed">
+            Each of these is a separate account, controlled by a separate login, managed by a different person. Any one of them can change. Any one of them can fail. And any one of them can lock you out at exactly the wrong moment.
+          </p>
+        </div>
+
+        <!-- Network diagram -->
+        <div class="flex items-center justify-center">
+          <div class="bg-slate-900 p-6 frame-amber w-full max-w-sm">
+            <p class="text-[10px] font-mono text-slate-600 uppercase tracking-widest mb-4">Infrastructure ownership map</p>
+            <svg viewBox="0 0 300 280" class="w-full" aria-hidden="true">
+              <!-- Edges first (behind nodes) -->
+              <!-- Registrar: teal (documented) -->
+              <line x1="150" y1="117" x2="82" y2="59" stroke="#14b8a6" stroke-width="1.2"/>
+              <!-- DNS: red dashed (former employee) -->
+              <line x1="150" y1="117" x2="220" y2="59" stroke="#ef4444" stroke-width="1.2" stroke-dasharray="4 3"/>
+              <!-- Hosting: teal (documented) -->
+              <line x1="173" y1="140" x2="265" y2="140" stroke="#14b8a6" stroke-width="1.2"/>
+              <!-- SSL: gray dashed (unknown) -->
+              <line x1="163" y1="160" x2="220" y2="230" stroke="#475569" stroke-width="1.2" stroke-dasharray="3 3"/>
+              <!-- Email: amber dashed (old vendor) -->
+              <line x1="137" y1="160" x2="80" y2="230" stroke="#f59e0b" stroke-width="1.2" stroke-dasharray="4 3"/>
+
+              <!-- Center node: Website -->
+              <circle cx="150" cy="140" r="26" fill="#0f172a" stroke="#2E7CF6" stroke-width="2"/>
+              <text x="150" y="136" text-anchor="middle" font-family="IBM Plex Mono" font-size="7" fill="#60a5fa" letter-spacing="0.5">WEBSITE</text>
+              <text x="150" y="148" text-anchor="middle" font-family="IBM Plex Mono" font-size="6" fill="#3b82f6" letter-spacing="0.3">acmecorp.com</text>
+
+              <!-- Registrar (top-left) — client: teal -->
+              <circle cx="75" cy="50" r="18" fill="#0f172a" stroke="#14b8a6" stroke-width="1.5"/>
+              <text x="75" y="47" text-anchor="middle" font-family="IBM Plex Mono" font-size="7" fill="#14b8a6">REG</text>
+              <text x="75" y="57" text-anchor="middle" font-family="IBM Plex Mono" font-size="6" fill="#94a3b8">Client</text>
+
+              <!-- DNS (top-right) — former employee: red -->
+              <circle cx="227" cy="50" r="18" fill="#0f172a" stroke="#ef4444" stroke-width="1.5"/>
+              <text x="227" y="47" text-anchor="middle" font-family="IBM Plex Mono" font-size="7" fill="#ef4444">DNS</text>
+              <text x="227" y="57" text-anchor="middle" font-family="IBM Plex Mono" font-size="6" fill="#ef4444">Fmr emp.</text>
+
+              <!-- Hosting (right) — agency: teal -->
+              <circle cx="278" cy="140" r="18" fill="#0f172a" stroke="#14b8a6" stroke-width="1.5"/>
+              <text x="278" y="137" text-anchor="middle" font-family="IBM Plex Mono" font-size="7" fill="#14b8a6">HOST</text>
+              <text x="278" y="147" text-anchor="middle" font-family="IBM Plex Mono" font-size="6" fill="#94a3b8">Agency</text>
+
+              <!-- SSL (bottom-right) — unknown: gray -->
+              <circle cx="228" cy="238" r="18" fill="#0f172a" stroke="#475569" stroke-width="1.5"/>
+              <text x="228" y="235" text-anchor="middle" font-family="IBM Plex Mono" font-size="7" fill="#94a3b8">SSL</text>
+              <text x="228" y="245" text-anchor="middle" font-family="IBM Plex Mono" font-size="6" fill="#475569">Unknown</text>
+
+              <!-- Email (bottom-left) — old vendor: amber -->
+              <circle cx="72" cy="238" r="18" fill="#0f172a" stroke="#f59e0b" stroke-width="1.5"/>
+              <text x="72" y="235" text-anchor="middle" font-family="IBM Plex Mono" font-size="7" fill="#f59e0b">EMAIL</text>
+              <text x="72" y="245" text-anchor="middle" font-family="IBM Plex Mono" font-size="6" fill="#f59e0b">Old vendor</text>
+            </svg>
+
+            <div class="mt-4 grid grid-cols-2 gap-x-4 gap-y-2">
+              <div class="flex items-center gap-2">
+                <span class="w-2 h-2 rounded-full bg-teal-500 shrink-0"></span>
+                <span class="text-[10px] font-mono text-slate-400">Documented</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <span class="w-2 h-2 rounded-full bg-amber-500 shrink-0"></span>
+                <span class="text-[10px] font-mono text-slate-400">Old vendor</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <span class="w-2 h-2 rounded-full bg-red-500 shrink-0"></span>
+                <span class="text-[10px] font-mono text-slate-400">Former employee</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <span class="w-2 h-2 rounded-full bg-slate-500 shrink-0"></span>
+                <span class="text-[10px] font-mono text-slate-400">Unknown</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- What SiteGov Believes -->
+  <section class="py-24 bg-slate-50 border-y border-slate-100 paper-grain">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="max-w-2xl mb-14">
+        <p class="text-xs font-semibold uppercase tracking-widest text-slate-400 mb-4">What we believe</p>
+        <h2 class="text-4xl font-bold leading-tight text-slate-900">Principles that drove every product decision.</h2>
+      </div>
+      <div class="grid sm:grid-cols-2 gap-6">
+
+        <div class="bg-white p-8 frame-teal">
+          <div class="w-10 h-10 bg-slate-900 rounded-lg flex items-center justify-center mb-5 shrink-0">
+            <svg class="w-5 h-5 text-teal-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M15 19.128a9.38 9.38 0 002.625.372 9.337 9.337 0 004.121-.952 4.125 4.125 0 00-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 018.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0111.964-3.07M12 6.375a3.375 3.375 0 11-6.75 0 3.375 3.375 0 016.75 0zm8.25 2.25a2.625 2.625 0 11-5.25 0 2.625 2.625 0 015.25 0z" />
+            </svg>
+          </div>
+          <h3 class="text-lg font-bold text-slate-900 mb-3">Infrastructure knowledge should survive employee turnover.</h3>
+          <p class="text-slate-500 text-sm leading-relaxed">When the person who managed the DNS leaves, their knowledge should stay behind. A system that only works while specific people are present is one departure away from an operational gap.</p>
+        </div>
+
+        <div class="bg-white p-8 frame-teal">
+          <div class="w-10 h-10 bg-slate-900 rounded-lg flex items-center justify-center mb-5 shrink-0">
+            <svg class="w-5 h-5 text-teal-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+          </div>
+          <h3 class="text-lg font-bold text-slate-900 mb-3">Access should be documented before it is needed.</h3>
+          <p class="text-slate-500 text-sm leading-relaxed">Nobody finds out who controls a registrar account at a convenient moment. The right time to discover a missing login is during a routine review &mdash; not at 11pm on go-live day.</p>
+        </div>
+
+        <div class="bg-white p-8 frame-teal">
+          <div class="w-10 h-10 bg-slate-900 rounded-lg flex items-center justify-center mb-5 shrink-0">
+            <svg class="w-5 h-5 text-teal-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 12h3.75M9 15h3.75M9 18h3.75m3 .75H18a2.25 2.25 0 002.25-2.25V6.108c0-1.135-.845-2.098-1.976-2.192a48.424 48.424 0 00-1.123-.08m-5.801 0c-.065.21-.1.433-.1.664 0 .414.336.75.75.75h4.5a.75.75 0 00.75-.75 2.25 2.25 0 00-.1-.664m-5.8 0A2.251 2.251 0 0113.5 2.25H15c1.012 0 1.867.668 2.15 1.586m-5.8 0c-.376.023-.75.05-1.124.08C9.095 4.01 8.25 4.973 8.25 6.108V8.25m0 0H4.875c-.621 0-1.125.504-1.125 1.125v11.25c0 .621.504 1.125 1.125 1.125h9.75c.621 0 1.125-.504 1.125-1.125V9.375c0-.621-.504-1.125-1.125-1.125H8.25zM6.75 12h.008v.008H6.75V12zm0 3h.008v.008H6.75V15zm0 3h.008v.008H6.75V18z" />
+            </svg>
+          </div>
+          <h3 class="text-lg font-bold text-slate-900 mb-3">Client records belong to clients.</h3>
+          <p class="text-slate-500 text-sm leading-relaxed">Infrastructure records are maintained by agencies, but they belong to the domain owner. Like medical records &mdash; the provider keeps them current, but the patient owns them. When the agency relationship ends, the record transfers, not disappears.</p>
+        </div>
+
+        <div class="bg-white p-8 frame-teal">
+          <div class="w-10 h-10 bg-slate-900 rounded-lg flex items-center justify-center mb-5 shrink-0">
+            <svg class="w-5 h-5 text-teal-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z" />
+            </svg>
+          </div>
+          <h3 class="text-lg font-bold text-slate-900 mb-3">Control matters more than assumptions.</h3>
+          <p class="text-slate-500 text-sm leading-relaxed">&ldquo;We think the client has access&rdquo; is not the same as knowing they do. &ldquo;The domain auto-renews&rdquo; is not the same as knowing who gets the renewal notice. SiteGov replaces assumptions with records.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Why SiteGov Exists -->
+  <section class="py-24 bg-slate-950 text-white">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="grid md:grid-cols-2 gap-16 items-start">
+        <div>
+          <p class="text-xs font-semibold uppercase tracking-widest text-slate-500 mb-4">Why it was built</p>
+          <h2 class="text-4xl font-bold leading-tight mb-6 text-white">
+            Built after repeatedly seeing the same operational failures go unfixed.
+          </h2>
+          <p class="text-slate-400 text-lg leading-relaxed mb-4">
+            SiteGov was created by a web professional with 25+ years of experience building websites, managing client launches, and leading web teams. The pattern it addresses isn&rsquo;t a theory. It emerged from watching the same failures play out across hundreds of projects.
+          </p>
+          <p class="text-slate-400 text-base leading-relaxed mb-4">
+            The same story repeated: an agency does excellent work, delivers a strong site, and then a completely preventable infrastructure problem derails the launch, the renewal, or the handoff. The code was never the problem. The failure to document who controlled the infrastructure was.
+          </p>
+          <p class="text-slate-400 text-base leading-relaxed">
+            SiteGov exists because the tooling to fix this didn&rsquo;t. Spreadsheets worked until someone left. Password managers stored credentials but not accountability. Monitoring tools detected outages but didn&rsquo;t surface the ownership gaps that caused them. Nothing connected infrastructure detection to governance documentation.
+          </p>
+        </div>
+
+        <!-- Metrics block -->
+        <div class="bg-slate-900 p-8 frame-amber">
+          <p class="text-[10px] font-mono text-slate-600 uppercase tracking-widest mb-8">Experience behind the product</p>
+          <div class="space-y-8">
+            <div>
+              <div class="text-6xl font-bold text-white tracking-tight leading-none mb-2">25+</div>
+              <div class="text-slate-500 text-sm font-mono uppercase tracking-wider">Years building websites</div>
+            </div>
+            <div class="h-px bg-slate-800"></div>
+            <div>
+              <div class="text-6xl font-bold text-white tracking-tight leading-none mb-2">100s</div>
+              <div class="text-slate-500 text-sm font-mono uppercase tracking-wider">Of launches and migrations</div>
+            </div>
+            <div class="h-px bg-slate-800"></div>
+            <div>
+              <div class="text-6xl font-bold text-white tracking-tight leading-none mb-2">1</div>
+              <div class="text-slate-500 text-sm font-mono uppercase tracking-wider">Recurring pattern. Every time.</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- What SiteGov Is Trying To Become -->
+  <section class="py-24 bg-white border-y border-slate-100 paper-grain">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="max-w-2xl mb-14">
+        <p class="text-xs font-semibold uppercase tracking-widest text-slate-400 mb-4">Where this is going</p>
+        <h2 class="text-4xl font-bold leading-tight text-slate-900">From scattered knowledge to infrastructure agencies can rely on.</h2>
+        <p class="text-slate-500 text-lg leading-relaxed mt-4">Most agencies carry infrastructure knowledge in people&rsquo;s heads, email threads, and spreadsheets nobody updates. SiteGov is the transition away from that.</p>
+      </div>
+
+      <!-- Transformation diagram -->
+      <div class="grid md:grid-cols-[1fr_auto_1fr] gap-6 items-center">
+
+        <!-- Before -->
+        <div class="bg-slate-50 p-6 frame-teal">
+          <p class="text-[10px] font-mono text-slate-400 uppercase tracking-widest mb-5">Before SiteGov</p>
+          <div class="space-y-3">
+            <div class="flex items-center gap-3">
+              <span class="w-2 h-2 rounded-full bg-slate-400 shrink-0"></span>
+              <span class="text-slate-500 text-sm">Tribal knowledge</span>
+            </div>
+            <div class="flex items-center gap-3">
+              <span class="w-2 h-2 rounded-full bg-slate-400 shrink-0"></span>
+              <span class="text-slate-500 text-sm">Email threads</span>
+            </div>
+            <div class="flex items-center gap-3">
+              <span class="w-2 h-2 rounded-full bg-slate-400 shrink-0"></span>
+              <span class="text-slate-500 text-sm">Stale spreadsheets</span>
+            </div>
+            <div class="flex items-center gap-3">
+              <span class="w-2 h-2 rounded-full bg-slate-400 shrink-0"></span>
+              <span class="text-slate-500 text-sm">Memory and assumptions</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Arrow -->
+        <div class="flex items-center justify-center py-4">
+          <div class="flex flex-col items-center gap-2">
+            <svg class="w-8 h-8 text-slate-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3" />
+            </svg>
+            <span class="text-[9px] font-mono text-slate-400 uppercase tracking-widest">SiteGov</span>
+          </div>
+        </div>
+
+        <!-- After -->
+        <div class="bg-slate-50 p-6 frame-teal">
+          <p class="text-[10px] font-mono text-slate-400 uppercase tracking-widest mb-5">After SiteGov</p>
+          <div class="space-y-3">
+            <div class="flex items-center gap-3">
+              <span class="w-2 h-2 rounded-full bg-teal-500 shrink-0"></span>
+              <span class="text-slate-700 text-sm font-medium">Documented records</span>
+            </div>
+            <div class="flex items-center gap-3">
+              <span class="w-2 h-2 rounded-full bg-teal-500 shrink-0"></span>
+              <span class="text-slate-700 text-sm font-medium">Transferable on handoff</span>
+            </div>
+            <div class="flex items-center gap-3">
+              <span class="w-2 h-2 rounded-full bg-teal-500 shrink-0"></span>
+              <span class="text-slate-700 text-sm font-medium">Recoverable after turnover</span>
+            </div>
+            <div class="flex items-center gap-3">
+              <span class="w-2 h-2 rounded-full bg-teal-500 shrink-0"></span>
+              <span class="text-slate-700 text-sm font-medium">Operationally resilient</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Trust and Boundaries -->
+  <section class="py-24 bg-slate-50 border-b border-slate-100 paper-grain">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="max-w-2xl mb-14">
+        <p class="text-xs font-semibold uppercase tracking-widest text-slate-400 mb-4">What SiteGov is</p>
+        <h2 class="text-4xl font-bold leading-tight text-slate-900">Specific tools. Specific jobs. No overlap.</h2>
+        <p class="text-slate-500 text-lg leading-relaxed mt-4">SiteGov occupies a specific space in the tooling stack. Understanding where it fits &mdash; and where it doesn&rsquo;t &mdash; sets the right expectations from day one.</p>
+      </div>
+
+      <div class="grid sm:grid-cols-3 gap-5">
+
+        <div class="bg-white p-6 frame-teal">
+          <p class="text-[10px] font-mono text-slate-400 uppercase tracking-widest mb-2">Password Manager</p>
+          <p class="text-slate-700 text-sm mb-4">Stores passwords.</p>
+          <div class="h-px bg-slate-100 my-4"></div>
+          <p class="text-[10px] font-mono text-teal-600 uppercase tracking-widest mb-2">SiteGov</p>
+          <p class="text-slate-800 text-sm font-semibold mb-3">Documents who has access.</p>
+          <p class="text-slate-500 text-xs leading-relaxed">Where credentials live, whether MFA is confirmed, who the backup admin is. Not the passwords themselves.</p>
+        </div>
+
+        <div class="bg-white p-6 frame-teal">
+          <p class="text-[10px] font-mono text-slate-400 uppercase tracking-widest mb-2">Security Scanner</p>
+          <p class="text-slate-700 text-sm mb-4">Finds vulnerabilities.</p>
+          <div class="h-px bg-slate-100 my-4"></div>
+          <p class="text-[10px] font-mono text-teal-600 uppercase tracking-widest mb-2">SiteGov</p>
+          <p class="text-slate-800 text-sm font-semibold mb-3">Finds ownership gaps.</p>
+          <p class="text-slate-500 text-xs leading-relaxed">Missing backup admins, undocumented credentials, former employees with active access. The governance layer, not the vulnerability layer.</p>
+        </div>
+
+        <div class="bg-white p-6 frame-teal">
+          <p class="text-[10px] font-mono text-slate-400 uppercase tracking-widest mb-2">Uptime Monitor</p>
+          <p class="text-slate-700 text-sm mb-4">Detects outages.</p>
+          <div class="h-px bg-slate-100 my-4"></div>
+          <p class="text-[10px] font-mono text-teal-600 uppercase tracking-widest mb-2">SiteGov</p>
+          <p class="text-slate-800 text-sm font-semibold mb-3">Documents who can respond.</p>
+          <p class="text-slate-500 text-xs leading-relaxed">When an outage happens, the question immediately becomes: who has access to fix it? SiteGov has that answer before the question is asked.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Closing CTA -->
+  <section class="bg-slate-50 border-t border-slate-200 py-28 paper-grain">
+    <div class="max-w-3xl mx-auto px-6 text-center">
+      <p class="text-xs font-semibold uppercase tracking-widest text-slate-400 mb-6">Get started</p>
+      <h2 class="text-4xl sm:text-5xl font-bold leading-snug sm:leading-snug mb-6">
+        Every client has infrastructure knowledge hiding somewhere.
+      </h2>
+      <p class="text-slate-500 text-xl mb-10 leading-relaxed">
+        SiteGov helps agencies find it, document it, and keep it from disappearing when someone leaves.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-3 justify-center">
+        <a href={`${APP_URL}/users/sign_up`} class="inline-flex items-center justify-center px-8 py-4 bg-slate-900 text-white text-sm font-semibold rounded-lg hover:bg-slate-700 transition-colors">
+          Run a free infrastructure scan
+        </a>
+        <a href="/what-is-sitegov" class="inline-flex items-center justify-center px-8 py-4 bg-white text-slate-700 text-sm font-medium rounded-lg border border-slate-200 hover:border-slate-400 transition-colors">
+          What is SiteGov?
+        </a>
+      </div>
+      <p class="mt-4 text-xs text-slate-400">No credit card required. Your first scan in under five minutes.</p>
+    </div>
+  </section>
+
+</BaseLayout>
