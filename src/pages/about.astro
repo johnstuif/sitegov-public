@@ -5,41 +5,175 @@ import { APP_URL } from '../config';
 ---
 
 <BaseLayout
-  title="About SiteGov | Built from Years of Website Infrastructure Failures"
-  description="SiteGov was built after years of watching the same operational failures repeat across web projects. The problem was never the website."
+  title="About SiteGov | Built from 25 Years of Agency Work"
+  description="SiteGov was built after 25 years of web work and hundreds of encounters with the same infrastructure ownership problems across clients, industries, and years."
   currentPage="About"
 >
 
   <!-- Hero -->
-  <section class="relative overflow-hidden bg-slate-950 text-white">
+  <section class="relative bg-slate-950 text-white">
     <div class="absolute inset-0 pointer-events-none select-none" aria-hidden="true">
       <div class="absolute inset-0" style="background-image: radial-gradient(circle, rgba(148,163,184,0.35) 1px, transparent 1px); background-size: 32px 32px; opacity: 0.08;"></div>
     </div>
+
+    <!-- Infrastructure network: extends from hero into pattern section below -->
+    <div class="absolute right-0 top-0 w-[55%] h-[1400px] pointer-events-none select-none" aria-hidden="true">
+      <svg class="w-full h-full opacity-[0.20]" viewBox="0 0 700 1400" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMin meet">
+        <defs>
+          <linearGradient id="net" x1="0" y1="0" x2="0" y2="1400" gradientUnits="userSpaceOnUse">
+            <stop offset="0%" stop-color="#94a3b8"/>
+            <stop offset="38%" stop-color="#94a3b8"/>
+            <stop offset="48%" stop-color="#475569"/>
+            <stop offset="100%" stop-color="#475569"/>
+          </linearGradient>
+        </defs>
+        <!-- Scatter dots: hero area -->
+        <circle cx="620" cy="35" r="1.5" fill="url(#net)"/>
+        <circle cx="480" cy="20" r="1" fill="url(#net)"/>
+        <circle cx="340" cy="55" r="1.5" fill="url(#net)"/>
+        <circle cx="660" cy="110" r="1" fill="url(#net)"/>
+        <circle cx="680" cy="200" r="1.5" fill="url(#net)"/>
+        <circle cx="650" cy="320" r="1" fill="url(#net)"/>
+        <circle cx="630" cy="440" r="1.5" fill="url(#net)"/>
+        <circle cx="80" cy="200" r="1.5" fill="url(#net)"/>
+        <circle cx="50" cy="380" r="1" fill="url(#net)"/>
+        <circle cx="200" cy="80" r="1.5" fill="url(#net)"/>
+        <!-- Scatter dots: continuation -->
+        <circle cx="600" cy="600" r="1.5" fill="url(#net)"/>
+        <circle cx="660" cy="730" r="1" fill="url(#net)"/>
+        <circle cx="630" cy="870" r="1.5" fill="url(#net)"/>
+        <circle cx="650" cy="1010" r="1" fill="url(#net)"/>
+        <circle cx="30" cy="630" r="1" fill="url(#net)"/>
+        <circle cx="60" cy="780" r="1.5" fill="url(#net)"/>
+        <circle cx="40" cy="940" r="1" fill="url(#net)"/>
+        <circle cx="430" cy="1120" r="1" fill="url(#net)"/>
+        <circle cx="310" cy="1220" r="1.5" fill="url(#net)"/>
+        <circle cx="600" cy="1500" r="1.5" fill="url(#net)"/>
+        <circle cx="650" cy="1750" r="1" fill="url(#net)"/>
+        <circle cx="620" cy="2000" r="1.5" fill="url(#net)"/>
+        <circle cx="640" cy="2300" r="1" fill="url(#net)"/>
+        <circle cx="600" cy="2600" r="1.5" fill="url(#net)"/>
+        <circle cx="650" cy="2900" r="1" fill="url(#net)"/>
+        <circle cx="620" cy="3200" r="1.5" fill="url(#net)"/>
+        <circle cx="640" cy="3500" r="1" fill="url(#net)"/>
+        <circle cx="600" cy="3800" r="1.5" fill="url(#net)"/>
+        <circle cx="640" cy="4100" r="1" fill="url(#net)"/>
+        <circle cx="610" cy="4400" r="1.5" fill="url(#net)"/>
+        <circle cx="30" cy="1450" r="1" fill="url(#net)"/>
+        <circle cx="55" cy="1900" r="1.5" fill="url(#net)"/>
+        <circle cx="35" cy="2400" r="1" fill="url(#net)"/>
+        <circle cx="60" cy="2900" r="1.5" fill="url(#net)"/>
+        <circle cx="35" cy="3400" r="1" fill="url(#net)"/>
+        <circle cx="55" cy="3900" r="1.5" fill="url(#net)"/>
+        <circle cx="35" cy="4400" r="1" fill="url(#net)"/>
+        <!-- Edges: hero (solid) -->
+        <line x1="580" y1="100" x2="420" y2="190" stroke="url(#net)" stroke-width="0.75"/>
+        <line x1="420" y1="190" x2="560" y2="280" stroke="url(#net)" stroke-width="0.75"/>
+        <line x1="420" y1="190" x2="280" y2="320" stroke="url(#net)" stroke-width="0.75"/>
+        <line x1="560" y1="280" x2="460" y2="400" stroke="url(#net)" stroke-width="0.75"/>
+        <line x1="280" y1="320" x2="200" y2="420" stroke="url(#net)" stroke-width="0.75"/>
+        <line x1="460" y1="400" x2="360" y2="470" stroke="url(#net)" stroke-width="0.75"/>
+        <!-- Edges: dashed, crossing hero boundary -->
+        <line x1="200" y1="420" x2="360" y2="470" stroke="url(#net)" stroke-width="0.75" stroke-dasharray="4 3"/>
+        <line x1="360" y1="470" x2="240" y2="680" stroke="url(#net)" stroke-width="0.75" stroke-dasharray="4 3"/>
+        <line x1="200" y1="420" x2="120" y2="700" stroke="url(#net)" stroke-width="0.75" stroke-dasharray="4 3"/>
+        <!-- Edges: through Pattern section -->
+        <line x1="240" y1="680" x2="300" y2="880" stroke="url(#net)" stroke-width="0.75" stroke-dasharray="4 3"/>
+        <line x1="120" y1="700" x2="80" y2="920" stroke="url(#net)" stroke-width="0.75" stroke-dasharray="4 3"/>
+        <line x1="300" y1="880" x2="180" y2="1080" stroke="url(#net)" stroke-width="0.75" stroke-dasharray="4 3"/>
+        <!-- Edges: extended continuation to CTA -->
+        <line x1="180" y1="1080" x2="260" y2="1280" stroke="url(#net)" stroke-width="0.75" stroke-dasharray="4 3"/>
+        <line x1="80" y1="920" x2="100" y2="1440" stroke="url(#net)" stroke-width="0.75" stroke-dasharray="4 3"/>
+        <line x1="260" y1="1280" x2="310" y2="1560" stroke="url(#net)" stroke-width="0.75" stroke-dasharray="4 3"/>
+        <line x1="100" y1="1440" x2="160" y2="1720" stroke="url(#net)" stroke-width="0.75" stroke-dasharray="4 3"/>
+        <line x1="310" y1="1560" x2="280" y2="1900" stroke="url(#net)" stroke-width="0.75" stroke-dasharray="4 3"/>
+        <line x1="160" y1="1720" x2="120" y2="2060" stroke="url(#net)" stroke-width="0.75" stroke-dasharray="4 3"/>
+        <line x1="280" y1="1900" x2="300" y2="2240" stroke="url(#net)" stroke-width="0.75" stroke-dasharray="4 3"/>
+        <line x1="120" y1="2060" x2="200" y2="2420" stroke="url(#net)" stroke-width="0.75" stroke-dasharray="4 3"/>
+        <line x1="300" y1="2240" x2="340" y2="2620" stroke="url(#net)" stroke-width="0.75" stroke-dasharray="4 3"/>
+        <line x1="200" y1="2420" x2="160" y2="2800" stroke="url(#net)" stroke-width="0.75" stroke-dasharray="4 3"/>
+        <line x1="340" y1="2620" x2="280" y2="3000" stroke="url(#net)" stroke-width="0.75" stroke-dasharray="4 3"/>
+        <line x1="160" y1="2800" x2="140" y2="3180" stroke="url(#net)" stroke-width="0.75" stroke-dasharray="4 3"/>
+        <line x1="280" y1="3000" x2="260" y2="3400" stroke="url(#net)" stroke-width="0.75" stroke-dasharray="4 3"/>
+        <line x1="140" y1="3180" x2="180" y2="3600" stroke="url(#net)" stroke-width="0.75" stroke-dasharray="4 3"/>
+        <line x1="260" y1="3400" x2="300" y2="3800" stroke="url(#net)" stroke-width="0.75" stroke-dasharray="4 3"/>
+        <line x1="180" y1="3600" x2="160" y2="4000" stroke="url(#net)" stroke-width="0.75" stroke-dasharray="4 3"/>
+        <line x1="300" y1="3800" x2="240" y2="4200" stroke="url(#net)" stroke-width="0.75" stroke-dasharray="4 3"/>
+        <line x1="160" y1="4000" x2="180" y2="4400" stroke="url(#net)" stroke-width="0.75" stroke-dasharray="4 3"/>
+        <line x1="240" y1="4200" x2="260" y2="4650" stroke="url(#net)" stroke-width="0.75" stroke-dasharray="4 3"/>
+        <line x1="180" y1="4400" x2="200" y2="4800" stroke="url(#net)" stroke-width="0.75" stroke-dasharray="4 3"/>
+        <!-- Nodes: hero area -->
+        <circle cx="580" cy="100" r="4.5" fill="url(#net)"/>
+        <circle cx="420" cy="190" r="4.5" fill="url(#net)"/>
+        <circle cx="560" cy="280" r="4.5" fill="url(#net)"/>
+        <circle cx="280" cy="320" r="4.5" fill="url(#net)"/>
+        <circle cx="460" cy="400" r="4.5" fill="url(#net)"/>
+        <circle cx="200" cy="420" r="4.5" fill="url(#net)"/>
+        <circle cx="360" cy="470" r="4" fill="url(#net)"/>
+        <!-- Nodes: pattern area -->
+        <circle cx="240" cy="680" r="3.5" fill="url(#net)"/>
+        <circle cx="120" cy="700" r="3" fill="url(#net)"/>
+        <circle cx="300" cy="880" r="3" fill="url(#net)"/>
+        <circle cx="80" cy="920" r="2.5" fill="url(#net)"/>
+        <circle cx="180" cy="1080" r="2" fill="url(#net)"/>
+        <!-- Nodes: extended continuation (progressively smaller) -->
+        <circle cx="260" cy="1280" r="2" fill="url(#net)"/>
+        <circle cx="100" cy="1440" r="2" fill="url(#net)"/>
+        <circle cx="310" cy="1560" r="1.5" fill="url(#net)"/>
+        <circle cx="160" cy="1720" r="1.5" fill="url(#net)"/>
+        <circle cx="280" cy="1900" r="1.5" fill="url(#net)"/>
+        <circle cx="120" cy="2060" r="1.5" fill="url(#net)"/>
+        <circle cx="300" cy="2240" r="1" fill="url(#net)"/>
+        <circle cx="200" cy="2420" r="1" fill="url(#net)"/>
+        <circle cx="340" cy="2620" r="1" fill="url(#net)"/>
+        <circle cx="160" cy="2800" r="1" fill="url(#net)"/>
+        <circle cx="280" cy="3000" r="1" fill="url(#net)"/>
+        <circle cx="140" cy="3180" r="1" fill="url(#net)"/>
+        <circle cx="260" cy="3400" r="1" fill="url(#net)"/>
+        <circle cx="180" cy="3600" r="1" fill="url(#net)"/>
+        <circle cx="300" cy="3800" r="1" fill="url(#net)"/>
+        <circle cx="160" cy="4000" r="1" fill="url(#net)"/>
+        <circle cx="240" cy="4200" r="1" fill="url(#net)"/>
+        <circle cx="180" cy="4400" r="1" fill="url(#net)"/>
+        <circle cx="260" cy="4650" r="1" fill="url(#net)"/>
+        <circle cx="200" cy="4800" r="1" fill="url(#net)"/>
+        <!-- Labels: hero area only -->
+        <text x="580" y="84" text-anchor="middle" fill="url(#net)" font-size="9" font-family="monospace" letter-spacing="1">REGISTRAR</text>
+        <text x="420" y="174" text-anchor="middle" fill="url(#net)" font-size="9" font-family="monospace" letter-spacing="1">DNS</text>
+        <text x="560" y="264" text-anchor="middle" fill="url(#net)" font-size="9" font-family="monospace" letter-spacing="1">HOSTING</text>
+        <text x="280" y="304" text-anchor="middle" fill="url(#net)" font-size="9" font-family="monospace" letter-spacing="1">NAMESERVERS</text>
+        <text x="460" y="384" text-anchor="middle" fill="url(#net)" font-size="9" font-family="monospace" letter-spacing="1">SSL</text>
+        <text x="200" y="404" text-anchor="middle" fill="url(#net)" font-size="9" font-family="monospace" letter-spacing="1">EMAIL</text>
+        <text x="360" y="454" text-anchor="middle" fill="url(#net)" font-size="9" font-family="monospace" letter-spacing="1">CDN</text>
+      </svg>
+    </div>
+
     <div class="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-amber-500/25 to-transparent"></div>
 
-    <div class="max-w-6xl mx-auto px-6 pt-24 pb-20">
+    <div class="relative z-[1] max-w-6xl mx-auto px-6 pt-24 pb-20">
       <div class="max-w-3xl">
         <p class="text-xs font-semibold uppercase tracking-widest text-slate-500 mb-4">About SiteGov</p>
         <h1 class="text-5xl sm:text-6xl font-bold leading-tight tracking-tight mb-6">
-          The problem was never the website.
+          We spent 25 years building websites. This kept happening.
         </h1>
         <p class="text-lg text-slate-300 leading-relaxed mb-4">
-          After years of building websites, running launches, and handling migrations, a pattern became impossible to ignore. Projects rarely failed because of code. They failed because nobody knew who controlled the infrastructure behind the code.
+          After hundreds of launches, migrations, and client handoffs, a pattern emerged that was hard to dismiss. Well-executed projects would run into the same operational wall, often at the worst possible moment: nobody had a clear picture of who actually controlled the infrastructure behind the site.
         </p>
         <p class="text-base text-slate-500 leading-relaxed">
-          SiteGov was built to fix that. Not as a theory. As a direct response to a problem seen repeating across clients, industries, and years.
+          SiteGov was built as a direct response to that gap, not as a theory, but from having been in these situations too many times to count.
         </p>
       </div>
     </div>
   </section>
 
   <!-- The Pattern -->
-  <section class="border-b border-slate-100 bg-slate-50 py-20 paper-grain">
+  <section class="relative border-b border-slate-100 py-20 paper-grain">
+
     <div class="max-w-6xl mx-auto px-6">
       <div class="max-w-2xl mb-14">
         <p class="text-xs font-semibold uppercase tracking-widest text-slate-400 mb-4">The pattern</p>
         <h2 class="text-3xl sm:text-4xl font-bold leading-tight text-slate-900">The same situations. Different clients. Different years.</h2>
-        <p class="text-slate-500 text-lg leading-relaxed mt-4">These aren&rsquo;t edge cases. Every agency that works with clients long enough encounters them. The situations change. The underlying failure doesn&rsquo;t.</p>
+        <p class="text-slate-500 text-lg leading-relaxed mt-4">Working with clients long enough, you start to recognize these moments. Different projects, different industries, different years. The same underlying problem.</p>
       </div>
 
       <!-- Launch day timeline -->
@@ -110,7 +244,7 @@ import { APP_URL } from '../config';
             </span>
           </div>
           <p class="text-slate-800 text-sm font-semibold mb-3 leading-snug">Domain renewal notices sent to abandoned inboxes</p>
-          <p class="text-slate-500 text-sm leading-relaxed">The domain was registered under the founder&rsquo;s personal Gmail from 2014. The account still exists. Nobody checks it. The renewal is automatic &mdash; until the card expires.</p>
+          <p class="text-slate-500 text-sm leading-relaxed">The domain was registered under the founder&rsquo;s personal Gmail from 2014. The account still exists. Nobody checks it. The renewal is automatic, until the card expires.</p>
         </div>
 
         <div class="bg-white p-6 frame-teal">
@@ -154,28 +288,37 @@ import { APP_URL } from '../config';
             </span>
           </div>
           <p class="text-slate-800 text-sm font-semibold mb-3 leading-snug">Unknown vendor still controls the DNS</p>
-          <p class="text-slate-500 text-sm leading-relaxed">An old vendor relationship ended. The nameservers still point to their infrastructure. Nobody realized. It was fine &mdash; until the vendor&rsquo;s system had an outage and the client&rsquo;s email went down for a day.</p>
+          <p class="text-slate-500 text-sm leading-relaxed">An old vendor relationship ended. The nameservers still point to their infrastructure. Nobody realized. It was fine, until the vendor&rsquo;s system had an outage and the client&rsquo;s email went down for a day.</p>
         </div>
 
       </div>
     </div>
   </section>
 
-  <!-- The Hidden Infrastructure Layer -->
-  <section class="py-24 bg-slate-950 text-white">
+  <!-- How This Started -->
+  <section class="relative py-24 bg-slate-950 text-white">
     <div class="max-w-6xl mx-auto px-6">
       <div class="grid md:grid-cols-2 gap-16 items-center">
         <div>
-          <p class="text-xs font-semibold uppercase tracking-widest text-slate-500 mb-4">The real picture</p>
+          <p class="text-xs font-semibold uppercase tracking-widest text-slate-500 mb-4">How this started</p>
           <h2 class="text-4xl font-bold leading-tight mb-6 text-white">
-            A website is not one thing. It&rsquo;s five independent providers, each with a different owner.
+            Years of good work running into the same operational wall.
           </h2>
           <p class="text-slate-400 text-lg leading-relaxed mb-4">
-            The visible website is just the surface. Behind it: a registrar that controls whether the domain exists, a DNS layer that points the domain somewhere, a host that serves the content, an SSL authority that makes it trusted, and an email system handling all the communication tied to the brand.
+            The projects that led to SiteGov weren&rsquo;t failures. That&rsquo;s what makes the pattern worth talking about. The work was solid. The code shipped. The design was approved. The client was happy.
           </p>
-          <p class="text-slate-400 text-base leading-relaxed">
-            Each of these is a separate account, controlled by a separate login, managed by a different person. Any one of them can change. Any one of them can fail. And any one of them can lock you out at exactly the wrong moment.
+          <p class="text-slate-400 text-base leading-relaxed mb-4">
+            And then, at the exact moment it mattered most (launch day, a migration, a handoff, an emergency), something outside the project would surface. Who controls the DNS? Where&rsquo;s the registrar login? Whose personal account is hosting tied to? Is that vendor relationship still active?
           </p>
+          <p class="text-slate-400 text-base leading-relaxed mb-4">
+            These situations aren&rsquo;t failures of craft. They&rsquo;re failures of documentation. Preventable, but only if someone had thought to capture the information before it was needed.
+          </p>
+          <div class="border-l-2 border-slate-700 pl-5 mt-6">
+            <p class="text-slate-300 text-sm leading-relaxed mb-3">
+              One launch was delayed by more than a week because nobody knew how to access the client&rsquo;s Cloudflare account. It wasn&rsquo;t an unusual situation. It was one of many that made us realize there had to be a better way to document and manage infrastructure ownership.
+            </p>
+            <p class="text-slate-500 text-sm">That realization eventually became SiteGov.</p>
+          </div>
         </div>
 
         <!-- Network diagram -->
@@ -251,7 +394,7 @@ import { APP_URL } from '../config';
   </section>
 
   <!-- What SiteGov Believes -->
-  <section class="py-24 bg-slate-50 border-y border-slate-100 paper-grain">
+  <section class="relative py-24 bg-slate-50 border-y border-slate-100 paper-grain">
     <div class="max-w-6xl mx-auto px-6">
       <div class="max-w-2xl mb-14">
         <p class="text-xs font-semibold uppercase tracking-widest text-slate-400 mb-4">What we believe</p>
@@ -276,7 +419,7 @@ import { APP_URL } from '../config';
             </svg>
           </div>
           <h3 class="text-lg font-bold text-slate-900 mb-3">Access should be documented before it is needed.</h3>
-          <p class="text-slate-500 text-sm leading-relaxed">Nobody finds out who controls a registrar account at a convenient moment. The right time to discover a missing login is during a routine review &mdash; not at 11pm on go-live day.</p>
+          <p class="text-slate-500 text-sm leading-relaxed">Nobody finds out who controls a registrar account at a convenient moment. The right time to discover a missing login is during a routine review, not at 11pm on go-live day.</p>
         </div>
 
         <div class="bg-white p-8 frame-teal">
@@ -286,7 +429,7 @@ import { APP_URL } from '../config';
             </svg>
           </div>
           <h3 class="text-lg font-bold text-slate-900 mb-3">Client records belong to clients.</h3>
-          <p class="text-slate-500 text-sm leading-relaxed">Infrastructure records are maintained by agencies, but they belong to the domain owner. Like medical records &mdash; the provider keeps them current, but the patient owns them. When the agency relationship ends, the record transfers, not disappears.</p>
+          <p class="text-slate-500 text-sm leading-relaxed">Infrastructure records are maintained by agencies, but they belong to the domain owner. Like medical records: the provider keeps them current, but the patient owns them. When the agency relationship ends, the record transfers, not disappears.</p>
         </div>
 
         <div class="bg-white p-8 frame-teal">
@@ -303,23 +446,40 @@ import { APP_URL } from '../config';
     </div>
   </section>
 
-  <!-- Why SiteGov Exists -->
-  <section class="py-24 bg-slate-950 text-white">
+  <!-- Meet the Founder -->
+  <section class="relative py-24 bg-slate-950 text-white">
     <div class="max-w-6xl mx-auto px-6">
       <div class="grid md:grid-cols-2 gap-16 items-start">
         <div>
-          <p class="text-xs font-semibold uppercase tracking-widest text-slate-500 mb-4">Why it was built</p>
-          <h2 class="text-4xl font-bold leading-tight mb-6 text-white">
-            Built after repeatedly seeing the same operational failures go unfixed.
+          <p class="text-xs font-semibold uppercase tracking-widest text-slate-500 mb-4">Meet the founder</p>
+          <h2 class="text-4xl font-bold leading-tight mb-8 text-white">
+            Built after looking for a tool that didn&rsquo;t exist.
           </h2>
+
+          <div class="flex items-center gap-4 mb-8 pb-8 border-b border-slate-800">
+            <div class="w-16 h-16 rounded-full bg-slate-800 ring-2 ring-slate-700 shrink-0 overflow-hidden">
+              <img
+                src="/founder.jpg"
+                alt="John Stuifbergen"
+                class="w-full h-full object-cover"
+                onerror="this.style.display='none'"
+              />
+            </div>
+            <div>
+              <p class="text-white font-bold text-lg leading-tight">John Stuifbergen</p>
+              <p class="text-slate-400 text-sm mt-0.5">Founder, SiteGov</p>
+              <p class="text-slate-500 text-xs mt-0.5">Founder, <a href="https://jollygoodsites.com" class="text-slate-400 hover:text-slate-300 transition-colors">Jolly Good Sites</a></p>
+            </div>
+          </div>
+
           <p class="text-slate-400 text-lg leading-relaxed mb-4">
-            SiteGov was created by a web professional with 25+ years of experience building websites, managing client launches, and leading web teams. The pattern it addresses isn&rsquo;t a theory. It emerged from watching the same failures play out across hundreds of projects.
+            After 25 years of building websites through Jolly Good Sites, managing client launches, inheriting sites from other agencies, handling migrations, and supporting clients through transitions, a pattern emerged that was hard to dismiss.
           </p>
           <p class="text-slate-400 text-base leading-relaxed mb-4">
-            The same story repeated: an agency does excellent work, delivers a strong site, and then a completely preventable infrastructure problem derails the launch, the renewal, or the handoff. The code was never the problem. The failure to document who controlled the infrastructure was.
+            The same challenge appeared across different clients, different team structures, and different project types. A launch delayed because DNS access was missing. A domain at risk because renewal notices were going to an abandoned inbox. A handoff complicated by infrastructure nobody had documented.
           </p>
           <p class="text-slate-400 text-base leading-relaxed">
-            SiteGov exists because the tooling to fix this didn&rsquo;t. Spreadsheets worked until someone left. Password managers stored credentials but not accountability. Monitoring tools detected outages but didn&rsquo;t surface the ownership gaps that caused them. Nothing connected infrastructure detection to governance documentation.
+            After enough repetitions, the natural response is to look for a tool that solves this. The tools that existed addressed credentials, uptime, and vulnerabilities. None of them addressed the underlying question: who controls each provider, is that access documented, and can the right person actually be reached when something goes wrong? SiteGov was built to answer that.
           </p>
         </div>
 
@@ -339,7 +499,7 @@ import { APP_URL } from '../config';
             <div class="h-px bg-slate-800"></div>
             <div>
               <div class="text-6xl font-bold text-white tracking-tight leading-none mb-2">1</div>
-              <div class="text-slate-500 text-sm font-mono uppercase tracking-wider">Recurring pattern. Every time.</div>
+              <div class="text-slate-500 text-sm font-mono uppercase tracking-wider">Recurring pattern. <span class="font-serif italic">Almost</span> every time.</div>
             </div>
           </div>
         </div>
@@ -349,7 +509,7 @@ import { APP_URL } from '../config';
   </section>
 
   <!-- What SiteGov Is Trying To Become -->
-  <section class="py-24 bg-white border-y border-slate-100 paper-grain">
+  <section class="relative py-24 bg-white border-y border-slate-100 paper-grain">
     <div class="max-w-6xl mx-auto px-6">
       <div class="max-w-2xl mb-14">
         <p class="text-xs font-semibold uppercase tracking-widest text-slate-400 mb-4">Where this is going</p>
@@ -420,57 +580,15 @@ import { APP_URL } from '../config';
     </div>
   </section>
 
-  <!-- Trust and Boundaries -->
-  <section class="py-24 bg-slate-50 border-b border-slate-100 paper-grain">
-    <div class="max-w-6xl mx-auto px-6">
-      <div class="max-w-2xl mb-14">
-        <p class="text-xs font-semibold uppercase tracking-widest text-slate-400 mb-4">What SiteGov is</p>
-        <h2 class="text-4xl font-bold leading-tight text-slate-900">Specific tools. Specific jobs. No overlap.</h2>
-        <p class="text-slate-500 text-lg leading-relaxed mt-4">SiteGov occupies a specific space in the tooling stack. Understanding where it fits &mdash; and where it doesn&rsquo;t &mdash; sets the right expectations from day one.</p>
-      </div>
-
-      <div class="grid sm:grid-cols-3 gap-5">
-
-        <div class="bg-white p-6 frame-teal">
-          <p class="text-[10px] font-mono text-slate-400 uppercase tracking-widest mb-2">Password Manager</p>
-          <p class="text-slate-700 text-sm mb-4">Stores passwords.</p>
-          <div class="h-px bg-slate-100 my-4"></div>
-          <p class="text-[10px] font-mono text-teal-600 uppercase tracking-widest mb-2">SiteGov</p>
-          <p class="text-slate-800 text-sm font-semibold mb-3">Documents who has access.</p>
-          <p class="text-slate-500 text-xs leading-relaxed">Where credentials live, whether MFA is confirmed, who the backup admin is. Not the passwords themselves.</p>
-        </div>
-
-        <div class="bg-white p-6 frame-teal">
-          <p class="text-[10px] font-mono text-slate-400 uppercase tracking-widest mb-2">Security Scanner</p>
-          <p class="text-slate-700 text-sm mb-4">Finds vulnerabilities.</p>
-          <div class="h-px bg-slate-100 my-4"></div>
-          <p class="text-[10px] font-mono text-teal-600 uppercase tracking-widest mb-2">SiteGov</p>
-          <p class="text-slate-800 text-sm font-semibold mb-3">Finds ownership gaps.</p>
-          <p class="text-slate-500 text-xs leading-relaxed">Missing backup admins, undocumented credentials, former employees with active access. The governance layer, not the vulnerability layer.</p>
-        </div>
-
-        <div class="bg-white p-6 frame-teal">
-          <p class="text-[10px] font-mono text-slate-400 uppercase tracking-widest mb-2">Uptime Monitor</p>
-          <p class="text-slate-700 text-sm mb-4">Detects outages.</p>
-          <div class="h-px bg-slate-100 my-4"></div>
-          <p class="text-[10px] font-mono text-teal-600 uppercase tracking-widest mb-2">SiteGov</p>
-          <p class="text-slate-800 text-sm font-semibold mb-3">Documents who can respond.</p>
-          <p class="text-slate-500 text-xs leading-relaxed">When an outage happens, the question immediately becomes: who has access to fix it? SiteGov has that answer before the question is asked.</p>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
   <!-- Closing CTA -->
-  <section class="bg-slate-50 border-t border-slate-200 py-28 paper-grain">
+  <section class="relative bg-slate-50 border-t border-slate-200 py-28 paper-grain">
     <div class="max-w-3xl mx-auto px-6 text-center">
       <p class="text-xs font-semibold uppercase tracking-widest text-slate-400 mb-6">Get started</p>
       <h2 class="text-4xl sm:text-5xl font-bold leading-snug sm:leading-snug mb-6">
-        Every client has infrastructure knowledge hiding somewhere.
+        The most important infrastructure information is usually discovered when something breaks.
       </h2>
       <p class="text-slate-500 text-xl mb-10 leading-relaxed">
-        SiteGov helps agencies find it, document it, and keep it from disappearing when someone leaves.
+        SiteGov helps agencies document domains, DNS, hosting, SSL, email, and infrastructure ownership before those moments happen.
       </p>
       <div class="flex flex-col sm:flex-row gap-3 justify-center">
         <a href={`${APP_URL}/users/sign_up`} class="inline-flex items-center justify-center px-8 py-4 bg-slate-900 text-white text-sm font-semibold rounded-lg hover:bg-slate-700 transition-colors">
