@@ -44,7 +44,7 @@ const faqSchema = {
       name: 'What is vendor dependency risk?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'When a critical infrastructure layer is controlled by a vendor whose relationship with your client has changed — an old agency still holding DNS, a contractor who left with hosting credentials, a previous developer whose email is still the registrar contact — your ability to act on that domain depends on their cooperation. SiteGov makes vendor dependencies visible before they become blockers.',
+        text: 'When a critical infrastructure layer is controlled by a vendor whose relationship with your client has changed, your ability to act on that domain depends on their cooperation. An old agency still holding DNS, a contractor who left with hosting credentials, a previous developer whose email is still the registrar contact. SiteGov makes vendor dependencies visible before they become blockers.',
       },
     },
   ],
@@ -87,7 +87,7 @@ const faqSchema = {
             Every domain runs on a stack of independent providers. The registrar holds the domain registration. DNS routes traffic to the right servers. Hosting serves the pages. SSL secures the connection. Email runs through its own platform entirely.
           </p>
           <p class="text-slate-500 text-base leading-relaxed mb-4">
-            Each layer is separate. Each has its own account. Each account has a login. Most organizations assume these are all connected &mdash; that whoever manages the domain also controls DNS, or that the developer who set up hosting also manages SSL.
+            Each layer is separate. Each has its own account. Each account has a login. Most organizations assume these are all connected: that whoever manages the domain also controls DNS, or that the developer who set up hosting also manages SSL.
           </p>
           <p class="text-slate-500 text-base leading-relaxed">
             They usually aren&rsquo;t. DNS is often managed by a different vendor than the registrar. Hosting is often on a developer&rsquo;s agency account. SSL auto-renews through a service nobody monitors. Email predates every agency relationship by a decade. The result: five layers, five potential access gaps, rarely documented together.
@@ -177,7 +177,7 @@ const faqSchema = {
 
         <div class="py-7">
           <h3 class="text-slate-900 font-semibold mb-3">What is vendor dependency risk?</h3>
-          <p class="text-slate-500 text-sm leading-relaxed">When a critical infrastructure layer is controlled by a vendor whose relationship with your client has changed &mdash; an old agency still holding DNS, a contractor who left with hosting credentials, a previous developer whose email is still the registrar contact &mdash; your ability to act on that domain depends on their cooperation. You can&rsquo;t migrate, change providers, or go live without their involvement, regardless of who the domain technically belongs to. SiteGov makes vendor dependencies visible before they become blockers. Every infrastructure layer shows who controls the account, not just which provider is running the service. When a vendor relationship ends, the governance record tells you exactly what needs to be transferred and who needs to do it.</p>
+          <p class="text-slate-500 text-sm leading-relaxed">When a critical infrastructure layer is controlled by a vendor whose relationship with your client has changed, your ability to act on that domain depends on their cooperation. An old agency still holding DNS, a contractor who left with hosting credentials, a previous developer whose email is still the registrar contact. In any of these situations, you can&rsquo;t migrate, change providers, or go live without their involvement, regardless of who the domain technically belongs to. SiteGov makes vendor dependencies visible before they become blockers. Every infrastructure layer shows who controls the account, not just which provider is running the service. When a vendor relationship ends, the governance record tells you exactly what needs to be transferred and who needs to do it.</p>
         </div>
 
       </div>
